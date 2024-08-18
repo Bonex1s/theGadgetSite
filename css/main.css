@@ -1,6 +1,14 @@
 body {
   font-family: "Montserrat", sans-serif;
 }
+a {
+  color: #000000;
+}
+.header {
+  position: sticky;
+  top: 0%;
+  z-index: 1000;
+}
 .promotions {
   background-color: black;
   height: 25px;
@@ -87,11 +95,16 @@ body {
   cursor: pointer;
 }
 .card:hover {
-  filter: brightness(1.5);
+  filter: brightness(1.3);
 }
 .text-card {
-  font-weight: 700;
+  font-weight: 670;
   font-size: small;
+  text-align: left;
+  margin-top: 1em;
+}
+.prise {
+  color: #757575;
 }
 .buy-button {
   background-color: #ffffff;
@@ -106,6 +119,22 @@ body {
 .buy-button:hover {
   background-color: #000000;
   color: #ffffff;
+}
+.arrow {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 160%;
+  transform: translateY(-50%);
+  width: 1.5em;
+  height: 1.5em;
+}
+.left-arrow {
+  left: 3em;
+}
+.right-arrow {
+  right: 3.5em;
 }
 .select-zone {
   background-color: #ffffff;
