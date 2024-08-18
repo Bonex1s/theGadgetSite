@@ -28,6 +28,12 @@ body {
 }
 .menu-text {
   margin: 1em;
+  transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
+}
+.menu-text:hover {
+  cursor: pointer;
+  color: #e1ce8c; /* Цвет текста при наведении */
+  transform: scale(1.05); /* Увеличение текста при наведении */
 }
 .svg-list {
   display: flex;
@@ -37,6 +43,13 @@ body {
 }
 .svg-icon {
   margin: 0.5em;
+  cursor: pointer;
+  transition: stroke 0.3s ease, transform 0.3s ease;
+}
+.svg-list :hover path {
+  stroke-width: 5;
+  stroke: #e1ce8c;
+  transform: scale(1.1);
 }
 
 /* CARDS MID */
