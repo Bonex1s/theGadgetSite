@@ -21,6 +21,7 @@ body {
   margin-top: 0.3em;
   margin-left: 1em;
 }
+
 .menu_list {
   display: flex;
   align-items: center;
@@ -75,18 +76,21 @@ body {
 }
 
 .card {
-  width: 15em;
+  width: 14em;
   height: 23em;
   text-align: center;
   border-radius: 8px;
   background-color: #fff; /* Добавить фоновый цвет */
   transition: filter 0.3s ease; /* Плавный переход */
 }
+.picture {
+  cursor: pointer;
+}
 .card:hover {
-  filter: brightness(2.1);
+  filter: brightness(1.5);
 }
 .text-card {
-  font-weight: 600;
+  font-weight: 700;
   font-size: small;
 }
 .buy-button {
@@ -146,4 +150,117 @@ body {
 
 .brend-list:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ITEM PICT */
+.items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-top: 5em;
+  margin-bottom: 5em;
+}
+
+.item-block {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 20px;
+  max-width: 1200px;
+  /* Добавить фоновый цвет */
+  transition: filter 0.3s ease;
+}
+.picture:hover {
+  filter: brightness(1.1);
+}
+
+.picture1 {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.picture img {
+  width: 100%;
+  height: auto;
+}
+
+.main-text {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+/* news block */
+
+.news-block {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4em;
+}
+
+.news-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 4em; /* Отступы между строками */
+  grid-column-gap: 6em;
+  margin-left: 9em;
+  margin-right: 9em;
+  margin-top: 3em;
+}
+
+.card-news {
+  display: flex;
+  align-items: flex-start;
+  overflow: hidden;
+  width: 100%;
+  max-width: 800px; /* Ширина карточки, можно изменить по желанию */
+  cursor: pointer;
+  padding: 1em;
+}
+.card-news:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-news-image {
+  width: 270px; /* Ширина изображения, можно изменить */
+  height: 180px;
+}
+
+.card-news-content {
+  padding-left: 12px;
+  flex: 1;
+}
+
+.main-news-text {
+  font-size: 1em;
+  font-weight: 600;
+  margin: 0;
+}
+
+.additional-news-text {
+  margin: 8px 0;
+}
+
+.date-news {
+  color: #888;
+}
+
+.info-button {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%); /* Сдвигает кнопку влево на половину её ширины */
+  bottom: 20px;
+  background-color: #ffffff;
+  color: black;
+  font-size: 12px;
+  border: 1px solid #000000;
+  padding: 10px 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-top: 0.5em;
+}
+.info-button:hover {
+  background-color: #000000;
+  color: #ffffff;
 }
