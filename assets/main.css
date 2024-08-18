@@ -1,0 +1,136 @@
+body {
+  font-family: "Montserrat", sans-serif;
+}
+.promotions {
+  background-color: black;
+  height: 25px;
+  color: white;
+  text-align: center;
+}
+.header-panel {
+  background-color: white;
+  color: black;
+  height: 5em;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  height: 4em;
+  width: 4em;
+  margin-top: 0.3em;
+  margin-left: 1em;
+}
+.menu_list {
+  display: flex;
+  align-items: center;
+  margin-right: 10em;
+}
+.menu-text {
+  margin: 1em;
+}
+.svg-list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 1em;
+}
+.svg-icon {
+  margin: 0.5em;
+}
+
+/* CARDS MID */
+
+.select {
+  margin-top: 1.5em;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+.cards-block {
+  margin-top: 2em;
+}
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-row-gap: 6em; /* Отступы между строками */
+  grid-column-gap: 2em; /* Отступы между колонками */
+  margin: 5em;
+  justify-items: center;
+  align-items: center;
+}
+
+.card {
+  width: 15em;
+  height: 23em;
+  text-align: center;
+  border-radius: 8px;
+  background-color: #fff; /* Добавить фоновый цвет */
+  transition: filter 0.3s ease; /* Плавный переход */
+}
+.card:hover {
+  filter: brightness(2.1);
+}
+.text-card {
+  font-weight: 600;
+  font-size: small;
+}
+.buy-button {
+  background-color: #ffffff;
+  color: black;
+  font-size: 12px;
+  border: 1px solid #000000;
+  padding: 10px 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-top: 0.5em;
+}
+.buy-button:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+.select-zone {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 1em;
+  cursor: pointer;
+  position: relative; /* Для позиционирования псевдоэлемента */
+  overflow: hidden;
+}
+.select-zone::after {
+  content: "";
+  position: absolute; /* Абсолютное позиционирование */
+  left: 0; /* Начинаем с левого края */
+  bottom: 0; /* Позиционируем у нижнего края */
+  width: 100%; /* Ширина равна ширине кнопки */
+  height: 2px; /* Высота подчеркивания */
+  background-color: #000000; /* Черный цвет подчеркивания */
+  transform: scaleX(0); /* Начальное состояние (скрыто) */
+  transform-origin: bottom right; /* Начало эффекта с правого края */
+  transition: transform 0.3s ease; /* Плавный переход */
+}
+.select-zone:hover::after {
+  transform: scaleX(1); /* Подчеркивание становится видимым */
+  transform-origin: bottom left;
+}
+.prise {
+  margin: 0.8em;
+}
+
+.brends {
+  display: flex;
+  gap: 2.5em;
+  margin-top: 7em;
+  justify-content: center;
+}
+.brend-list {
+  height: 10em;
+  width: 12em;
+}
+
+.brend-list:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
