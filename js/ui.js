@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.getElementById("login").addEventListener("click", function () {
     const formSection = document.querySelector(".login-container");
-    // Переключение видимости поля поиска
     if (
       formSection.style.display === "none" ||
       formSection.style.display === ""
@@ -27,10 +26,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener("scroll", function () {
     const header = document.querySelector(".header-panel");
-    const scrollPosition = window.scrollY; // Положение прокрутки
+    const scrollPosition = window.scrollY;
 
     if (scrollPosition > 100) {
-      // Прокрутка на 100px (можете изменить значение)
       header.classList.add("scrolled");
     } else {
       header.classList.remove("scrolled");
