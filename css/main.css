@@ -106,7 +106,7 @@ a {
   background-color: #ffffff;
   left: 23%;
   top: 120px;
-  border: solid;
+  border: solid rgb(180, 180, 180);
 }
 
 .login-container.visible {
