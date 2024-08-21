@@ -61,7 +61,6 @@ document.addEventListener("DOMContentLoaded", () => {
   function showPage(index) {
     pages.forEach((page, i) => {
       page.style.display = i === index ? "grid" : "none";
-      console.log("ahahahah");
     });
   }
 
@@ -75,6 +74,5 @@ document.addEventListener("DOMContentLoaded", () => {
     showPage(currentPage);
   });
 
-  // Изначально показываем первую страницу
   showPage(currentPage);
 });

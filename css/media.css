@@ -1,0 +1,80 @@
+@media screen and (max-width: 480px) {
+  .promotions {
+    display: none;
+  }
+  .header-panel {
+    height: 4em;
+    flex-direction: column; /* Располагаем элементы в колонку */
+    padding: 0 1em; /* Уменьшаем внутренние отступы */
+  }
+
+  .logo {
+    height: 3em;
+    width: 3em;
+    margin-top: 0.2em;
+    margin-left: 0;
+  }
+
+  .menu_list {
+    margin-right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .svg-list {
+    margin: 0;
+    justify-content: center;
+  }
+
+  .login-container {
+    width: 90%;
+    left: 5%;
+    top: 100px;
+  }
+
+  .select {
+    flex-direction: column;
+    font-size: 1.2em;
+  }
+
+  .card-list {
+    grid-template-columns: repeat(2, 1fr); /* Показываем по 2 карточки в ряд */
+    margin: 2em;
+    grid-row-gap: 3em; /* Уменьшаем отступы между строками */
+  }
+
+  .card {
+    width: 100%;
+    height: auto; /* Высота будет зависеть от содержимого */
+    margin-bottom: 2em;
+  }
+
+  .items {
+    flex-direction: column;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
+  .item-block {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 10px;
+    max-width: 100%;
+  }
+
+  .news-list {
+    grid-template-columns: 1fr;
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+
+  .footer {
+    height: auto;
+    padding: 2em 1em;
+  }
+
+  .carousel-container {
+    height: auto;
+    padding-bottom: 2em;
+  }
+}
