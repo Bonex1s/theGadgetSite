@@ -229,7 +229,8 @@
         <h1 class="select-zone">Усі товари</h1>
       </div>
       <div class="cards-block">
-        <a class="arrow left-arrow">
+        <!-- Стрелочка влево -->
+        <a class="arrow left-arrow" id="left-arrow">
           <svg
             width="32"
             height="54"
@@ -244,7 +245,9 @@
             />
           </svg>
         </a>
-        <ul class="card-list">
+
+        <!-- Первая страница карточек -->
+        <ul class="card-list page-1 active-page">
           <li class="card">
             <img src="./assets/product-photos.png" alt="" />
             <h1 class="text-card">
@@ -315,7 +318,78 @@
             <button class="buy-button">Купити</button>
           </li>
         </ul>
-        <a class="arrow right-arrow">
+
+        <!-- Вторая страница карточек -->
+        <ul class="card-list page-2">
+          <li class="card">
+            <img src="./assets/Clear Case.webp" alt="" />
+            <h1 class="text-card">
+              Чохол Clear Case with MagSafe for iPhone 15 Pro Max (OEM)
+            </h1>
+            <p class="prise">999.00 грн</p>
+            <button class="buy-button">Купити</button>
+          </li>
+          <li class="card">
+            <img src="./assets/maikailines.webp" alt="" />
+            <h1 class="text-card">
+              Чохол MaiKai Titan Art Series для iPhone 15 Pro Max (Fantastic
+              Colored)
+            </h1>
+            <p class="prise">799.00 грн</p>
+            <button class="buy-button">Купити</button>
+          </li>
+          <li class="card">
+            <img src="./assets/NFCCase.webp" alt="" />
+            <h1 class="text-card">
+              Чохол NFC для телефону iPhone 15 Pro Max (сірий)
+            </h1>
+            <p class="prise">1999.00 грн</p>
+            <button class="buy-button">Купити</button>
+          </li>
+          <li class="card">
+            <img src="./assets/KajsaGlamorus.webp" alt="" />
+            <h1 class="text-card">
+              Чохол Kajsa Glamorus Collection Snake iPhone 15 Pro Max (синій)
+            </h1>
+            <p class="prise">999.00 грн</p>
+            <button class="buy-button">Купити</button>
+          </li>
+          <li class="card">
+            <img src="./assets/spigenspacecrystal.webp" alt="" />
+            <h1 class="text-card">
+              Чохол Spigen для iPhone 15 Pro Max, Ultra Hybrid, Space Crystal
+            </h1>
+            <p class="prise">1199.00 грн</p>
+            <button class="buy-button">Купити</button>
+          </li>
+          <li class="card">
+            <img src="./assets/Proovecrystal.webp" alt="" />
+            <h1 class="text-card">
+              Тримач в машину Proove Crystal Clamp Suction Type Car Mount
+              (чорний)
+            </h1>
+            <p class="prise">649.00 грн</p>
+            <button class="buy-button">Купити</button>
+          </li>
+          <li class="card">
+            <img src="./assets/hococat@640w.webp" alt="" />
+            <h1 class="text-card">
+              Bluetooth навушники Hoco Cat Ear W39 Purple
+            </h1>
+            <p class="prise">699.00 грн</p>
+            <button class="buy-button">Купити</button>
+          </li>
+          <li class="card">
+            <img src="./assets/blueoprivacy.webp" alt="card photo" />
+            <h1 class="text-card">
+              Захисне скло Blueo Full Cover Anti-Peep Glass for iPhone 15 Pro
+            </h1>
+            <p class="prise">749.00 грн</p>
+            <button class="buy-button">Купити</button>
+          </li>
+        </ul>
+
+        <a class="arrow right-arrow" id="right-arrow">
           <svg
             width="32"
             height="54"
@@ -331,6 +405,7 @@
           </svg>
         </a>
       </div>
+
       <div class="brend-section">
         <ul class="brends">
           <li class="brend-list">
@@ -454,16 +529,43 @@
           вас щасливими та з новим придбанням.
         </p>
       </div>
-      <div class="feedback">
-        <h1 class="header-feedback">
-          “Результат порaдував, друзі були у захваті”
-        </h1>
-        <p class="main-feedback">
-          Щойно здійснив покупку в theGadget і просто залишився вражений якістю
-          обслуговування та асортиментом товарів. Чудовий вибір чохлів, техніки
-          та аксесуарів за доступні ціни. Замовлення обробили швидко, доставка
-          також вразила своєю швидкістю.
-        </p>
+
+      <div class="carousel-container">
+        <div class="feedback prev-block">
+          <h1 class="header-feedback">
+            “Результат порaдував, друзі були у захваті”
+          </h1>
+          <p class="main-feedback">
+            Щойно здійснив покупку в theGadget і просто залишився вражений
+            якістю обслуговування та асортиментом товарів. Чудовий вибір чохлів,
+            техніки та аксесуарів за доступні ціни. Замовлення обробили швидко,
+            доставка також вразила своєю швидкістю.
+          </p>
+        </div>
+        <div class="feedback active-block">
+          <h1 class="header-feedback">
+            “Все, що потрібно для вашого пристрою, в одному місці!”
+          </h1>
+          <p class="main-feedback">
+            Магазин theGadget — це просто рай для любителів техніки і стильних
+            аксесуарів. У них є чохли і гаджети для всіх моїх пристроїв. Зручно,
+            що можна знайти все необхідне в одному місці. Персонал дуже
+            привітний і завжди готовий допомогти з вибором. Обов’язково
+            порекомендую друзям!
+          </p>
+        </div>
+        <div class="feedback next-block">
+          <h1 class="header-feedback">
+            “Результат порaдував, друзі були у захваті”
+          </h1>
+          <p class="main-feedback">
+            Нещодавно відкрив для себе магазин theGadget і був приємно
+            здивований їхнім асортиментом та якістю обслуговування. Тут є все,
+            що потрібно: від стильних чохлів до сучасних гаджетів. Персонал
+            завжди готовий допомогти з вибором і дати корисні поради. Рекомендую
+            всім, хто шукає якісні аксесуари для своїх пристроїв!
+          </p>
+        </div>
       </div>
     </section>
 
