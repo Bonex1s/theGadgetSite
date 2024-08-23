@@ -2,10 +2,23 @@
   .promotions {
     display: none;
   }
+  .header {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+  }
   .header-panel {
     height: 4em;
     flex-direction: column; /* Располагаем элементы в колонку */
     padding: 0 1em; /* Уменьшаем внутренние отступы */
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .header-panel .logo {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .logo {
@@ -19,6 +32,7 @@
     margin-right: 0;
     flex-direction: column;
     align-items: flex-start;
+    background-color: white;
   }
 
   .svg-list {

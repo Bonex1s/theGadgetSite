@@ -13,10 +13,21 @@ a {
   background-color: #000000;
   color: white;
 }
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.menu-icon {
+  width: 30px;
+  height: 30px;
+  stroke: black;
+}
 .header {
   position: sticky;
-  top: 0%;
+  top: 0;
   z-index: 1000;
+  width: 100%;
 }
 .promotions {
   background-color: black;
