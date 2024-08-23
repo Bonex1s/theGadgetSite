@@ -466,6 +466,7 @@ a {
   position: absolute;
   transition: all 0.5s ease;
   opacity: 0.5;
+  cursor: pointer;
 }
 
 .active-block {
@@ -502,4 +503,43 @@ a {
   color: white;
   height: 450px;
   margin-top: 7em;
+}
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 35px 100px;
+}
+
+.footer-column {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.footer-column h3 {
+  margin-bottom: 10px;
+  font-weight: 750;
+  font-size: 20px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 2em;
+}
+
+.footer-column ul li {
+  margin-bottom: 30px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer-column ul li a:hover {
+  color: #e1ce8c;
+}
+.footer p {
+  margin: 1.2em 4em;
+  font-weight: 100;
 }
