@@ -1,0 +1,222 @@
+body {
+  font-family: "Montserrat", sans-serif;
+}
+a {
+  color: #000000;
+}
+/* DEVICE HEADER */
+
+.main-button {
+  background-color: white;
+  border: solid;
+  color: #000000;
+}
+.main-button:hover {
+  background-color: #000000;
+  color: white;
+}
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.menu-icon {
+  width: 30px;
+  height: 30px;
+  stroke: black;
+}
+/* HEADER */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+.promotions {
+  background-color: black;
+  height: 25px;
+  color: white;
+  text-align: center;
+}
+.prom-block {
+  margin-left: 28em;
+}
+.promotions button {
+  margin-left: 27em;
+}
+.header-panel {
+  position: fixed;
+  color: black;
+  height: 5em;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+  transition: background-color 0.5s ease;
+}
+.header-panel.scrolled {
+  background-color: rgba(255, 255, 255, 1); /* Полностью непрозрачный фон */
+}
+.logo {
+  height: 4em;
+  width: 4em;
+  margin-top: 0.3em;
+  margin-left: 1em;
+}
+
+.menu_list {
+  display: flex;
+  align-items: center;
+  margin-right: 10em;
+}
+.menu-text {
+  margin: 1em;
+  transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
+}
+.menu-text:hover {
+  cursor: pointer;
+  color: #e1ce8c; /* Цвет текста при наведении */
+  transform: scale(1.05); /* Увеличение текста при наведении */
+}
+.svg-list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 1em;
+}
+.svg-icon {
+  margin: 0.5em;
+  cursor: pointer;
+  transition: stroke 0.3s ease, transform 0.3s ease;
+}
+.svg-list :hover path {
+  stroke-width: 5;
+  stroke: #e1ce8c;
+  transform: scale(1.1);
+}
+.search-container {
+  display: none;
+  position: absolute;
+  right: 13em;
+  top: 0.8em;
+  background: transparent;
+
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 0.5em;
+  border-radius: 4px;
+}
+.search-input {
+  border: none;
+  outline: none;
+  padding: 0.5em;
+  width: 200px;
+  box-sizing: border-box;
+}
+.search-input::placeholder {
+  color: black;
+}
+
+/* REGISTRATION-LOGIN */
+
+.login-container {
+  display: none; /* Скрываем окно по умолчанию */
+  position: absolute;
+  height: 36em;
+  width: 50em;
+  background-color: #ffffff;
+  left: 23%;
+  top: 120px;
+  border: solid rgb(180, 180, 180);
+}
+
+.login-container.visible {
+  display: flex; /* Показать окно с flex-раскладкой, когда класс "visible" добавлен */
+}
+
+.image-section {
+  flex: 1;
+  position: relative;
+  height: 100%; /* Задаем высоту 100%, чтобы изображение заполняло весь контейнер */
+}
+
+.image-section img {
+  width: 100%;
+  height: 100%; /* Заставляем изображение занимать всю высоту контейнера */
+  object-fit: cover; /* Обеспечиваем правильное масштабирование изображения без искажений */
+}
+
+.text-front {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+.text-front h1 {
+  font-size: 2em;
+  margin: 0;
+}
+
+.text-front p {
+  font-size: 1.2em;
+}
+
+.form-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2em;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form label {
+  margin-bottom: 0.5em;
+}
+
+.login-form input {
+  margin-bottom: 1em;
+  padding: 0.5em;
+  border: solid rgb(188, 188, 188);
+}
+
+.login-form button {
+  padding: 0.4em;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: none;
+  cursor: pointer;
+  border: solid;
+  width: 10em;
+  margin: auto;
+}
+
+/* PRODUCT-PAGE */
+
+.product-main-countainer {
+  display: flex;
+  margin: 9em 8em;
+  flex-direction: row;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 570px;
+}
+
+.product-img {
+  width: 600px;
+  height: 550px;
+}
+.colored-circles {
+  margin-top: 2.5em;
+}

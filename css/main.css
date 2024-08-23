@@ -4,6 +4,8 @@ body {
 a {
   color: #000000;
 }
+/* DEVICE HEADER */
+
 .main-button {
   background-color: white;
   border: solid;
@@ -23,6 +25,8 @@ a {
   height: 30px;
   stroke: black;
 }
+/* HEADER */
+
 .header {
   position: sticky;
   top: 0;
@@ -34,6 +38,12 @@ a {
   height: 25px;
   color: white;
   text-align: center;
+}
+.prom-block {
+  margin-left: 28em;
+}
+.promotions button {
+  margin-left: 27em;
 }
 .header-panel {
   position: fixed;
