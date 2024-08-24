@@ -21,3 +21,21 @@
   color: white;
   padding: 0.5em;
 }
+.black-stroke-btn {
+  background-color: black;
+  color: white;
+  padding: 0.5em;
+  display: inline-block;
+}
+
+.black-stroke-btn:hover {
+  border: solid;
+  background-color: white;
+  color: black;
+  padding: 0.5em;
+  display: inline-block;
+}
+
+.price {
+  margin-top: 0.5em;
+}

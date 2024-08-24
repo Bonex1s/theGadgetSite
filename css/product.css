@@ -35,7 +35,7 @@ a {
 }
 .promotions {
   background-color: black;
-  height: 25px;
+  padding: 5px;
   color: white;
   text-align: center;
 }
@@ -202,7 +202,7 @@ a {
 
 .product-main-countainer {
   display: flex;
-  margin: 9em 8em;
+  padding: 9em 10em;
   flex-direction: row;
 }
 
