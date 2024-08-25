@@ -202,15 +202,19 @@ a {
 
 .product-main-countainer {
   display: flex;
-  padding: 9em 10em;
+  padding: 9em 12em;
   flex-direction: row;
 }
 
 .product-info {
   display: flex;
   flex-direction: column;
+
   gap: 10px;
   width: 570px;
+}
+.buy-btn {
+  width: 250px;
 }
 
 .product-img {
@@ -219,4 +223,12 @@ a {
 }
 .colored-circles {
   margin-top: 2.5em;
+}
+.small-img-list {
+  display: flex;
+}
+
+.small-img {
+  width: 120px;
+  padding: 0.5em;
 }
