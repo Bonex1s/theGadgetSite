@@ -47,6 +47,7 @@ a {
 }
 .header-panel {
   position: fixed;
+
   color: black;
   height: 5em;
   width: 100%;
