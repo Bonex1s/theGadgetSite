@@ -28,8 +28,9 @@ a {
 /* HEADER */
 
 .header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
   z-index: 1000;
   width: 100%;
 }
@@ -46,10 +47,7 @@ a {
   margin-left: 27em;
 }
 .header-panel {
-  position: fixed;
-
   color: black;
-  height: 5em;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -60,7 +58,6 @@ a {
   background-color: rgba(255, 255, 255, 1); /* Полностью непрозрачный фон */
 }
 .logo {
-  height: 4em;
   width: 4em;
   margin-top: 0.3em;
   margin-left: 1em;
@@ -69,7 +66,7 @@ a {
 .menu_list {
   display: flex;
   align-items: center;
-  margin-right: 10em;
+  padding-right: 10em;
 }
 .menu-text {
   margin: 1em;
