@@ -44,16 +44,12 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // IMG
-// Получаем все маленькие изображения
 const smallImages = document.querySelectorAll(".small-img img");
-
-// Получаем элемент основной картинки
 const mainImage = document.getElementById("main-img");
 
-// Добавляем обработчик событий на каждое маленькое изображение
 smallImages.forEach((img) => {
   img.addEventListener("click", (event) => {
-    event.preventDefault(); // Предотвращаем переход по ссылке
-    mainImage.src = event.target.src; // Меняем основное изображение
+    event.preventDefault();
+    mainImage.src = event.target.src;
   });
 });

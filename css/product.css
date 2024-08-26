@@ -213,6 +213,7 @@ a {
 }
 .buy-btn {
   width: 250px;
+  margin: 1.3em 0;
 }
 
 .product-img {
@@ -257,6 +258,18 @@ a {
 .colored-circles svg {
   padding-left: 0.1em;
 }
+.svg-info {
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+}
+.svg-info div {
+  text-align: center;
+}
+.svg-info div p {
+  font-size: 12px;
+}
+
 /* FOOOOTER */
 
 .footer {
