@@ -1,28 +1,27 @@
 /* TEXT STYLE */
 .header-text-strong {
-  font-size: 1.2em;
-  font-weight: 600;
+  font-size: 1.5em;
+  font-weight: 610;
 }
 
 .grey-txt {
   color: grey;
-  font-size: 1em;
-  font-weight: 200;
+  font-size: 1.1em;
+  font-weight: 220;
 }
 
 /* BUTTONS */
 .stoke-white-btn {
   border: solid;
   border-radius: 0.2em;
-  padding: 0.5em;
+  padding: 0.4em;
 }
 .stoke-white-btn:hover {
   background-color: black;
   color: white;
-  padding: 0.5em;
+  padding: 0.4em;
 }
 
-/* CSS */
 .button-57 {
   position: relative;
   overflow: hidden;
@@ -31,7 +30,7 @@
   display: inline-block;
   font-size: 15px;
   line-height: 15px;
-  padding: 15px 85px 17px;
+  padding: 15px 100px 17px;
   text-decoration: none;
   cursor: pointer;
   background: black;

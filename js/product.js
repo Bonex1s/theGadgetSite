@@ -53,3 +53,22 @@ smallImages.forEach((img) => {
     mainImage.src = event.target.src;
   });
 });
+
+// RAITING
+
+document.querySelectorAll(".rating").forEach((rating) => {
+  const ratingValue = parseFloat(rating.getAttribute("data-rating"));
+  const stars = rating.querySelectorAll(".star");
+
+  stars.forEach((star, index) => {
+    if (ratingValue >= index + 1) {
+      star.style.fill = "gold";
+    } else if (ratingValue > index) {
+      star.style.fill = "linear-gradient(90deg, gold 50%, #ccc 50%)";
+    } else {
+      star.style.fill = "#ccc"; // Колір для незаповненої зірки
+    }
+  });
+
+  rating.querySelector(".rating-value").textContent = ratingValue;
+});

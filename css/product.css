@@ -199,26 +199,29 @@ a {
 }
 
 /* PRODUCT-PAGE */
-
+.product {
+  text-align: center;
+  padding: 7.5em 5em;
+}
 .product-main-countainer {
-  display: flex;
-  padding: 9em 12em;
+  display: inline-flex;
+
   flex-direction: row;
+  gap: 2em;
 }
 
 .product-info {
   display: block;
   gap: 10px;
-  width: 570px;
+  width: 550px;
+  text-align: left;
 }
 .buy-btn {
-  width: 250px;
   margin: 1.3em 0;
 }
-
+/* IMG */
 .product-img {
-  width: 600px;
-  height: 550px;
+  width: 500px;
 }
 .colored-circles {
   padding-top: 4em;
@@ -235,9 +238,11 @@ a {
 .small-img:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+/* --------------  */
 .id-product {
   padding-top: 0.7em;
 }
+
 .price-block {
   display: flex;
 }
@@ -247,7 +252,7 @@ a {
 }
 .cashback p {
   padding: 1em 0.3em;
-  font-size: 1.2em;
+  font-size: 1.4em;
   font-weight: 600;
   color: grey;
 }
@@ -259,15 +264,40 @@ a {
   padding-left: 0.1em;
 }
 .svg-info {
-  padding: 1em;
+  padding: 2em 0;
   display: flex;
   justify-content: space-between;
+  max-width: fit-content;
+  gap: 5em;
 }
 .svg-info div {
   text-align: center;
 }
 .svg-info div p {
   font-size: 12px;
+}
+/* RAITNG STARS PRODUCT */
+.rating {
+  display: flex;
+  align-items: center;
+  padding-bottom: 1.2em;
+}
+
+.stars {
+  display: flex;
+  gap: 5px;
+}
+
+.star {
+  width: 20px;
+  height: 20px;
+  fill: gold;
+}
+
+.rating-value {
+  margin-left: 1em;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 /* FOOOOTER */
