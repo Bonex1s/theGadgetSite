@@ -207,7 +207,7 @@ a {
   display: inline-flex;
 
   flex-direction: row;
-  gap: 2em;
+  gap: 4em;
 }
 
 .product-info {
@@ -223,10 +223,7 @@ a {
 .product-img {
   width: 500px;
 }
-.colored-circles {
-  padding-top: 4em;
-  padding-bottom: 1em;
-}
+
 .small-img-list {
   display: flex;
 }
@@ -242,7 +239,10 @@ a {
 .id-product {
   padding-top: 0.7em;
 }
-
+.colored-circles {
+  padding-top: 4.5em;
+  padding-bottom: 1em;
+}
 .price-block {
   display: flex;
 }
@@ -264,11 +264,12 @@ a {
   padding-left: 0.1em;
 }
 .svg-info {
-  padding: 2em 0;
+  padding: 3em 0;
   display: flex;
   justify-content: space-between;
   max-width: fit-content;
   gap: 5em;
+  border-bottom: solid grey;
 }
 .svg-info div {
   text-align: center;
@@ -298,6 +299,57 @@ a {
   margin-left: 1em;
   font-size: 16px;
   font-weight: 600;
+}
+/* FEATURES */
+.additional-info {
+  display: flex;
+  flex-direction: row;
+}
+.features {
+  width: 600px;
+  padding-left: 7em;
+}
+.features-main-text {
+  border-bottom: solid rgb(181, 181, 181);
+  padding-top: 2em;
+  padding-bottom: 1em;
+}
+.user-information {
+  width: 550px;
+  text-align: left;
+  padding-left: 3.5em;
+  padding-top: 2em;
+}
+.user-tip {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid rgb(181, 181, 181);
+  padding-top: 2em;
+  padding-bottom: 1em;
+  font-weight: bold;
+}
+.user-social {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 2em;
+  padding-top: 2em;
+  padding-bottom: 1em;
+  font-weight: bold;
+}
+.user-social svg {
+  margin-left: 1.4em;
+}
+
+.characteristic-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  font-size: 16px;
+}
+
+.label {
+  font-weight: bold;
 }
 
 /* FOOOOTER */
