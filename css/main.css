@@ -135,7 +135,7 @@ a {
 .image-section {
   flex: 1;
   position: relative;
-  height: 100%; /* Задаем высоту 100%, чтобы изображение заполняло весь контейнер */
+  height: 100%;
 }
 
 .image-section img {
@@ -195,6 +195,7 @@ a {
   width: 10em;
   margin: auto;
 }
+/* HERO */
 
 /* CARDS MID */
 
@@ -334,7 +335,6 @@ a {
   grid-template-rows: repeat(2, auto);
   gap: 20px;
   max-width: 1200px;
-  /* Добавить фоновый цвет */
   transition: filter 0.3s ease;
 }
 .picture:hover {

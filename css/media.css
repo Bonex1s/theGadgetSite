@@ -3,15 +3,16 @@
     display: none;
   }
   .header {
-    position: sticky;
+    position: fixed;
+    left: 0;
     top: 0;
     z-index: 1000;
     width: 100%;
   }
   .header-panel {
     height: 4em;
-    flex-direction: column; /* Располагаем элементы в колонку */
-    padding: 0 1em; /* Уменьшаем внутренние отступы */
+    flex-direction: column;
+    padding: 0 1em;
   }
   .menu-toggle {
     display: block;
@@ -32,7 +33,9 @@
     margin-right: 0;
     flex-direction: column;
     align-items: flex-start;
-    background-color: white;
+    background-color: black;
+    color: white;
+    display: none;
   }
 
   .svg-list {

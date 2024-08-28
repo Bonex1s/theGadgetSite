@@ -9,10 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.getElementById("search-icon").addEventListener("click", function () {
     const searchContainer = document.querySelector(".search-container");
-    if (
-      searchContainer.style.display === "none" ||
-      searchContainer.style.display === ""
-    ) {
+    if (searchContainer.style.display === "none") {
       searchContainer.style.display = "block";
     } else {
       searchContainer.style.display = "none";
