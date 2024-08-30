@@ -7,9 +7,12 @@ document.addEventListener("DOMContentLoaded", function () {
     promotionContainer.style.display = "none";
   });
 
-  document.getElementById("search-icon").addEventListener("click", function () {
+  document.getElementById("search-icon").addEventListener("click", () => {
     const searchContainer = document.querySelector(".search-container");
-    if (searchContainer.style.display === "none") {
+    if (
+      searchContainer.style.display === "none" ||
+      searchContainer.style.display === ""
+    ) {
       searchContainer.style.display = "block";
     } else {
       searchContainer.style.display = "none";
@@ -63,9 +66,75 @@ document.querySelectorAll(".rating").forEach((rating) => {
     } else if (ratingValue > index) {
       star.style.fill = "linear-gradient(90deg, gold 50%, #ccc 50%)";
     } else {
-      star.style.fill = "#ccc"; // Колір для незаповненої зірки
+      star.style.fill = "#ccc";
     }
   });
 
   rating.querySelector(".rating-value").textContent = ratingValue;
+});
+
+const data = [
+  {
+    name: "Чохол Spigen для Samsung iPhone 15 Pro Max, Thin Fit (FKL-0320022-UR) Black",
+    src: "../assets/spigenthinfit2.2.webp",
+    price: "999грн",
+    id: "Код товару: 2000000728240",
+    img1: "../assets/spigenthinfit2.1.webp",
+    img2: "../assets/spigenthinfit2.2.webp",
+    img3: "../assets/spigenthinfit2.3.webp",
+    img4: "../assets/spigenthinfit2.4.webp",
+    img5: "../assets/spigenthinfit2.5.webp",
+  },
+  {
+    name: "Чохол Spigen для Samsung iPhone 15 Pro Max, Thin Fit (FKL-0320022-UR) Mute Baige",
+    src: "../assets/spigenthinfit1.webp",
+    price: "999грн",
+    id: "Код товару: 2000000128740",
+    img1: "../assets/spigenthinfit1.webp",
+    img2: "../assets/spigenthinfit2.webp",
+    img3: "../assets/spigenthinfit3.webp",
+    img4: "../assets/spigenthinfit4.webp",
+    img5: "../assets/spigenthinfit5.webp",
+  },
+];
+
+document.getElementById("black-color").addEventListener("click", () => {
+  const dataIndex = 0;
+  document.getElementById("main-img").src = data[dataIndex].src;
+  document.getElementById("product-header").textContent = data[dataIndex].name;
+  document.getElementById("product-id").textContent = data[dataIndex].id;
+  document.getElementById("price").textContent = data[dataIndex].price;
+
+  const smallImages = document.querySelectorAll(".small-img img");
+  const images = [
+    data[dataIndex].img1,
+    data[dataIndex].img2,
+    data[dataIndex].img3,
+    data[dataIndex].img4,
+    data[dataIndex].img5,
+  ];
+
+  smallImages.forEach((img, i) => {
+    img.src = images[i];
+  });
+});
+document.getElementById("yellow-color").addEventListener("click", () => {
+  const dataIndex = 1;
+  document.getElementById("main-img").src = data[dataIndex].src;
+  document.getElementById("product-header").textContent = data[dataIndex].name;
+  document.getElementById("product-id").textContent = data[dataIndex].id;
+  document.getElementById("price").textContent = data[dataIndex].price;
+
+  const smallImages = document.querySelectorAll(".small-img img");
+  const images = [
+    data[dataIndex].img1,
+    data[dataIndex].img2,
+    data[dataIndex].img3,
+    data[dataIndex].img4,
+    data[dataIndex].img5,
+  ];
+
+  smallImages.forEach((img, i) => {
+    img.src = images[i];
+  });
 });
