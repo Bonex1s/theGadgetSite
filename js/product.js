@@ -75,7 +75,7 @@ document.querySelectorAll(".rating").forEach((rating) => {
 
 const data = [
   {
-    name: "Чохол Spigen для Samsung iPhone 15 Pro Max, Thin Fit (FKL-0320022-UR) Black",
+    name: "Чохол Spigen для Samsung iPhone 15 Pro Max, Thin Fit (FKL-8328222-BL) Black",
     src: "../assets/spigenthinfit2.2.webp",
     price: "999грн",
     id: "Код товару: 2000000728240",
@@ -86,7 +86,7 @@ const data = [
     img5: "../assets/spigenthinfit2.5.webp",
   },
   {
-    name: "Чохол Spigen для Samsung iPhone 15 Pro Max, Thin Fit (FKL-0320022-UR) Mute Baige",
+    name: "Чохол Spigen для Samsung iPhone 15 Pro Max, Thin Fit (FKL-0320022-MB) Mute Baige",
     src: "../assets/spigenthinfit1.webp",
     price: "999грн",
     id: "Код товару: 2000000128740",

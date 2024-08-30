@@ -36,16 +36,17 @@ a {
 }
 .promotions {
   background-color: black;
-  padding: 5px;
   color: white;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  padding: 0.3em 1em;
 }
 .prom-block {
-  margin-left: 28em;
+  flex: 1; /* Занимает доступное пространство */
+  text-align: center;
+  font-size: small;
 }
-.promotions button {
-  margin-left: 27em;
-}
+
 .header-panel {
   position: fixed;
   color: black;
