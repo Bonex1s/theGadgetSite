@@ -90,8 +90,8 @@ const data = [
     src: "../assets/spigenthinfit1.webp",
     price: "999грн",
     id: "Код товару: 2000000128740",
-    img1: "../assets/spigenthinfit1.webp",
-    img2: "../assets/spigenthinfit2.webp",
+    img1: "../assets/spigenthinfit2.webp",
+    img2: "../assets/spigenthinfit1.webp",
     img3: "../assets/spigenthinfit3.webp",
     img4: "../assets/spigenthinfit4.webp",
     img5: "../assets/spigenthinfit5.webp",
@@ -138,3 +138,25 @@ document.getElementById("yellow-color").addEventListener("click", () => {
     img.src = images[i];
   });
 });
+
+function initializeToggleButtons() {
+  const buttons = document.querySelectorAll(".user-tip");
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", function () {
+      const targetId = this.getAttribute("data-target");
+      const infoContainer = document.getElementById(targetId);
+      const svg = this.querySelector("svg");
+
+      if (infoContainer.classList.contains("open")) {
+        infoContainer.classList.remove("open");
+        svg.classList.remove("rotated");
+      } else {
+        infoContainer.classList.add("open");
+        svg.classList.add("rotated");
+      }
+    });
+  });
+}
+
+initializeToggleButtons();

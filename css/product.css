@@ -28,38 +28,35 @@ a {
 /* HEADER */
 
 .header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
   z-index: 1000;
   width: 100%;
 }
 .promotions {
   background-color: black;
-  padding: 5px;
   color: white;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  padding: 0.3em 1em;
 }
 .prom-block {
-  margin-left: 28em;
+  flex: 1; /* Занимает доступное пространство */
+  text-align: center;
+  font-size: small;
 }
-.promotions button {
-  margin-left: 27em;
-}
+
 .header-panel {
   position: fixed;
   color: black;
-  height: 5em;
   width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: transparent;
-  transition: background-color 0.5s ease;
+  background-color: white;
 }
-.header-panel.scrolled {
-  background-color: rgba(255, 255, 255, 1); /* Полностью непрозрачный фон */
-}
+
 .logo {
-  height: 4em;
   width: 4em;
   margin-top: 0.3em;
   margin-left: 1em;
@@ -68,7 +65,7 @@ a {
 .menu_list {
   display: flex;
   align-items: center;
-  margin-right: 10em;
+  padding-right: 10em;
 }
 .menu-text {
   margin: 1em;
@@ -101,7 +98,6 @@ a {
   right: 13em;
   top: 0.8em;
   background: transparent;
-
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
   padding: 0.5em;
   border-radius: 4px;
@@ -137,7 +133,7 @@ a {
 .image-section {
   flex: 1;
   position: relative;
-  height: 100%; /* Задаем высоту 100%, чтобы изображение заполняло весь контейнер */
+  height: 100%;
 }
 
 .image-section img {
@@ -197,11 +193,30 @@ a {
   width: 10em;
   margin: auto;
 }
+/* NAVIGATION */
+
+.navigation {
+  display: flex;
+  align-items: center; /* Центрирует элементы по вертикали */
+  padding: 122px 40px 0;
+  font-size: 14px;
+  font-weight: 200;
+  color: grey;
+}
+
+.navigation a {
+  color: #000000;
+  margin-right: 5px;
+}
+
+.navigation a:hover {
+  text-decoration: underline; /* Подчеркивание при наведении курсора */
+}
 
 /* PRODUCT-PAGE */
 .product {
   text-align: center;
-  padding: 7.5em 5em 3em;
+  padding: 4em 5em 3em;
 }
 .product-main-countainer {
   display: inline-flex;
@@ -329,6 +344,37 @@ a {
   padding-bottom: 1em;
   font-weight: bold;
 }
+.info-container {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  background-color: white;
+  transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+  padding: 0 1em;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.info-container.open {
+  max-height: 200px;
+  opacity: 1;
+  padding: 1em;
+}
+
+.user-tip {
+  cursor: pointer;
+}
+
+.user-tip svg {
+  transition: transform 0.3s ease;
+}
+
+.user-tip svg.rotated {
+  transform: rotate(180deg);
+}
+.info-container p {
+  padding: 0.5em;
+}
+
 .user-social {
   display: flex;
   justify-content: left;
@@ -438,31 +484,4 @@ a {
 .footer p {
   margin: 1.2em 4em;
   font-weight: 100;
-}
-.main-test {
-  display: flex;
-  justify-content: space-around;
-  padding: 4em;
-}
-/* TEST! */
-.test {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-}
-.main-text-test {
-  font-weight: bold;
-}
-.button-test-cnt {
-  text-align: center;
-}
-
-.button-test {
-  border: solid;
-  padding: 1em;
-  border-radius: 1em;
-}
-.button-test:hover {
-  background-color: black;
-  color: white;
 }

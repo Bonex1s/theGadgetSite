@@ -18,14 +18,14 @@
     <title>Product page</title>
   </head>
   <body>
-    <section class="header">
+    <header class="header">
       <div class="promotions">
         <div class="prom-block">
           Знижка 100 грн на перше замовлення! Гарячі новинки та акції.
-          <button id="close-promotion">&times;</button>
         </div>
+        <button id="close-promotion">&times;</button>
       </div>
-      <div class="header-panel">
+      <nav class="header-panel">
         <div class="menu-toggle">
           <svg
             class="menu-icon"
@@ -143,6 +143,31 @@
             </svg>
           </li>
         </ul>
+        <div class="search-container">
+          <input type="text" class="search-input" placeholder="Пошук..." />
+        </div>
+        <div class="login-container">
+          <div class="image-section">
+            <div class="image-overlay">
+              <img src="../assets/loginpict.png" alt="" />
+              <div class="text-front">
+                <h1>Привіт красавец!</h1>
+                <p>увійти в систему для продовження</p>
+              </div>
+            </div>
+          </div>
+          <div class="form-section">
+            <form class="login-form">
+              <label for="username">Логин:</label>
+              <input type="text" id="username" name="username" required />
+
+              <label for="password">Пароль:</label>
+              <input type="password" id="password" name="password" required />
+
+              <button class="main-button" type="submit">Увійти</button>
+            </form>
+          </div>
+        </div>
         <ul class="svg-list">
           <li class="svg-icon" id="search-icon">
             <svg
@@ -213,33 +238,15 @@
             </svg>
           </li>
         </ul>
-        <form class="search-container">
-          <input type="text" class="search-input" placeholder="Пошук..." />
-        </form>
-        <div class="login-container">
-          <div class="image-section">
-            <div class="image-overlay">
-              <img src="../assets/loginpict.png" alt="" />
-              <div class="text-front">
-                <h1>Привіт красавец!</h1>
-                <p>увійти в систему для продовження</p>
-              </div>
-            </div>
-          </div>
-          <div class="form-section">
-            <form class="login-form">
-              <label for="username">Логин:</label>
-              <input type="text" id="username" name="username" required />
-
-              <label for="password">Пароль:</label>
-              <input type="password" id="password" name="password" required />
-
-              <button class="main-button" type="submit">Увійти</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
+      </nav>
+    </header>
+    <div class="navigation">
+      <a href="../index.html">Головна</a> /
+      <a href="#">
+        Чохол Spigen для Samsung iPhone 15 Pro Max, Thin Fit (FKL-0320022-UR)
+        Mute Baige</a
+      >
+    </div>
     <section class="product">
       <div class="product-main-countainer">
         <div class="product-img">
@@ -972,7 +979,11 @@
           </div>
         </div>
         <div class="user-information">
-          <div class="user-tip">
+          <div
+            class="user-tip"
+            id="toggle-button"
+            data-target="info-container-1"
+          >
             <span>Доставка</span>
             <svg
               width="28"
@@ -988,7 +999,17 @@
               />
             </svg>
           </div>
-          <div class="user-tip">
+          <div class="info-container" id="info-container-1">
+            <p>З магазину theGadget: Безкоштовно</p>
+            <p>З відділення “Нова пошта”: 49грн</p>
+            <p>З поштомату “Нова пошта”: 49грн</p>
+            <p>Доставка за адресою: від 49 грн</p>
+          </div>
+          <div
+            class="user-tip"
+            id="toggle-button-2"
+            data-target="info-container-2"
+          >
             <span>Оплата</span>
             <svg
               width="28"
@@ -1004,7 +1025,14 @@
               />
             </svg>
           </div>
-          <div class="user-tip">
+          <div class="info-container" id="info-container-2">
+            <p>Готівкою, банківською картою, за безготівковим розрахунком</p>
+          </div>
+          <div
+            class="user-tip"
+            id="toggle-button-3"
+            data-target="info-container-3"
+          >
             <span>Гарантія</span>
             <svg
               width="28"
@@ -1019,6 +1047,13 @@
                 fill="black"
               />
             </svg>
+          </div>
+          <div class="info-container" id="info-container-3">
+            <p>
+              Обмін/повернення товару належної якості протягом 14 днів.
+              Детальніше
+            </p>
+            <p>Офіційна гарантія виробника: від 14 днів Детальніше</p>
           </div>
           <div class="user-social">
             <span>Поділитись</span>
@@ -1136,28 +1171,7 @@
         </div>
       </div>
     </section>
-    <!-- <div class="main-test">
-      <div class="test">
-        <div class="name">TEST BIG!</div>
-        <div class="disc">TEST MIDDLE</div>
-        <div class="price">TEST LOW</div>
-      </div>
-      <div class="test">
-        <div class="name">TEST BIG!</div>
-        <div class="disc">TEST MIDDLE</div>
-        <div class="price">TEST LOW</div>
-      </div>
-      <div class="test">
-        <div class="name">TEST BIG!</div>
-        <div class="disc">TEST MIDDLE</div>
-        <div class="price">TEST LOW</div>
-      </div>
-    </div>
-    <div class="button-test-cnt">
-      <button id="button-test" type="button" class="button-test">
-        ЗМіНИТИ!
-      </button>
-    </div> -->
+
     <section class="footer">
       <div class="footer-container">
         <div class="footer-column">
