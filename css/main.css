@@ -4,27 +4,6 @@ body {
 a {
   color: #000000;
 }
-/* DEVICE HEADER */
-
-.main-button {
-  background-color: white;
-  border: solid;
-  color: #000000;
-}
-.main-button:hover {
-  background-color: #000000;
-  color: white;
-}
-.menu-toggle {
-  display: none;
-  cursor: pointer;
-}
-
-.menu-icon {
-  width: 30px;
-  height: 30px;
-  stroke: black;
-}
 /* HEADER */
 
 .header {
@@ -120,13 +99,16 @@ a {
 
 .login-container {
   display: none; /* Скрываем окно по умолчанию */
-  position: absolute;
-  height: 36em;
-  width: 50em;
+  position: fixed;
+  height: 620px;
+  width: 855px;
   background-color: #ffffff;
-  left: 23%;
-  top: 120px;
   border: solid rgb(180, 180, 180);
+
+  /* Центрирование */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .login-container.visible {
