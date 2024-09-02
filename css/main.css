@@ -50,7 +50,7 @@ a {
   padding-right: 10em;
 }
 .menu-text {
-  padding: 1em;
+  padding: 1.2em 1em 2.7em;
   transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
 }
 .menu-text:hover {
@@ -232,7 +232,7 @@ a {
 
 .card {
   width: 14em;
-  height: 23em;
+
   text-align: center;
   border-radius: 8px;
   background-color: #fff; /* Добавить фоновый цвет */
@@ -248,7 +248,7 @@ a {
   font-weight: 670;
   font-size: small;
   text-align: left;
-  margin-top: 1em;
+  padding: 1em 1em 1em;
 }
 .prise {
   color: #757575;

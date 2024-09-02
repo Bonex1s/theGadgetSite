@@ -42,19 +42,40 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  const menu = document.getElementById("item-preview-menu");
-  document
-    .getElementById("menu-text-case")
-    .addEventListener("mouseover", () => {
-      menu.style.display = "flex";
-    });
+  const menuCase = document.getElementById("item-preview-menu");
+  const buttonMenuCase = document.getElementById("menu-text-case");
 
-  menu.addEventListener("mouseout", () => {
-    menu.style.display = "none";
+  buttonMenuCase.addEventListener("mouseover", () => {
+    menuCase.style.display = "flex";
   });
-  document.getElementById("menu-text-case").addEventListener("mouseout", () => {
-    menu.style.display = "none";
+  buttonMenuCase.addEventListener("mouseout", () => {
+    menuCase.style.display = "none";
   });
+
+  menuCase.addEventListener("mouseout", () => {
+    menuCase.style.display = "none";
+  });
+  menuCase.addEventListener("mouseover", () => {
+    menuCase.style.display = "flex";
+  });
+
+  const menuGlass = document.getElementById("item-preview-menu-2");
+  const buttonMenuGlass = document.getElementById("menu-text-glass");
+
+  buttonMenuGlass.addEventListener("mouseover", () => {
+    menuGlass.style.display = "flex";
+  });
+  buttonMenuGlass.addEventListener("mouseout", () => {
+    menuGlass.style.display = "none";
+  });
+
+  menuGlass.addEventListener("mouseout", () => {
+    menuGlass.style.display = "none";
+  });
+  menuGlass.addEventListener("mouseover", () => {
+    menuGlass.style.display = "flex";
+  });
+
   // const productElement = document.getElementById("menu-text-case");
 
   // function handleMouseEnter() {
