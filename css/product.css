@@ -1,5 +1,6 @@
 body {
   font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
 }
 a {
   color: #000000;
@@ -232,10 +233,22 @@ a {
   width: 550px;
   text-align: left;
 }
+.buy-button-block {
+  display: flex;
+  gap: 0.8em;
+}
 .buy-btn {
   margin: 1.3em 0;
 }
-
+.quick-buy {
+  border: solid #5c5c5c;
+  border-radius: 0.3em;
+  font-size: 15px;
+  background-color: black;
+}
+.quick-buy:hover {
+  background-color: #5c5c5c;
+}
 /* img */
 
 .product-img {
@@ -260,8 +273,25 @@ a {
 .id-product {
   padding-top: 0.7em;
 }
+.light-description-block {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 2em;
+  grid-column-gap: 1em;
+  padding-top: 2em;
+}
+.light-description-text {
+  font-size: 14px;
+}
+.light-description {
+  display: flex;
+}
+.light-description svg {
+  padding-bottom: 30px;
+}
+
 .colored-circles {
-  padding-top: 4.5em;
+  padding-top: 2em;
   padding-bottom: 1em;
 }
 .price-block {
@@ -285,12 +315,11 @@ a {
   padding-left: 0.1em;
 }
 .svg-info {
-  padding: 3em 0;
+  padding: 2em 0 0;
   display: flex;
   justify-content: space-between;
   max-width: fit-content;
   gap: 5em;
-  border-bottom: solid grey;
 }
 .svg-info div {
   text-align: center;
@@ -298,7 +327,31 @@ a {
 .svg-info div p {
   font-size: 12px;
 }
+/* RIGHT MENU */
+
+.cart-panel {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 22%;
+  height: 100%;
+  background-color: white;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  transition: right 0.9s cubic-bezier(0.25, 1, 0.5, 1); /* Плавная анимация */
+  overflow-y: auto; /* Скролл внутри корзины, если контент длинный */
+}
+
+.cart-panel.active {
+  right: 0; /* Панель выезжает на экран */
+}
+
+body.cart-open {
+  overflow: hidden; /* Отключение скролла страницы */
+}
+
 /* RAITNG STARS PRODUCT */
+
 .rating {
   display: flex;
   align-items: center;
@@ -332,14 +385,15 @@ a {
 }
 .features-main-text {
   border-bottom: solid rgb(181, 181, 181);
-  padding-top: 2em;
+  padding-top: 3em;
   padding-bottom: 1em;
+  font-weight: 600;
 }
 .user-information {
   width: 550px;
   text-align: left;
   padding-left: 3.5em;
-  padding-top: 2em;
+  padding-top: 1em;
 }
 .user-tip {
   display: flex;

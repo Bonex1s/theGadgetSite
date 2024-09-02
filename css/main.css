@@ -1,9 +1,11 @@
 body {
   font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
 }
 a {
   color: #000000;
 }
+
 /* HEADER */
 
 .header {
@@ -48,9 +50,9 @@ a {
   display: flex;
   align-items: center;
   padding-right: 10em;
+  gap: 2em;
 }
 .menu-text {
-  padding: 1.2em 1em 2.7em;
   transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
 }
 .menu-text:hover {
@@ -237,6 +239,16 @@ a {
   border-radius: 8px;
   background-color: #fff; /* Добавить фоновый цвет */
   transition: filter 0.3s ease; /* Плавный переход */
+  position: relative;
+}
+.new-label {
+  position: absolute;
+  top: 10px;
+  background-color: #e1ce8c;
+  color: #000000;
+  padding: 5px 10px;
+  font-size: 12px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Тень для лучшего выделения */
 }
 .picture {
   cursor: pointer;
@@ -248,7 +260,7 @@ a {
   font-weight: 670;
   font-size: small;
   text-align: left;
-  padding: 1em 1em 1em;
+  padding: 1em 0 1em;
 }
 .prise {
   color: #757575;
