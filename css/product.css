@@ -68,7 +68,7 @@ a {
   padding-right: 10em;
 }
 .menu-text {
-  margin: 1em;
+  padding: 1em;
   transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
 }
 .menu-text:hover {
@@ -214,6 +214,7 @@ a {
 }
 
 /* PRODUCT-PAGE */
+
 .product {
   text-align: center;
   padding: 4em 5em 3em;
@@ -234,7 +235,9 @@ a {
 .buy-btn {
   margin: 1.3em 0;
 }
-/* IMG */
+
+/* img */
+
 .product-img {
   width: 35em;
 }
@@ -251,7 +254,9 @@ a {
 .small-img:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 /* --------------  */
+
 .id-product {
   padding-top: 0.7em;
 }

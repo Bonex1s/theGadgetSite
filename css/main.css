@@ -50,7 +50,7 @@ a {
   padding-right: 10em;
 }
 .menu-text {
-  margin: 1em;
+  padding: 1em;
   transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
 }
 .menu-text:hover {
@@ -93,6 +93,20 @@ a {
 }
 .search-input::placeholder {
   color: black;
+}
+/* PREVIEW-BLOCK */
+.item-preview-menu {
+  width: 100%;
+  background-color: white;
+  padding-top: 5.5em;
+  justify-content: space-evenly;
+  display: none;
+}
+.preview-list {
+  padding-bottom: 2em;
+}
+.preview-list div {
+  padding: 0.2em;
 }
 
 /* REGISTRATION-LOGIN */
@@ -180,6 +194,20 @@ a {
 }
 /* HERO */
 
+.hero {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  text-align: center;
+}
+
+.hero img {
+  width: 100%; /* Изображение занимает 100% ширины родителя */
+  height: auto; /* Высота зависит от пропорций */
+  object-fit: cover; /* Обрезает изображение для заполнения контейнера */
+  display: block; /* Убирает отступы вокруг изображения */
+}
 /* CARDS MID */
 
 .select {

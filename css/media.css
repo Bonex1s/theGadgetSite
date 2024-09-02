@@ -1,23 +1,62 @@
 @media screen and (max-width: 480px) {
-  .main-button {
-    background-color: white;
-    border: solid;
-    color: #000000;
-  }
-  .main-button:hover {
-    background-color: #000000;
-    color: white;
-  }
-  .menu-toggle {
+  .promotions {
     display: none;
-    cursor: pointer;
   }
 
-  .menu-icon {
-    width: 30px;
-    height: 30px;
-    stroke: black;
+  .header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background-color: white; /* Добавить фон для лучшего отображения текста */
   }
+
+  .header-panel {
+    height: 4em;
+    flex-direction: column;
+    padding: 0 1em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Добавить тень для выделения */
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .header-panel .logo {
+    margin: 0 auto;
+  }
+
+  .logo {
+    height: 3em;
+    width: 3em;
+    margin-top: 0.2em;
+  }
+
+  .menu_list {
+    display: none; /* Убедитесь, что меню скрыто по умолчанию */
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: black;
+    color: white;
+    width: 100%;
+    padding: 1em; /* Добавить отступы для содержимого */
+  }
+
+  .svg-list {
+    margin: 0;
+    justify-content: center;
+  }
+
+  .login-container {
+    width: 90%;
+    left: 5%;
+    top: 100px;
+    position: absolute; /* Добавить позиционирование для правильного размещения */
+    background-color: white; /* Фон для контрастности */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень для выделения */
+  }
+
   .select {
     flex-direction: column;
     font-size: 1.2em;
@@ -25,7 +64,7 @@
 
   .card-list {
     grid-template-columns: repeat(2, 1fr); /* Показываем по 2 карточки в ряд */
-    margin: 2em;
+    margin: 2em 0; /* Удалить отступы по бокам */
     grid-row-gap: 3em; /* Уменьшаем отступы между строками */
   }
 
@@ -37,8 +76,7 @@
 
   .items {
     flex-direction: column;
-    margin-top: 2em;
-    margin-bottom: 2em;
+    margin: 2em 0; /* Установить отступы сверху и снизу */
   }
 
   .item-block {
@@ -50,17 +88,14 @@
 
   .news-list {
     grid-template-columns: 1fr;
-    margin-left: 2em;
-    margin-right: 2em;
+    margin: 0 2em; /* Установить отступы слева и справа */
   }
 
   .footer {
-    height: auto;
     padding: 2em 1em;
   }
 
   .carousel-container {
-    height: auto;
     padding-bottom: 2em;
   }
 }

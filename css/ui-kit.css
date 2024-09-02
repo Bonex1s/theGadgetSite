@@ -1,7 +1,7 @@
 /* TEXT STYLE */
 .header-text-strong {
-  font-size: 1.5em;
-  font-weight: 610;
+  font-size: 1.3em;
+  font-weight: 600;
 }
 
 .grey-txt {
@@ -15,6 +15,7 @@
   border: solid;
   border-radius: 0.3em;
   padding: 0.6em;
+  font-size: 15px;
 }
 .stoke-white-btn:hover {
   background-color: black;

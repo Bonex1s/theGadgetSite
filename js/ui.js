@@ -41,6 +41,33 @@ document.addEventListener("DOMContentLoaded", function () {
       header.classList.remove("scrolled");
     }
   });
+
+  const menu = document.getElementById("item-preview-menu");
+  document
+    .getElementById("menu-text-case")
+    .addEventListener("mouseover", () => {
+      menu.style.display = "flex";
+    });
+
+  menu.addEventListener("mouseout", () => {
+    menu.style.display = "none";
+  });
+  document.getElementById("menu-text-case").addEventListener("mouseout", () => {
+    menu.style.display = "none";
+  });
+  // const productElement = document.getElementById("menu-text-case");
+
+  // function handleMouseEnter() {
+  //   const menu = document.getElementById("item-preview-menu");
+  //   menu.style.display = "flex";
+  // }
+  // function handleMouseLeave() {
+  //   const menu = document.getElementById("item-preview-menu");
+  //   menu.style.display = "none"; // Скрываем меню
+  // }
+  // productElement.addEventListener("mouseenter", handleMouseEnter);
+  // productElement.addEventListener("mouseleave", handleMouseLeave);
+
   document
     .querySelector(".carousel-container")
     .addEventListener("click", function () {
