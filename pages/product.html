@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/product.css" />
     <link rel="stylesheet" href="../css/reset.css" />
-    <link rel="stylesheet" href="../css/web.css" />
+    <link rel="stylesheet" href="../css/media-product.css" />
     <link rel="stylesheet" href="../css/media.css" />
     <link rel="stylesheet" href="../css/ui-kit.css" />
 
@@ -26,22 +26,6 @@
         <button id="close-promotion">&times;</button>
       </div>
       <nav class="header-panel">
-        <div class="menu-toggle">
-          <svg
-            class="menu-icon"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
-        </div>
         <a href="../index.html">
           <img class="logo" src="../assets/Logo 5.png" alt="LOGO" />
         </a>
@@ -151,7 +135,7 @@
             <div class="image-overlay">
               <img src="../assets/loginpict.png" alt="" />
               <div class="text-front">
-                <h1>Привіт красавец!</h1>
+                <h1>Привіт!</h1>
                 <p>увійти в систему для продовження</p>
               </div>
             </div>
@@ -236,6 +220,24 @@
                 stroke-linejoin="round"
               />
             </svg>
+          </li>
+          <li class="svg-icon">
+            <div class="menu-toggle">
+              <svg
+                class="menu-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+              </svg>
+            </div>
           </li>
         </ul>
       </nav>
@@ -886,8 +888,8 @@
           <div class="cart-panel" id="cartPanel">
             <!-- Содержимое корзины -->
             <h2>Корзина</h2>
-            <p>Ваши товары здесь...</p>
-            <button onclick="closeCart()">Закрыть</button>
+            <p>Тут усі ваші товари...</p>
+            <button onclick="closeCart()">Закрити</button>
           </div>
           <div class="buy-button-block">
             <button class="button-57" role="button" onclick="openCart()">

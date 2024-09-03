@@ -222,6 +222,24 @@
               />
             </svg>
           </li>
+          <li class="svg-icon">
+            <div class="menu-toggle">
+              <svg
+                class="menu-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+              </svg>
+            </div>
+          </li>
         </ul>
       </div>
       <div class="item-preview-menu" id="item-preview-menu">
@@ -301,7 +319,11 @@
     </header>
 
     <section class="hero">
-      <img src="./assets/1111.png" alt="" />
+      <picture>
+        <source media="(max-width: 480px)" srcset="./assets/HeroMedia.png" />
+        <source media="(max-width: 768px)" srcset="./assets/HeroMedia.png" />
+        <img src="./assets/1111.png" alt="Responsive Image" />
+      </picture>
     </section>
     <section class="cards">
       <div class="select">
@@ -502,7 +524,7 @@
           <li class="brend-list">
             <img src="./assets/usams.png" alt="usams logo" />
           </li>
-          <li class="brend-list">
+          <li class="brend-list hidden">
             <img src="./assets/uag.png" alt="uag logo" />
           </li>
         </ul>

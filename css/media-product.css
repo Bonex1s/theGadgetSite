@@ -1,0 +1,24 @@
+@media (min-width: 320px) and (max-width: 480px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .product-img {
+    width: 20em;
+  }
+  .product {
+    text-align: center;
+    padding: 2em 3em 3em;
+  }
+  .small-img {
+    width: 50em;
+  }
+  .small-img-list {
+    display: flex;
+  }
+  .product-main-countainer {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 3em;
+  }
+}
