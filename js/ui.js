@@ -52,11 +52,12 @@ document.addEventListener("DOMContentLoaded", function () {
     menuCase.style.display = "none";
   });
 
-  menuCase.addEventListener("mouseout", () => {
-    menuCase.style.display = "none";
-  });
   menuCase.addEventListener("mouseover", () => {
     menuCase.style.display = "flex";
+  });
+
+  menuCase.addEventListener("mouseout", () => {
+    menuCase.style.display = "none";
   });
 
   const menuGlass = document.getElementById("item-preview-menu-2");

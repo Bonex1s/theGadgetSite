@@ -54,6 +54,7 @@ a {
 }
 .menu-text {
   transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
+  padding: 1.5em 0 2em;
 }
 .menu-text:hover {
   cursor: pointer;
@@ -536,14 +537,13 @@ a {
   margin-top: 7em;
 }
 .footer-container {
-  display: flex;
-  justify-content: space-between;
-  padding: 35px 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 0.3fr);
+  padding: 2em 13em 1em 2em;
 }
 
 .footer-column {
-  flex: 1;
-  margin: 0 10px;
+  padding: 0 10px;
 }
 
 .footer-column h3 {

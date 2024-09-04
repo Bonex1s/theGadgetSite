@@ -243,8 +243,9 @@ a {
 .quick-buy {
   border: solid #5c5c5c;
   border-radius: 0.3em;
-  font-size: 15px;
   background-color: black;
+  width: 100px;
+  padding: 10px;
 }
 .quick-buy:hover {
   background-color: #5c5c5c;
@@ -333,7 +334,7 @@ a {
   position: fixed;
   top: 0;
   right: -100%;
-  width: 25%;
+  width: 2%;
   height: 100%;
   background-color: white;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
