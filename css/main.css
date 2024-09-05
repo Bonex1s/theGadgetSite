@@ -196,6 +196,11 @@ a {
   width: 10em;
   margin: auto;
 }
+/* TOGGLE MENU -------------*/
+.toggle-section {
+  display: none;
+}
+
 /* HERO */
 
 .hero {

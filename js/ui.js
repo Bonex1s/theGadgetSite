@@ -132,3 +132,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   showPage(currentPage);
 });
+
+const menuToggle = document.getElementById("toggle-section");
+
+document.getElementById("menu-toggle").addEventListener("click", () => {
+  if (menuToggle.style.display === "" || menuToggle.style.display === "none") {
+    menuToggle.style.display = "block";
+  } else {
+    menuToggle.style.display = "none";
+  }
+});
