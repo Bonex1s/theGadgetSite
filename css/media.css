@@ -72,11 +72,11 @@
   .login-container {
     display: none; /* Скрываем окно по умолчанию */
     position: fixed;
-    height: 450px;
+    height: 420px;
     width: 100%;
     background-color: #ffffff;
     border: solid rgb(180, 180, 180);
-    top: 34%;
+    top: 36%;
     left: 50%;
 
     /* Центрирование */
@@ -337,5 +337,11 @@
   .footer p {
     margin: 1.2em 4em;
     font-weight: 100;
+  }
+}
+@media (min-width: 768px) and (max-width: 1190px) {
+  .menu_list {
+    padding-right: 0;
+    gap: 1em;
   }
 }
