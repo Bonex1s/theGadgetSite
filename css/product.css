@@ -218,7 +218,7 @@ a {
 
 .product {
   text-align: center;
-  padding: 4em 5em 3em;
+  padding: 4em 0em 3em;
 }
 .product-main-countainer {
   display: inline-flex;
@@ -334,7 +334,7 @@ a {
   position: fixed;
   top: 0;
   right: -100%;
-  width: 2%;
+  width: 23%;
   height: 100%;
   background-color: white;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
@@ -378,11 +378,10 @@ body.cart-open {
 /* FEATURES */
 .additional-info {
   display: flex;
-  flex-direction: row;
+  justify-content: center;
 }
 .features {
-  width: 600px;
-  padding-left: 7em;
+  width: 500px;
 }
 .features-main-text {
   border-bottom: solid rgb(181, 181, 181);
@@ -393,8 +392,7 @@ body.cart-open {
 .user-information {
   width: 550px;
   text-align: left;
-  padding-left: 3.5em;
-  padding-top: 1em;
+  padding: 1em 3em;
 }
 .user-tip {
   display: flex;

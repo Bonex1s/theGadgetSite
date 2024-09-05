@@ -65,7 +65,6 @@ a {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin: 1em;
 }
 .svg-icon {
   margin: 0.5em;
@@ -113,7 +112,9 @@ a {
 }
 
 /* REGISTRATION-LOGIN */
-
+.menu-toggle {
+  display: none;
+}
 .login-container {
   display: none; /* Скрываем окно по умолчанию */
   position: fixed;
