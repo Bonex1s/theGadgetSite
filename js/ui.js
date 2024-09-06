@@ -109,6 +109,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+  const popularButton = document.getElementById("select-zone-popular");
+  const allButton = document.getElementById("select-zone-all");
   const leftArrow = document.getElementById("left-arrow");
   const rightArrow = document.getElementById("right-arrow");
   const pages = document.querySelectorAll(".card-list");
@@ -131,6 +133,15 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   showPage(currentPage);
+
+  popularButton.addEventListener("click", () => {
+    currentPage = currentPage > 0 ? currentPage - 1 : pages.length - 1;
+    showPage(currentPage);
+  });
+  allButton.addEventListener("click", () => {
+    currentPage = currentPage < pages.length - 1 ? currentPage + 1 : 0;
+    showPage(currentPage);
+  });
 });
 
 const menuToggle = document.getElementById("toggle-section");
@@ -142,3 +153,18 @@ document.getElementById("menu-toggle").addEventListener("click", () => {
     menuToggle.style.display = "none";
   }
 });
+
+const productLinks = document.querySelectorAll("a[data-product]");
+
+// Добавляем обработчик событий на клик для каждой ссылки
+productLinks.forEach((link) => {
+  link.addEventListener("click", function (event) {
+    // Получаем значение атрибута data-product (название товара)
+    const productName = this.getAttribute("data-product");
+
+    // Сохраняем текст в localStorage
+    localStorage.setItem("selectedProduct", productName);
+  });
+});
+
+console.log(localStorage);
