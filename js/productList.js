@@ -66,18 +66,6 @@ document.getElementById("search-icon").addEventListener("click", function () {
     searchContainer.style.display = "none";
   }
 });
-const productLinks = document.querySelectorAll("a[data-product]");
-
-// Добавляем обработчик событий на клик для каждой ссылки
-productLinks.forEach((link) => {
-  link.addEventListener("click", function (event) {
-    // Получаем значение атрибута data-product (название товара)
-    const productName = this.getAttribute("data-product");
-
-    // Сохраняем текст в localStorage
-    localStorage.setItem("selectedProduct", productName);
-  });
-});
 
 const productTitle = localStorage.getItem("selectedProduct");
 
@@ -88,10 +76,3 @@ if (productTitle) {
 }
 
 const savedValue = localStorage.getItem("selectedProduct");
-
-// Проверяем, есть ли это значение
-if (savedValue !== null) {
-  console.log("Значение сохранено: ", savedValue);
-} else {
-  console.log("Значение не сохранено");
-}

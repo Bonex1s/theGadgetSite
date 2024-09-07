@@ -215,7 +215,7 @@ a {
 }
 .filter {
   border-bottom: solid black;
-  padding: 1em 2em;
+  padding: 1em 0em 1em;
 }
 /* Стиль для контейнеsра ползунка */
 .slider-container {

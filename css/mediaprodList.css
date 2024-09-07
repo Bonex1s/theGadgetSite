@@ -1,0 +1,220 @@
+@media (min-width: 320px) and (max-width: 480px) {
+  body {
+    overflow-x: hidden;
+  }
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    background-color: white;
+  }
+
+  .header-panel {
+    position: fixed;
+    color: black;
+    width: 100%;
+    display: inline-flex;
+    justify-content: flex-start;
+    background-color: white;
+    gap: 7em;
+  }
+
+  .header-panel .logo {
+    margin: 0 auto;
+  }
+
+  .logo {
+    width: 4em;
+    padding: 0.5em;
+  }
+
+  .menu_list {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: black;
+    color: white;
+    width: 100%;
+    padding: 1em;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .svg-list {
+    display: flex;
+    gap: 1em;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+  }
+  .svg-icon {
+    cursor: pointer;
+    transition: stroke 0.3s ease, transform 0.3s ease;
+    margin: 0;
+  }
+  .search-container {
+    position: absolute;
+    right: 0em;
+    top: 3.8em;
+    background: white;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    border-radius: 0%;
+  }
+
+  /* REGISTRATION */
+  .login-container {
+    display: none; /* Скрываем окно по умолчанию */
+    position: fixed;
+    height: 420px;
+    width: 100%;
+    background-color: #ffffff;
+    border: solid rgb(180, 180, 180);
+    top: 50%;
+    left: 50%;
+
+    /* Центрирование */
+  }
+
+  .login-container.visible {
+    display: flex; /* Показать окно с flex-раскладкой, когда класс "visible" добавлен */
+  }
+
+  .image-section {
+    display: none;
+  }
+
+  .text-front {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+  }
+
+  .text-front h1 {
+    font-size: 2em;
+    margin: 0;
+  }
+
+  .text-front p {
+    font-size: 1.2em;
+  }
+
+  .form-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2em;
+  }
+
+  .login-form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .login-form label {
+    margin-bottom: 0.5em;
+  }
+
+  .login-form input {
+    margin-bottom: 1em;
+    padding: 0.5em;
+    border: solid rgb(188, 188, 188);
+  }
+
+  .login-form button {
+    padding: 0.4em;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    border: solid;
+    width: 10em;
+    margin: auto;
+  }
+
+  /* MEDIA MENU --------------*/
+  .toggle-section {
+    display: none;
+    background-color: white;
+    padding-top: 4em;
+  }
+  .toggle-container {
+    display: grid;
+  }
+
+  .card-list {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 0;
+    grid-row-gap: 3em;
+  }
+}
+.cards {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.cards-block {
+  width: 100%;
+}
+.card {
+  width: 100%;
+  padding: 2em;
+}
+
+.filter-container {
+  display: none;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #000000;
+  color: white;
+  height: 600px;
+  margin-top: auto;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(2, 0.3fr);
+  padding: 2em 3em 1em 2em;
+}
+
+.footer-column {
+  padding: 0 45px 0em 0em;
+}
+
+.footer-column h3 {
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1em;
+}
+
+.footer-column ul li {
+  margin-bottom: 7px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+}
+
+.footer-column ul li a:hover {
+  color: #e1ce8c;
+}
+.footer p {
+  margin: 1.2em 4em;
+  font-weight: 100;
+}
