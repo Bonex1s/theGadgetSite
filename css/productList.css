@@ -208,6 +208,7 @@ a {
 .filter-container {
   width: 20%;
   padding: 3em 0em 6em 3em;
+  display: block;
 }
 .filter-container p {
   padding: 1em 0 0.6em;
