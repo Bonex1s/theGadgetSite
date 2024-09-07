@@ -1,4 +1,8 @@
 @media (min-width: 320px) and (max-width: 480px) {
+  .navigation {
+    font-size: 9px;
+    padding: 9em 2em 0;
+  }
   .menu-toggle {
     display: none;
   }
@@ -8,7 +12,13 @@
   }
   .product {
     text-align: center;
-    padding: 2em 3em 3em;
+    padding: 2em 2em 3em;
+  }
+  .product-main-countainer {
+    width: 100%;
+  }
+  .product-info {
+    width: 100%;
   }
   .small-img {
     width: 50em;
@@ -20,5 +30,51 @@
     display: inline-flex;
     flex-direction: column;
     gap: 3em;
+  }
+  .small-img-list {
+    padding: 0;
+  }
+
+  .buy-button-block {
+    display: flex;
+    flex-direction: column;
+  }
+  .header-text {
+    width: 100%;
+  }
+  .light-description-block {
+    display: none;
+  }
+  .description-menu {
+    gap: 2em;
+  }
+  .svg-info {
+    gap: 2em;
+  }
+  .description-block {
+    gap: 2em;
+    padding: 2em;
+  }
+  .description-img {
+    width: none;
+    box-shadow: none;
+    border-radius: 35px;
+  }
+
+  .user-information {
+    width: 100%;
+    padding: 0 0 0 1em;
+  }
+  .features-main-text {
+    padding-top: 2em;
+    padding-bottom: 1em;
+    font-weight: 600;
+    display: block;
+  }
+  .features {
+    text-align: left;
+  }
+  .characteristic-item {
+    display: block;
   }
 }

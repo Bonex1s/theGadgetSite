@@ -358,9 +358,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
-  margin-top: 5em;
-  margin-bottom: 5em;
+  padding: 5em 0 5em;
 }
 
 .item-block {
@@ -404,9 +402,7 @@ a {
   grid-template-columns: repeat(2, 1fr);
   grid-row-gap: 1em; /* Отступы между строками */
   grid-column-gap: 6em;
-  margin-left: 9em;
-  margin-right: 9em;
-  margin-top: 3em;
+  margin: 2em 4em 0;
 }
 
 .card-news {

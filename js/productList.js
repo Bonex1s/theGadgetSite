@@ -76,3 +76,10 @@ if (productTitle) {
 }
 
 const savedValue = localStorage.getItem("selectedProduct");
+
+if (document.getElementById("productTitle").textContent === "iPhone 15 Pro") {
+  document.getElementById("caseId").src =
+    "https://thegadget.ua/images/products/9b30974d82c824248d9eab2bd549dbc8878d4505199a2331c7b8f6d54055c257.webp";
+  document.getElementById("text-card").textContent =
+    "Чохол SwitchEasy Artist Case with MagSafe for iPhone 15 Pro 6.1 Fleur";
+}

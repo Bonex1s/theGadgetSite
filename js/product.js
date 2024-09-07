@@ -47,12 +47,12 @@ document.addEventListener("DOMContentLoaded", function () {
 const smallImages = document.querySelectorAll(".small-img img");
 const mainImage = document.getElementById("main-img");
 
-smallImages.forEach((img) => {
-  img.addEventListener("click", (event) => {
-    event.preventDefault();
-    mainImage.src = event.target.src;
-  });
-});
+// smallImages.forEach((img) => {
+//   img.addEventListener("click", (event) => {
+//     event.preventDefault();
+//     mainImage.src = event.target.src;
+//   });
+// });
 
 // RAITING
 
