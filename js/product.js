@@ -170,3 +170,11 @@ function closeCart() {
   document.getElementById("cartPanel").classList.remove("active");
   document.body.classList.remove("cart-open");
 }
+
+document.getElementById("description-button").addEventListener("click", () => {
+  const description = document.getElementById("description-container");
+  const feedbackCol = document.getElementById("feedback-col-container");
+
+  description.style.display = "none";
+  feedbackCol.style.display = "flex";
+});

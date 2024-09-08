@@ -205,17 +205,31 @@ a {
   display: none;
 }
 /* FILTER ----------------- */
+.sort {
+  text-align: right;
+  padding: 2em 2em 1em 0em;
+}
+.sort p {
+  font-size: 14px;
+  font-weight: 400;
+}
+.sort p span {
+  color: grey;
+}
 .filter-container {
   width: 20%;
-  padding: 3em 0em 6em 3em;
+  padding: 1em 0em 6em 3em;
   display: block;
 }
 .filter-container p {
   padding: 1em 0 0.6em;
-  border-bottom: solid black;
+  border-bottom: solid grey;
+  border-bottom-width: 0.5px;
+  font-size: small;
 }
 .filter {
-  border-bottom: solid black;
+  border-bottom: solid grey;
+  border-bottom-width: 1px;
   padding: 1em 0em 1em;
 }
 /* Стиль для контейнеsра ползунка */
@@ -294,7 +308,6 @@ a {
 }
 
 .cards {
-  padding-top: 2em;
   display: flex;
 }
 
@@ -303,16 +316,16 @@ a {
 }
 .card-list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-row-gap: 3em; /* Отступы между строками */
   grid-column-gap: 0.2em; /* Отступы между колонками */
-  margin: 5em;
+  margin: 0 2em;
   justify-items: center;
   align-items: center;
 }
 
 .card {
-  width: 14em;
+  width: 19em;
 
   text-align: center;
   border-radius: 8px;

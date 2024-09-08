@@ -460,6 +460,9 @@ body.cart-open {
 .description {
   text-align: center;
 }
+.description-container {
+  display: block;
+}
 .description-menu {
   display: flex;
   justify-content: center;
@@ -496,6 +499,18 @@ body.cart-open {
   box-shadow: 0 13px 20px rgba(0, 0, 0, 0.2);
   border-radius: 35px;
 }
+/* FEEDBACK PRODUCT */
+.feedback-data div {
+  display: flex;
+}
+.feedback-data {
+  display: flex;
+  flex-direction: column;
+}
+.feedback-col-container {
+  display: none;
+}
+
 /* FOOOOTER */
 
 .footer {
