@@ -76,7 +76,7 @@
     width: 100%;
     background-color: #ffffff;
     border: solid rgb(180, 180, 180);
-    top: 50%;
+    top: 36%;
     left: 50%;
 
     /* Центрирование */
@@ -189,6 +189,7 @@
     grid-template-rows: auto;
     gap: 10px;
     max-width: 100%;
+    padding: 1em;
   }
   .brends {
     display: grid;
