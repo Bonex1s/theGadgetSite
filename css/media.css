@@ -215,6 +215,7 @@
   .news-list {
     grid-template-columns: 1fr;
     margin: 0 2em; /* Установить отступы слева и справа */
+    padding: 0;
   }
   .carousel-container {
     padding-bottom: 2em;
@@ -306,7 +307,7 @@
   .footer {
     background-color: #000000;
     color: white;
-    height: 600px;
+    height: 620px;
     margin-top: auto;
   }
 
@@ -314,6 +315,10 @@
     display: grid;
     grid-template-columns: repeat(2, 0.3fr);
     padding: 2em 3em 1em 2em;
+    gap: 0;
+  }
+  .footer-main {
+    display: block;
   }
 
   .footer-column {
@@ -346,8 +351,20 @@
     color: #e1ce8c;
   }
   .footer p {
-    margin: 1.2em 4em;
+    margin: 0;
+    padding: 1em;
     font-weight: 100;
+  }
+  .footer-info {
+    padding: 0;
+    text-align: center;
+  }
+  .svg-footer-list {
+    display: flex;
+    justify-content: center;
+  }
+  .img-logo-footer {
+    display: none;
   }
 }
 @media (min-width: 768px) and (max-width: 1190px) {

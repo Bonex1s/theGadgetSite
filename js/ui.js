@@ -44,38 +44,39 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const menuCase = document.getElementById("item-preview-menu");
   const buttonMenuCase = document.getElementById("menu-text-case");
-
-  buttonMenuCase.addEventListener("mouseover", () => {
-    menuCase.style.display = "flex";
-  });
-  buttonMenuCase.addEventListener("mouseout", () => {
-    menuCase.style.display = "none";
-  });
-
-  menuCase.addEventListener("mouseover", () => {
-    menuCase.style.display = "flex";
-  });
-
-  menuCase.addEventListener("mouseout", () => {
-    menuCase.style.display = "none";
-  });
-
   const menuGlass = document.getElementById("item-preview-menu-2");
   const buttonMenuGlass = document.getElementById("menu-text-glass");
+  const buttonMenuPhone = document.getElementById("menu-text-phone");
+  const menuPhone = document.getElementById("item-preview-menu-3");
+  const menuСharger = document.getElementById("item-preview-menu-4");
+  const buttonСharger = document.getElementById("menu-text-charger");
+  const buttonOther = document.getElementById("menu-text-other");
+  const buttonGadget = document.getElementById("menu-text-gadget");
+  const menuGadget = document.getElementById("item-preview-menu-5");
+  const menuOther = document.getElementById("item-preview-menu-6");
 
-  buttonMenuGlass.addEventListener("mouseover", () => {
-    menuGlass.style.display = "flex";
-  });
-  buttonMenuGlass.addEventListener("mouseout", () => {
-    menuGlass.style.display = "none";
-  });
+  function previewMenu(menu, button) {
+    button.addEventListener("mouseover", () => {
+      menu.style.display = "flex";
+    });
+    button.addEventListener("mouseout", () => {
+      menu.style.display = "none";
+    });
 
-  menuGlass.addEventListener("mouseout", () => {
-    menuGlass.style.display = "none";
-  });
-  menuGlass.addEventListener("mouseover", () => {
-    menuGlass.style.display = "flex";
-  });
+    menu.addEventListener("mouseover", () => {
+      menu.style.display = "flex";
+    });
+
+    menu.addEventListener("mouseout", () => {
+      menu.style.display = "none";
+    });
+  }
+  previewMenu(menuCase, buttonMenuCase);
+  previewMenu(menuGlass, buttonMenuGlass);
+  previewMenu(menuPhone, buttonMenuPhone);
+  previewMenu(menuСharger, buttonСharger);
+  previewMenu(menuOther, buttonOther);
+  previewMenu(menuGadget, buttonGadget);
 
   // const productElement = document.getElementById("menu-text-case");
 

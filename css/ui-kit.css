@@ -2,6 +2,8 @@
 .header-text-strong {
   font-size: 1.3em;
   font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .grey-txt {
