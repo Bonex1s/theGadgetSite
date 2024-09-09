@@ -169,3 +169,13 @@ productLinks.forEach((link) => {
 });
 
 console.log(localStorage);
+
+function openCart() {
+  document.getElementById("cartPanel").classList.add("active");
+  document.body.classList.add("cart-open");
+}
+
+function closeCart() {
+  document.getElementById("cartPanel").classList.remove("active");
+  document.body.classList.remove("cart-open");
+}

@@ -96,6 +96,27 @@ a {
 .search-input::placeholder {
   color: black;
 }
+.cart-panel {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 23%;
+  height: 100%;
+  background-color: white;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  transition: right 0.9s cubic-bezier(0.25, 1, 0.5, 1); /* Плавная анимация */
+  overflow-y: auto; /* Скролл внутри корзины, если контент длинный */
+}
+
+.cart-panel.active {
+  right: 0; /* Панель выезжает на экран */
+}
+
+body.cart-open {
+  overflow: hidden; /* Отключение скролла страницы */
+}
+
 /* PREVIEW-BLOCK */
 .item-preview-menu {
   width: 100%;
@@ -535,6 +556,7 @@ a {
 /* FOOOOTER */
 
 .footer {
+  position: relative;
   background-color: #000000;
   color: white;
   height: 450px;
@@ -597,6 +619,6 @@ a {
 }
 .img-logo-footer {
   position: absolute;
-  top: 520%;
+  top: 50%;
   right: 6%;
 }
