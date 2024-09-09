@@ -10,6 +10,9 @@
   .product-img {
     width: 20em;
   }
+  .price {
+    font-size: 25px;
+  }
   .product {
     text-align: center;
     padding: 2em 2em 3em;
@@ -42,14 +45,20 @@
   .header-text {
     width: 100%;
   }
+
   .light-description-block {
     display: none;
   }
+  .colored-circles {
+    padding: 4em 0 1em;
+  }
+
   .description-menu {
     gap: 2em;
   }
   .svg-info {
     gap: 2em;
+    max-width: none;
   }
   .description-block {
     gap: 2em;
@@ -76,5 +85,17 @@
   }
   .characteristic-item {
     display: block;
+  }
+  .additional-info {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    padding: 0;
+  }
+  .user-social {
+    flex-direction: column;
+  }
+  .social a svg {
+    width: 25px;
   }
 }

@@ -265,8 +265,7 @@ body.cart-open {
 }
 
 .card {
-  width: 14em;
-
+  padding: 1em;
   text-align: center;
   border-radius: 8px;
   background-color: #fff; /* Добавить фоновый цвет */
@@ -293,24 +292,35 @@ body.cart-open {
   font-size: small;
   text-align: left;
   padding: 1em 0 1em;
+  height: 6em;
 }
 .prise {
   color: #757575;
 }
-.buy-button {
-  background-color: #ffffff;
-  color: black;
-  font-size: 12px;
-  border: 1px solid #000000;
-  padding: 10px 25px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  margin-top: 0.5em;
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0.5em;
 }
-.buy-button:hover {
-  background-color: #000000;
-  color: #ffffff;
+
+.stars {
+  display: flex;
+  gap: 5px;
 }
+
+.star {
+  width: 12px;
+  height: 12px;
+  fill: gold;
+}
+
+.rating-value {
+  margin-left: 1em;
+  font-size: 16px;
+  font-weight: 600;
+}
+
 .arrow {
   background: none;
   border: none;
@@ -570,7 +580,7 @@ body.cart-open {
 .footer-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  padding: 2em 0em 1em 1em;
+  padding: 2em 0em 1em 4em;
   gap: 9em;
 }
 

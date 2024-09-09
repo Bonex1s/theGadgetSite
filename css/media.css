@@ -176,7 +176,10 @@
   .card {
     width: 100%;
     height: auto; /* Высота будет зависеть от содержимого */
-    margin-bottom: 2em;
+    padding: 0;
+  }
+  .text-card {
+    height: 9em;
   }
 
   .items {
