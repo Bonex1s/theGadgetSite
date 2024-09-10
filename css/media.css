@@ -78,8 +78,6 @@
     border: solid rgb(180, 180, 180);
     top: 36%;
     left: 50%;
-
-    /* Центрирование */
   }
 
   .login-container.visible {
@@ -155,11 +153,25 @@
   /* HERO -------------------*/
   .hero {
     margin-top: 4em;
+    height: 14em;
   }
   .hero picture {
     height: auto;
     width: 100%;
     display: block;
+  }
+  .centered-text {
+    top: 38%;
+    transform: translate(-50%, -40%);
+    padding: 8px 42px;
+  }
+
+  .centered-text h1 {
+    font-size: 1.8rem; /* Уменьшаем размер заголовка на мобильных */
+  }
+
+  .centered-text p {
+    font-size: 1.2rem; /* Уменьшаем размер текста */
   }
 
   .select {
@@ -169,7 +181,7 @@
 
   .card-list {
     grid-template-columns: repeat(2, 1fr); /* Показываем по 2 карточки в ряд */
-    margin: 2em 1em; /* Удалить отступы по бокам */
+    margin: 2em 1em;
     grid-row-gap: 3em; /* Уменьшаем отступы между строками */
   }
 
@@ -184,7 +196,8 @@
 
   .items {
     flex-direction: column;
-    margin: 2em 0; /* Установить отступы сверху и снизу */
+    margin: 0;
+    padding: 3em 0 4em;
   }
 
   .item-block {
@@ -194,15 +207,18 @@
     max-width: 100%;
     padding: 1em;
   }
+  .brend-section {
+    padding: 1em 2em 0em;
+  }
   .brends {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     margin-top: auto;
     justify-content: center;
   }
   .brend-list {
-    height: 8em;
-    width: 11em;
+    height: 5em;
+    width: 6em;
   }
   .hidden {
     display: none;

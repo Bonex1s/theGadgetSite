@@ -229,9 +229,11 @@ body.cart-open {
 /* HERO */
 
 .hero {
+  display: flex;
+  justify-content: center;
   position: relative;
   width: 100%;
-  height: auto;
+  height: 48em;
   overflow: hidden;
   text-align: center;
 }
@@ -242,6 +244,35 @@ body.cart-open {
   object-fit: cover; /* Обрезает изображение для заполнения контейнера */
   display: block; /* Убирает отступы вокруг изображения */
 }
+
+.centered-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Центрирует блок */
+  background-color: rgba(255, 255, 255, 0.6); /* Полупрозрачный белый фон */
+  padding: 20px 40px;
+  text-align: center;
+  border-radius: 8px; /* Закругленные углы */
+}
+
+.centered-text h1 {
+  font-size: 3.5rem; /* Размер заголовка */
+  color: #000; /* Цвет текста */
+  margin: 0;
+  font-weight: 500;
+}
+
+.centered-text p {
+  font-size: 3.5rem;
+  color: #000;
+  margin: 0;
+  font-weight: 500;
+}
+.centered-text p span {
+  color: #ffffff;
+}
+
 /* CARDS MID */
 
 .select {
@@ -471,6 +502,9 @@ body.cart-open {
 
 .date-news {
   color: #888;
+}
+.hidden {
+  display: none;
 }
 
 .info-button {

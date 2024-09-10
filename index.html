@@ -510,11 +510,22 @@
     </header>
 
     <section class="hero">
-      <picture>
-        <source media="(max-width: 480px)" srcset="./assets/HeroMedia.png" />
-        <source media="(max-width: 768px)" srcset="./assets/HeroMedia.png" />
-        <img src="./assets/1111.png" alt="Responsive Image" />
+      <picture id="hero-picture">
+        <source media="(max-width: 480px)" srcset="./assets/hero-img-4M.webp" />
+        <source
+          media="(max-width: 768px)"
+          srcset="./assets/hero-image-4M.webp"
+        />
+        <img
+          id="hero-image"
+          src="./assets/hero-img-4.png"
+          alt="Responsive Image"
+        />
       </picture>
+      <div class="centered-text">
+        <h1>Мобільні аксесуари</h1>
+        <p>на <span>будь-який </span> смак!</p>
+      </div>
     </section>
     <section class="cards">
       <div class="select">
@@ -1502,7 +1513,7 @@
           <li class="brend-list">
             <img src="./assets/usams.png" alt="usams logo" />
           </li>
-          <li class="brend-list hidden">
+          <li class="brend-list">
             <img src="./assets/uag.png" alt="uag logo" />
           </li>
         </ul>
@@ -1527,9 +1538,9 @@
       </div>
       <h1 class="main-text">Новини та статті</h1>
       <div class="news-block">
-        <ul class="news-list">
-          <a href="./pages/newspage.html">
-            <li>
+        <div class="news-list">
+          <div class="news-item">
+            <a href="./pages/newspage.html">
               <div class="card-news">
                 <img
                   src="./assets/news1.png"
@@ -1545,25 +1556,117 @@
                   <span class="date-news">12:00</span>
                 </div>
               </div>
-            </li>
-          </a>
-          <li>
-            <div class="card-news">
-              <img
-                src="./assets/news2.png"
-                alt="Image Description"
-                class="card-news-image"
-              />
-              <div class="card-news-content">
-                <h2 class="main-news-text">
-                  Нова HomePod отримає вигнутий сенсорний екран
-                </h2>
-                <p class="additional-news-text">11.12.2024</p>
-                <span class="date-news">12:44</span>
+            </a>
+          </div>
+          <div class="news-item">
+            <a
+              href="https://www.unian.ua/games/arkeyn-drugiy-sezon-netflix-nareshti-pokazala-povnocinniy-treyler-12748695.html"
+              target="_blank"
+            >
+              <div class="card-news">
+                <img
+                  src="https://images.unian.net/photos/2024_09/1725541112-7046.jpg?r=464814"
+                  alt="Image Description"
+                  class="card-news-image"
+                />
+                <div class="card-news-content">
+                  <h2 class="main-news-text">
+                    Вийшов повноцінний трейлер другого сезону "Аркейн" – однієї
+                    з найкращих екранізацій ігор
+                  </h2>
+                  <p class="additional-news-text">05.09.24</p>
+                  <span class="date-news">16:15</span>
+                </div>
               </div>
-            </div>
-          </li>
-          <li>
+            </a>
+          </div>
+          <div class="news-item">
+            <a
+              href="https://www.unian.ua/techno/gadgets/prezentaciya-iphone-16-chogo-chekati-i-yak-divitisya-golovniy-ivent-roku-12751482.html?_gl=1*1eu3x4b*_ga*MTI3OTQzMjMxOC4xNzI1OTE2Njg0*_ga_TECJ2YKWSJ*MTcyNTkxNjY4NC4xLjEuMTcyNTkxNjcwOS4zNS4wLjA.*_ga_DENC12J6P3*MTcyNTkxNjY4NC4xLjEuMTcyNTkxNjcwOS4zNS4wLjM0MzI2NTQzMw.."
+            >
+              <div class="card-news">
+                <img
+                  src="https://images.unian.net/photos/2024_09/1725899818-6705.jpeg?r=577793"
+                  alt="Image Description"
+                  class="card-news-image"
+                />
+                <div class="card-news-content">
+                  <h2 class="main-news-text">
+                    Apple провела осінню презентацію 2024 року (подія завершена)
+                  </h2>
+                  <p class="additional-news-text">09.09.24</p>
+                  <span class="date-news">21:24</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="news-item">
+            <a
+              href="https://techno.nv.ua/ukr/gadgets/apple-pokazala-noviy-iphone-16-pro-50449549.html"
+            >
+              <div class="card-news">
+                <img
+                  src="https://static.nv.ua/shared/system/Article/posters/002/950/894/original/4622972d51165db366bb5bd8c6cbe89c.jpg?q=85&stamp=20240909213957&w=900&f=webp"
+                  alt="Image Description"
+                  class="card-news-image"
+                />
+                <div class="card-news-content">
+                  <h2 class="main-news-text">
+                    Багато ШІ та камера для Голлівуду. Apple показала iPhone 16
+                    Pro
+                  </h2>
+                  <p class="additional-news-text">10.05.2024</p>
+                  <span class="date-news">11:33</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <!-- HIDEN -->
+          <div class="news-item hidden">
+            <a
+              href="https://www.unian.ua/techno/gadgets/prezentaciya-iphone-16-chogo-chekati-i-yak-divitisya-golovniy-ivent-roku-12751482.html?_gl=1*1eu3x4b*_ga*MTI3OTQzMjMxOC4xNzI1OTE2Njg0*_ga_TECJ2YKWSJ*MTcyNTkxNjY4NC4xLjEuMTcyNTkxNjcwOS4zNS4wLjA.*_ga_DENC12J6P3*MTcyNTkxNjY4NC4xLjEuMTcyNTkxNjcwOS4zNS4wLjM0MzI2NTQzMw.."
+              target="_blank"
+            >
+              <div class="card-news">
+                <img
+                  src="https://static.nv.ua/shared/system/Article/posters/002/950/862/original/89716977d26b9a19ae34a30b9dc568fc.jpg?q=85&stamp=20240909202828&w=900&f=webp"
+                  alt="Image Description"
+                  class="card-news-image"
+                />
+                <div class="card-news-content">
+                  <h1 class="main-news-text">
+                    З новим дизайном і поліпшеною начинкою. Apple презентувала
+                    Apple Watch Series 10
+                  </h1>
+                  <p class="additional-news-text">09.09.24</p>
+                  <span class="date-news">21:24</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="news-item hidden">
+            <a
+              href="https://www.unian.ua/games/playstation-5-pro-prezentaciya-10-veresnya-sony-pokazhe-novu-konsol-12752538.html"
+              target="_blank"
+            >
+              <div class="card-news">
+                <img
+                  src="https://images.unian.net/photos/2024_09/1725895835-6171.png?r=896590"
+                  alt="Image Description"
+                  class="card-news-image"
+                />
+                <div class="card-news-content">
+                  <h2 class="main-news-text">
+                    Відразу після Apple: Sony анонсувала презентацію нової
+                    консолі PlayStation
+                  </h2>
+                  <p class="additional-news-text">09.09.24</p>
+                  <span class="date-news">18:40</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="news-item hidden">
             <div class="card-news">
               <img
                 src="./assets/news3.png"
@@ -1579,8 +1682,8 @@
                 <span class="date-news">16:00</span>
               </div>
             </div>
-          </li>
-          <li>
+          </div>
+          <div class="news-item hidden">
             <div class="card-news">
               <img
                 src="./assets/news4.png"
@@ -1596,10 +1699,12 @@
                 <span class="date-news">11:33</span>
               </div>
             </div>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
-      <button type="button" class="info-button">Читати більше</button>
+      <button type="button" class="info-button" id="loadMoreBtn">
+        Читати більше
+      </button>
       <div class="company-text">
         <p>
           В інтернет-магазині theGadget ви знайдете найкращі аксесуари та

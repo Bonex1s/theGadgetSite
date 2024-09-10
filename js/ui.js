@@ -179,3 +179,42 @@ function closeCart() {
   document.getElementById("cartPanel").classList.remove("active");
   document.body.classList.remove("cart-open");
 }
+
+document.getElementById("loadMoreBtn").addEventListener("click", function () {
+  const hiddenNews = document.querySelectorAll(".news-item.hidden");
+
+  hiddenNews.forEach((item, index) => {
+    if (index < 12) {
+      // Показываем 3 новости за раз
+      item.classList.add("visible");
+      item.classList.remove("hidden");
+    }
+  });
+
+  // Если все новости показаны, скрываем кнопку "Читать еще"
+  if (document.querySelectorAll(".news-item.hidden").length === 0) {
+    this.style.display = "none";
+  }
+});
+const images = [
+  { desktop: "./assets/hero-img.webp", mobile: "./assets/hero-img-M.webp" },
+  { desktop: "./assets/hero-img-3.webp", mobile: "./assets/hero-img-3M.webp" },
+  { desktop: "./assets/hero-img-4.png", mobile: "./assets/hero-img-4M.webp" },
+];
+
+let currentIndex = 0;
+
+function changeHeroImage() {
+  const heroImage = document.getElementById("hero-image");
+  const heroPicture = document
+    .getElementById("hero-picture")
+    .getElementsByTagName("source");
+
+  currentIndex = (currentIndex + 1) % images.length;
+
+  heroImage.src = images[currentIndex].desktop;
+  heroPicture[0].srcset = images[currentIndex].mobile;
+  heroPicture[1].srcset = images[currentIndex].mobile;
+}
+
+setInterval(changeHeroImage, 6000);
