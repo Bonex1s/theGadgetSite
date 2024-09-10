@@ -233,6 +233,11 @@ a {
   width: 550px;
   text-align: left;
 }
+.stoke-white-btn.active {
+  background-color: black;
+  color: white;
+}
+
 .buy-button-block {
   display: flex;
   gap: 0.8em;

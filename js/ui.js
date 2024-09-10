@@ -218,3 +218,13 @@ function changeHeroImage() {
 }
 
 setInterval(changeHeroImage, 6000);
+
+const buttonSelectZone = document.querySelectorAll(".select-zone");
+
+buttonSelectZone.forEach((button) => {
+  button.addEventListener("click", () => {
+    buttonSelectZone.forEach((btn) => btn.classList.remove("active"));
+
+    button.classList.add("active");
+  });
+});

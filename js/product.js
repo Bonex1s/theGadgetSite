@@ -1,3 +1,5 @@
+import { activeButton } from "./utils.js";
+
 document.addEventListener("DOMContentLoaded", function () {
   //  PROMOTION-BLOCK
 
@@ -178,3 +180,5 @@ document.getElementById("description-button").addEventListener("click", () => {
   description.style.display = "none";
   feedbackCol.style.display = "flex";
 });
+
+activeButton(".stoke-white-btn");

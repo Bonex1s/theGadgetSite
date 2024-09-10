@@ -378,6 +378,7 @@ body.cart-open {
   position: relative; /* Для позиционирования псевдоэлемента */
   overflow: hidden;
 }
+
 .select-zone::after {
   content: "";
   position: absolute; /* Абсолютное позиционирование */
@@ -392,6 +393,11 @@ body.cart-open {
 }
 .select-zone:hover::after {
   transform: scaleX(1); /* Подчеркивание становится видимым */
+  transform-origin: bottom left;
+}
+.select-zone:hover::after,
+.select-zone.active::after {
+  transform: scaleX(1);
   transform-origin: bottom left;
 }
 .prise {
