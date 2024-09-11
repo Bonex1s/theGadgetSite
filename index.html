@@ -503,9 +503,29 @@
         </div>
       </div>
       <div class="cart-panel" id="cartPanel">
-        <h2>Корзина</h2>
-        <p>Тут усі ваші товари...</p>
-        <button type="button" onclick="closeCart()">Закрити</button>
+        <div class="header-basket">
+          <span>Мій кошик</span>
+          <button type="button" onclick="closeCart()" style="font-size: 30px">
+            ×
+          </button>
+        </div>
+        <div class="cart-product">
+          <div class="img-cart-product">
+            <img src="./assets/spigencase1.webp" alt="Photo product" />
+          </div>
+          <div class="info-cart-product">
+            <p class="product-cart-name">
+              Захисне Скло MaiKai 3D Amazing Full Glass для iPhone X/XS/11 Pro
+            </p>
+            <p class="quantity-cart-product">
+              1x
+              <b> 399грн</b>
+            </p>
+            <span class="cancel-cart-ptoduct">Відмінити</span>
+          </div>
+        </div>
+        <p class="price-cart-product">Усього: <strong>300грн</strong></p>
+        <hr class="separator" />
       </div>
     </header>
 
@@ -1871,5 +1891,4 @@
   </body>
   <script src="./js/ui.js" defer></script>
   <script src="./js/main.js" defer></script>
-  <script src="./js/mobile.js" defer></script>
 </html>

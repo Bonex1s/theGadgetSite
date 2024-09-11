@@ -173,6 +173,9 @@ function closeCart() {
   document.body.classList.remove("cart-open");
 }
 
+window.openCart = openCart;
+window.closeCart = closeCart;
+
 document.getElementById("description-button").addEventListener("click", () => {
   const description = document.getElementById("description-container");
   const feedbackCol = document.getElementById("feedback-col-container");
@@ -182,3 +185,4 @@ document.getElementById("description-button").addEventListener("click", () => {
 });
 
 activeButton(".stoke-white-btn");
+console.log("Script loaded");

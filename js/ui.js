@@ -228,3 +228,5 @@ buttonSelectZone.forEach((button) => {
     button.classList.add("active");
   });
 });
+
+console.log("Script loaded");
