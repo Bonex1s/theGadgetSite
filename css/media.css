@@ -139,6 +139,9 @@
     width: 10em;
     margin: auto;
   }
+  .cart-panel {
+    width: 89%;
+  }
 
   /* MEDIA MENU --------------*/
   .toggle-section {

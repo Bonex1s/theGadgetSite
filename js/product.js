@@ -186,3 +186,120 @@ document.getElementById("description-button").addEventListener("click", () => {
 
 activeButton(".stoke-white-btn");
 console.log("Script loaded");
+
+// CART ADD -------------------------------------------------------
+
+// ==================================================================
+
+// Получаем сохраненную корзину из LocalStorage
+function getCart() {
+  return JSON.parse(localStorage.getItem("cart")) || [];
+}
+
+// Сохраняем корзину в LocalStorage
+function saveCart(cart) {
+  localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+// Добавляем товар в корзину
+function addToCart(event) {
+  event.preventDefault();
+  console.log("addToCart called");
+
+  const productName = document.querySelector("#product-header").textContent;
+  const productPrice = parseInt(
+    document.querySelector("#price").textContent.replace(/\D/g, "")
+  );
+  const productImg = document.querySelector("#main-img").src;
+
+  const cart = getCart();
+  const existingProduct = cart.find((item) => item.name === productName);
+
+  if (existingProduct) {
+    existingProduct.quantity += 1;
+  } else {
+    cart.push({
+      name: productName,
+      price: productPrice,
+      img: productImg,
+      quantity: 1,
+    });
+  }
+
+  saveCart(cart);
+  renderCart();
+}
+
+// Отображаем корзину
+function renderCart() {
+  const cart = getCart();
+  const cartItemsContainer = document.querySelector("#cart-product");
+  const totalPriceElement = document.querySelector("#price-cart-product");
+  cartItemsContainer.innerHTML = "";
+  let totalPrice = 0;
+
+  cart.forEach((item, index) => {
+    const cartItem = document.createElement("div");
+    cartItem.classList.add("cart-product");
+    cartItem.innerHTML = `
+      <div class="img-cart-product">
+        <img src="${item.img}" alt="Фото товара" />
+      </div>
+      <div class="info-cart-product">
+        <p class="product-cart-name">${item.name}</p>
+        <p class="quantity-cart-product">${item.quantity}x <b>${item.price} грн</b></p>
+        <span class="cancel-product js-cancel-cart-product" data-index="${index}">Відмінити</span>
+      </div>
+    `;
+    cartItemsContainer.appendChild(cartItem);
+    totalPrice += item.price * item.quantity;
+  });
+
+  totalPriceElement.innerHTML = `Усього: <strong>${totalPrice} грн</strong>`;
+
+  document
+    .querySelectorAll(".cancel-product.js-cancel-cart-product")
+    .forEach((button) => {
+      button.addEventListener("click", removeFromCart);
+    });
+}
+
+// Удаляем один элемент товара из корзины
+function removeFromCart(event) {
+  const cancelButton = event.target;
+  if (!cancelButton.classList.contains("cancel-product")) return;
+
+  const productName = cancelButton
+    .closest(".cart-product")
+    .querySelector(".product-cart-name").textContent;
+
+  let cart = getCart();
+  cart = cart
+    .map((item) => {
+      if (item.name === productName) {
+        if (item.quantity > 1) {
+          item.quantity -= 1; // Уменьшаем количество товара
+        } else {
+          return null; // Удаляем товар, если количество становится равным 0
+        }
+      }
+      return item;
+    })
+    .filter((item) => item !== null); // Удаляем все null элементы из корзины
+
+  saveCart(cart);
+  renderCart();
+}
+
+// Инициализация
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".button-57.js-add-to-card").forEach((button) => {
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+      console.log("Button clicked");
+      addToCart(event);
+    });
+  });
+
+  renderCart();
+});

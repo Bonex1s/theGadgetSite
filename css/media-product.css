@@ -98,4 +98,7 @@
   .social a svg {
     width: 25px;
   }
+  .cart-panel {
+    width: 89%;
+  }
 }

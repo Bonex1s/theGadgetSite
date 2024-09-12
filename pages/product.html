@@ -187,7 +187,7 @@
               />
             </svg>
           </li>
-          <li class="svg-icon">
+          <li class="svg-icon" onclick="openCart()">
             <svg
               width="30"
               height="30"
@@ -779,7 +779,7 @@
             </svg>
           </div>
           <div class="models">
-            <button class="stoke-white-btn">iPhone 15</button>
+            <button class="stoke-white-btn" id="test">iPhone 15</button>
             <button class="stoke-white-btn">iPhone 15 Pro</button>
             <button class="stoke-white-btn">iPhone 15 Pro Max</button>
           </div>
@@ -870,12 +870,45 @@
             </div>
           </div>
           <div class="cart-panel" id="cartPanel">
-            <h2>Корзина</h2>
-            <p>Тут усі ваші товари...</p>
-            <button onclick="closeCart()">Закрити</button>
+            <div class="header-basket">
+              <span>Мій кошик</span>
+              <button
+                type="button"
+                onclick="closeCart()"
+                style="font-size: 30px"
+              >
+                ×
+              </button>
+            </div>
+            <div class="cart-product-main" id="cart-product">
+              <div class="img-cart-product">
+                <img src="../assets/spigencase1.webp" alt="Photo product" />
+              </div>
+              <div class="info-cart-product">
+                <p class="product-cart-name" id="product-cart-name">
+                  Захисне Скло MaiKai 3D Amazing Full Glass для iPhone X/XS/11
+                  Pro
+                </p>
+                <p class="quantity-cart-product">
+                  1x
+                  <b> 399грн</b>
+                </p>
+                <span class="cancel-product js-cancel-cart-product"
+                  >Відмінити</span
+                >
+              </div>
+            </div>
+            <p class="price-cart-product" id="price-cart-product">
+              Усього: <strong>300грн</strong>
+            </p>
+            <hr class="separator" />
           </div>
           <div class="buy-button-block">
-            <button class="button-57" role="button" onclick="openCart()">
+            <button
+              class="button-57 js-add-to-card"
+              role="button"
+              onclick="openCart()"
+            >
               <span class="text">Купити</span><span>До кошика</span>
             </button>
 

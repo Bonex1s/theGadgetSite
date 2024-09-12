@@ -96,6 +96,7 @@ a {
 .search-input::placeholder {
   color: black;
 }
+/* CART PANEL (BASKET) */
 .cart-panel {
   position: fixed;
   top: 0;
