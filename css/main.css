@@ -155,6 +155,52 @@ body.cart-open {
   border-top: 1px solid #ccc;
   margin: 10px 0;
 }
+.main-extra-section {
+  display: flex;
+  justify-content: space-between;
+}
+.extra-container {
+  display: flex;
+  margin: 1em 1em 0;
+  border: solid black;
+  border-radius: 6px;
+  border-width: 0.5px;
+}
+.extra-img {
+  width: 250px;
+  padding: 0.5em;
+}
+
+.exta-header-text {
+  font-size: 13px;
+  font-weight: 500;
+}
+.extra-product-info {
+  padding: 1em;
+}
+.add-button {
+  background-color: black;
+  border-radius: 6px;
+  color: white;
+  padding: 1em;
+  margin: 0.5em;
+  font-size: 13px;
+}
+.extra-colors-svg svg {
+  width: 22px;
+}
+.extra-colors-svg {
+  padding-top: 0.5em;
+}
+.red-price {
+  font-size: 16px;
+  color: red;
+  font-weight: 600;
+}
+.old-price {
+  font-size: 15px;
+  text-decoration: line-through;
+}
 
 /* PREVIEW-BLOCK */
 .item-preview-menu {

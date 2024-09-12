@@ -189,19 +189,14 @@ console.log("Script loaded");
 
 // CART ADD -------------------------------------------------------
 
-// ==================================================================
-
-// Получаем сохраненную корзину из LocalStorage
 function getCart() {
   return JSON.parse(localStorage.getItem("cart")) || [];
 }
 
-// Сохраняем корзину в LocalStorage
 function saveCart(cart) {
   localStorage.setItem("cart", JSON.stringify(cart));
 }
 
-// Добавляем товар в корзину
 function addToCart(event) {
   event.preventDefault();
   console.log("addToCart called");
@@ -230,7 +225,6 @@ function addToCart(event) {
   renderCart();
 }
 
-// Отображаем корзину
 function renderCart() {
   const cart = getCart();
   const cartItemsContainer = document.querySelector("#cart-product");
@@ -264,7 +258,6 @@ function renderCart() {
     });
 }
 
-// Удаляем один элемент товара из корзины
 function removeFromCart(event) {
   const cancelButton = event.target;
   if (!cancelButton.classList.contains("cancel-product")) return;
@@ -278,22 +271,21 @@ function removeFromCart(event) {
     .map((item) => {
       if (item.name === productName) {
         if (item.quantity > 1) {
-          item.quantity -= 1; // Уменьшаем количество товара
+          item.quantity -= 1;
         } else {
-          return null; // Удаляем товар, если количество становится равным 0
+          return null;
         }
       }
       return item;
     })
-    .filter((item) => item !== null); // Удаляем все null элементы из корзины
+    .filter((item) => item !== null);
 
   saveCart(cart);
   renderCart();
 }
 
-// Инициализация
 document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".button-57.js-add-to-card").forEach((button) => {
+  document.querySelectorAll(".button-57.js-add-to-cart").forEach((button) => {
     button.addEventListener("click", (event) => {
       event.preventDefault();
       console.log("Button clicked");

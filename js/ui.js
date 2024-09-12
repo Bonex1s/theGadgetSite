@@ -161,14 +161,15 @@ const productLinks = document.querySelectorAll("a[data-product]");
 productLinks.forEach((link) => {
   link.addEventListener("click", (event) => {
     // Получаем значение атрибута data-product (название товара)
-    const productName = this.getAttribute("data-product");
+    const productName = event.target.getAttribute("data-product");
 
     // Сохраняем текст в localStorage
     localStorage.setItem("selectedProduct", productName);
+
+    // Для проверки выводим значение в консоль
+    console.log(localStorage.getItem("selectedProduct"));
   });
 });
-
-console.log(localStorage);
 
 function openCart() {
   document.getElementById("cartPanel").classList.add("active");
