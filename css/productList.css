@@ -298,7 +298,122 @@ a {
   justify-content: space-between;
   padding: 1em 0;
 }
+/* CART PANEL (BASKET) */
+.cart-panel {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 32%;
+  height: 100%;
+  background-color: white;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  transition: right 0.9s cubic-bezier(0.25, 1, 0.5, 1); /* Плавная анимация */
+  overflow-y: auto; /* Скролл внутри корзины, если контент длинный */
+}
 
+.cart-panel.active {
+  right: 0; /* Панель выезжает на экран */
+}
+
+body.cart-open {
+  overflow: hidden; /* Отключение скролла страницы */
+}
+.header-basket {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em 1.5em;
+}
+.header-basket span {
+  font-weight: 600;
+}
+.cart-product {
+  display: flex;
+  padding: 1em 1em 0;
+  margin-bottom: 1em;
+}
+.cart-product img {
+  width: 250px;
+}
+.product-cart-name {
+  font-size: 13px;
+  font-weight: 500;
+}
+.cancel-product {
+  border-bottom: solid #757575;
+  border-width: 1px;
+  color: grey;
+  font-size: 12px;
+  cursor: pointer;
+}
+.quantity-cart-product {
+  font-size: 12px;
+  padding-top: 0.5em;
+}
+.price-cart-product {
+  padding: 1em 2em;
+}
+.separator {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 10px 0;
+}
+.main-extra-section {
+  display: flex;
+  justify-content: space-between;
+}
+.extra-container {
+  display: flex;
+  margin: 1em 1em 0;
+  border: solid black;
+  border-radius: 6px;
+  border-width: 0.5px;
+}
+.extra-img {
+  width: 250px;
+  padding: 0.5em;
+}
+
+.exta-header-text {
+  font-size: 13px;
+  font-weight: 500;
+}
+.extra-product-info {
+  padding: 1em;
+}
+.add-button {
+  background-color: black;
+  border-radius: 6px;
+  color: white;
+  padding: 1em;
+  margin: 0.5em;
+  font-size: 13px;
+}
+.extra-colors-svg svg {
+  width: 22px;
+}
+.extra-colors-svg {
+  padding-top: 0.5em;
+}
+.red-price {
+  font-size: 16px;
+  color: red;
+  font-weight: 600;
+}
+.old-price {
+  font-size: 15px;
+  text-decoration: line-through;
+}
+.formalize {
+  width: 27em;
+  background-color: black;
+  color: white;
+  padding: 1em 1em;
+  margin: 1em;
+}
+.formalize:hover {
+  background-color: #757575;
+}
 /* CARDS MID */
 .header-productList-menu {
   padding-top: 5em;
@@ -419,15 +534,22 @@ a {
 /* FOOOOTER */
 
 .footer {
+  position: relative;
   background-color: #000000;
   color: white;
   height: 450px;
   margin-top: 7em;
 }
+.footer-main {
+  display: flex;
+  justify-content: space-between;
+}
+
 .footer-container {
   display: grid;
-  grid-template-columns: repeat(3, 0.3fr);
-  padding: 2em 13em 1em 2em;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 2em 0em 1em 4em;
+  gap: 9em;
 }
 
 .footer-column {
@@ -462,6 +584,23 @@ a {
   margin: 1.2em 4em;
   font-weight: 100;
 }
+.footer-info {
+  padding: 2em;
+  text-align: center;
+}
+.svg-footer-list {
+  display: flex;
+}
+.svg-footer-list li a svg {
+  width: 40px;
+  padding: 0.2em;
+}
+.img-logo-footer {
+  position: absolute;
+  top: 50%;
+  right: 6%;
+}
+
 .rating {
   display: flex;
   align-items: center;

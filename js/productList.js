@@ -1,3 +1,6 @@
+import cartTemplate from "./cart-template.js";
+import footerTemplate from "./footer-template.js";
+
 const minRange = document.getElementById("minRange");
 const maxRange = document.getElementById("maxRange");
 const minPrice = document.getElementById("minPrice");
@@ -83,3 +86,134 @@ if (document.getElementById("productTitle").textContent === "iPhone 15 Pro") {
   document.getElementById("text-card").textContent =
     "Чохол SwitchEasy Artist Case with MagSafe for iPhone 15 Pro 6.1 Fleur";
 }
+
+function openCart() {
+  document.getElementById("cartPanel").classList.add("active");
+  document.body.classList.add("cart-open");
+}
+
+function closeCart() {
+  document.getElementById("cartPanel").classList.remove("active");
+  document.body.classList.remove("cart-open");
+}
+
+window.openCart = openCart;
+window.closeCart = closeCart;
+
+function renderContainer() {
+  const cartContainer = document.getElementById("cart-container");
+  const footerContainer = document.getElementById("footer");
+  cartContainer.innerHTML = cartTemplate;
+  footerContainer.innerHTML = footerTemplate;
+}
+document.addEventListener("DOMContentLoaded", renderContainer);
+document.addEventListener("DOMContentLoaded", renderContainer);
+
+// CART ADD -------------------------------------------------------
+
+function getCart() {
+  return JSON.parse(localStorage.getItem("cart")) || [];
+}
+
+function saveCart(cart) {
+  localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+function addToCart(event) {
+  event.preventDefault();
+  console.log("addToCart called");
+
+  const productName = document.querySelector("#product-header").textContent;
+  const productPrice = parseInt(
+    document.querySelector("#price").textContent.replace(/\D/g, "")
+  );
+  const productImg = document.querySelector("#main-img").src;
+
+  const cart = getCart();
+  const existingProduct = cart.find((item) => item.name === productName);
+
+  if (existingProduct) {
+    existingProduct.quantity += 1;
+  } else {
+    cart.push({
+      name: productName,
+      price: productPrice,
+      img: productImg,
+      quantity: 1,
+    });
+  }
+
+  saveCart(cart);
+  renderCart();
+}
+
+function renderCart() {
+  const cart = getCart();
+  const cartItemsContainer = document.querySelector("#cart-product");
+  const totalPriceElement = document.querySelector("#price-cart-product");
+  cartItemsContainer.innerHTML = "";
+  let totalPrice = 0;
+
+  cart.forEach((item, index) => {
+    const cartItem = document.createElement("div");
+    cartItem.classList.add("cart-product");
+    cartItem.innerHTML = `
+      <div class="img-cart-product">
+        <img src="${item.img}" alt="Фото товара" />
+      </div>
+      <div class="info-cart-product">
+        <p class="product-cart-name">${item.name}</p>
+        <p class="quantity-cart-product">${item.quantity}x <b>${item.price} грн</b></p>
+        <span class="cancel-product js-cancel-cart-product" data-index="${index}">Відмінити</span>
+      </div>
+    `;
+    cartItemsContainer.appendChild(cartItem);
+    totalPrice += item.price * item.quantity;
+  });
+
+  totalPriceElement.innerHTML = `Усього: <strong>${totalPrice} грн</strong>`;
+
+  document
+    .querySelectorAll(".cancel-product.js-cancel-cart-product")
+    .forEach((button) => {
+      button.addEventListener("click", removeFromCart);
+    });
+}
+
+function removeFromCart(event) {
+  const cancelButton = event.target;
+  if (!cancelButton.classList.contains("cancel-product")) return;
+
+  const productName = cancelButton
+    .closest(".cart-product")
+    .querySelector(".product-cart-name").textContent;
+
+  let cart = getCart();
+  cart = cart
+    .map((item) => {
+      if (item.name === productName) {
+        if (item.quantity > 1) {
+          item.quantity -= 1;
+        } else {
+          return null;
+        }
+      }
+      return item;
+    })
+    .filter((item) => item !== null);
+
+  saveCart(cart);
+  renderCart();
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".button-57.js-add-to-cart").forEach((button) => {
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+      console.log("Button clicked");
+      addToCart(event);
+    });
+  });
+
+  renderCart();
+});

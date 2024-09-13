@@ -18,7 +18,7 @@
     <title>theGadget</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header" id="header">
       <div class="header-panel">
         <a href="../index.html">
           <img class="logo" src="../assets/Logo 5.png" alt="LOGO" />
@@ -182,7 +182,7 @@
               />
             </svg>
           </li>
-          <li class="svg-icon">
+          <li class="svg-icon" onclick="openCart()">
             <svg
               width="30"
               height="30"
@@ -217,7 +217,7 @@
             </svg>
           </li>
           <li class="svg-icon">
-            <div class="menu-toggle" id="menu-toggle">
+            <div class="menu-toggle" id="menu-toggle" onclick="openCart()">
               <svg
                 width="24"
                 height="24"
@@ -1442,8 +1442,9 @@
         </ul>
       </div>
     </section>
+    <div class="cart-container" id="cart-container"></div>
 
-    <footer class="footer">
+    <footer class="footer" id="footer">
       <div class="footer-container">
         <div class="footer-column">
           <h3>Інфо</h3>
@@ -1481,5 +1482,6 @@
     </footer>
   </body>
 
-  <script src="../js/productList.js" defer></script>
+  <script type="module" src="../js/productList.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
 </html>
