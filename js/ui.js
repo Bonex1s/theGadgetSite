@@ -231,3 +231,22 @@ buttonSelectZone.forEach((button) => {
 });
 
 console.log("Script loaded");
+// LOGIN ------------------------------------------------------------------------
+
+document.querySelector("#login-form").addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const username = document.querySelector("#username").value;
+  const password = document.querySelector("#password").value;
+
+  if (username === "admin" && password === "admin") {
+    localStorage.setItem(
+      "user",
+      JSON.stringify({ name: "Test User", email: "test@example.com" })
+    );
+
+    window.location.href = "./pages/user.html";
+  } else {
+    alert("Неверный логин или пароль");
+  }
+});
