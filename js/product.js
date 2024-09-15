@@ -295,3 +295,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   renderCart();
 });
+
+const toggleBtn = document.getElementById("characteristic-toggle-btn");
+const moreCharacteristics = document.getElementById("more-characteristics");
+
+toggleBtn.addEventListener("click", function () {
+  moreCharacteristics.classList.toggle("open");
+
+  if (moreCharacteristics.classList.contains("open")) {
+    toggleBtn.textContent = "Скрити характеристики";
+  } else {
+    toggleBtn.textContent = "Ще характеристики";
+  }
+});
