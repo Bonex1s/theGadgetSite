@@ -74,7 +74,7 @@ a {
 }
 .menu-text:hover {
   cursor: pointer;
-  color: #e1ce8c; /* Цвет текста при наведении */
+  color: var(--primary-color);
   transform: scale(1.05); /* Увеличение текста при наведении */
 }
 .svg-list {
@@ -90,7 +90,7 @@ a {
 }
 .svg-list :hover path {
   stroke-width: 5;
-  stroke: #e1ce8c;
+  stroke: var(--primary-color);
   transform: scale(1.1);
 }
 .search-container {
@@ -526,7 +526,7 @@ body.cart-open {
 }
 .description-menu span:hover {
   font-weight: bold;
-  color: #e1ce8c;
+  color: var(--primary-color);
   cursor: pointer;
 }
 .description-block {
@@ -603,7 +603,7 @@ body.cart-open {
 }
 
 .footer-column ul li a:hover {
-  color: #e1ce8c;
+  color: var(--primary-color);
 }
 .footer p {
   font-weight: 100;

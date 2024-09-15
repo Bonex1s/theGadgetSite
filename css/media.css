@@ -370,7 +370,7 @@
   }
 
   .footer-column ul li a:hover {
-    color: #e1ce8c;
+    color: var(--primary-color);
   }
   .footer p {
     margin: 0;

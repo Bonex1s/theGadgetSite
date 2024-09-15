@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/user.css" />
     <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/variables.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -212,30 +213,98 @@
         </ul>
       </div>
     </header>
-    <section>
-      <div
-        style="
-          font-size: 50px;
-          font-weight: 600;
-          padding: 7em;
-          text-align: center;
-        "
-      >
-        Данні аккаунту будуть тут
+    <section class="account-page-container">
+      <div class="primary-section">
+        <div class="profile-main-header">Власний кабінет</div>
+        <hr class="separator-full" />
+        <div class="profile-name">
+          <b>Віталій В.</b> <span>Бонуси: <b>100</b></span>
+        </div>
+
+        <div class="personal-data-container">
+          <div class="personal-data">
+            <div class="personal-data-header">
+              <h3>Мої персональні данні</h3>
+              <span class="arrow">&#8250;</span>
+              <!-- Иконка стрелки -->
+            </div>
+            <div class="personal-data-content">
+              <p>Тут будуть ваші персональні данні.</p>
+            </div>
+          </div>
+          <div class="personal-data">
+            <div class="personal-data-header">
+              <h3>Мої замовлення</h3>
+              <span class="arrow">&#8250;</span>
+              <!-- Иконка стрелки -->
+            </div>
+            <div class="personal-data-content">
+              <p>Тут буде інформація про ваші замовлення.</p>
+            </div>
+          </div>
+          <div class="personal-data">
+            <div class="personal-data-header">
+              <h3>Адреса</h3>
+              <span class="arrow">&#8250;</span>
+              <!-- Иконка стрелки -->
+            </div>
+            <div class="personal-data-content">
+              <p>Тут буде інформація про вашу адресу.</p>
+            </div>
+          </div>
+        </div>
+
         <a href="../index.html">
           <button
-            type="button"
-            style="
-              font-size: 25px;
-              background-color: black;
-              color: white;
-              padding: 0.3em 1.8em;
-              border-radius: 5px;
-            "
+            class="back-button"
+            style="background-color: black; color: white"
           >
-            Вийти
+            Вихід
           </button>
         </a>
+      </div>
+      <div class="secondary-section">
+        <div class="cart-panel" id="cartPanel">
+          <div class="header-basket">
+            <span>Останні покупки</span>
+          </div>
+          <div class="cart-product">
+            <div class="img-cart-product">
+              <img
+                src="https://thegadget.ua/images/products/90827e0735decbb88439c4ebb28ecc0a34026d160acccad4a5c4019a5f1d7ff8.webp"
+                alt="Photo product"
+              />
+            </div>
+            <div class="info-cart-product">
+              <p class="product-cart-name">
+                Чохол Benks Lucent Pro Case for iPhone 16 Pro Max with MagSafe
+                Transparent
+              </p>
+              <p class="quantity-cart-product">
+                1x
+                <b> 999грн</b>
+              </p>
+            </div>
+          </div>
+
+          <hr class="separator" />
+          <div class="cart-product">
+            <div class="img-cart-product">
+              <img src="../assets/spigencase1.webp" alt="Photo product" />
+            </div>
+            <div class="info-cart-product">
+              <p class="product-cart-name">
+                Захисне Скло MaiKai 3D Amazing Full Glass для iPhone X/XS/11 Pro
+              </p>
+              <p class="quantity-cart-product">
+                1x
+                <b> 399грн</b>
+              </p>
+            </div>
+          </div>
+
+          <hr class="separator" />
+        </div>
       </div>
     </section>
   </body>

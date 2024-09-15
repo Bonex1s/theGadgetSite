@@ -49,7 +49,7 @@ a {
   display: flex;
   align-items: center;
   padding-right: 10em;
-  gap: 2em;
+  gap: 1em;
 }
 .menu-text {
   transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
@@ -201,4 +201,133 @@ a {
 /* TOGGLE MENU -------------*/
 .toggle-section {
   display: none;
+}
+
+/* MAIN ZONE ============================= */
+.account-page-container {
+  display: flex;
+  height: 100vh;
+}
+.primary-section {
+  flex: 0 0 65%; /* Левая часть займет 70% */
+  background-color: #f0f0f0;
+}
+.secondary-section {
+  flex: 0 0 35%; /* Правая часть займет 30% */
+  border-left: solid var(--separator-color);
+}
+/* PRIMARY SECTION ======================== */
+.back-button {
+  position: absolute; /* Абсолютное позиционирование кнопки */
+  bottom: 10px; /* Отступ от нижней границы контейнера */
+  left: 10px; /* Отступ от левой границы контейнера */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.profile-name {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 2.5em;
+  font-size: 20px;
+}
+.profile-main-header {
+  padding: 5em 1.5em 0;
+  font-size: 25px;
+  font-weight: 600;
+}
+.separator {
+  border: none;
+  border-top: 1px solid var(--separator-color);
+  margin: 1em 1em 1em 1em;
+}
+.separator-full {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 1em 0em 1em 0;
+  width: 100%;
+}
+.personal-data {
+  padding: 10px;
+}
+
+.personal-data-header {
+  display: inline-flex;
+  border-bottom: 1px solid #ddd;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  width: 40em;
+  margin: 1em 2em;
+  font-size: 21px;
+}
+
+.personal-data-header h3 {
+  font-weight: bold;
+}
+
+.personal-data-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.personal-data-content.open {
+  max-height: 100px; /* Измените на нужный вам размер */
+}
+
+.personal-data-content {
+  padding-left: 3em;
+}
+
+.personal-data-container {
+  padding-top: 2em;
+}
+
+.arrow {
+  font-size: 24px;
+  transition: transform 0.3s ease;
+}
+
+.arrow.rotate {
+  transform: rotate(90deg);
+}
+/* SECONDARY SECTION =================== */
+/* CART PANEL ============================ */
+
+.cart-panel {
+  height: 100%;
+  background-color: white;
+
+  padding-top: 4em;
+}
+
+.header-basket {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em 1.5em;
+}
+.header-basket span {
+  font-weight: 600;
+}
+.cart-product {
+  display: flex;
+  padding: 1em 1em 0;
+  margin-bottom: 1em;
+}
+.cart-product img {
+  width: 250px;
+}
+.product-cart-name {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.quantity-cart-product {
+  font-size: 12px;
+  padding-top: 0.5em;
+}
+.price-cart-product {
+  padding: 1em 2em;
 }

@@ -58,7 +58,7 @@ a {
 }
 .menu-text:hover {
   cursor: pointer;
-  color: #e1ce8c; /* Цвет текста при наведении */
+  color: var(--primary-color);
   transform: scale(1.05); /* Увеличение текста при наведении */
 }
 .svg-list {
@@ -73,7 +73,7 @@ a {
 }
 .svg-list :hover path {
   stroke-width: 5;
-  stroke: #e1ce8c;
+  stroke: var(--primary-color);
   transform: scale(1.1);
 }
 .search-container {
@@ -112,7 +112,7 @@ a {
   display: block;
 }
 .preview-list a:hover {
-  color: #e1ce8c;
+  color: var(--primary-color);
 }
 
 /* REGISTRATION-LOGIN */
@@ -451,7 +451,7 @@ body.cart-open {
 .new-label {
   position: absolute;
   top: 10px;
-  background-color: #e1ce8c;
+  background-color: var(--primary-color);
   color: #000000;
   padding: 5px 10px;
   font-size: 12px;
@@ -578,7 +578,7 @@ body.cart-open {
 }
 
 .footer-column ul li a:hover {
-  color: #e1ce8c;
+  color: var(--primary-color);
 }
 .footer p {
   margin: 1.2em 4em;
