@@ -215,11 +215,26 @@
     </header>
     <section class="account-page-container">
       <div class="primary-section">
-        <div class="profile-main-header">Власний кабінет</div>
-        <hr class="separator-full" />
-        <div class="profile-name">
-          <b>Віталій В.</b> <span>Бонуси: <b>100</b></span>
+        <div class="profile-data">
+          <div class="profile-data-container">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="50"
+              height="50"
+              fill="currentColor"
+            >
+              <circle cx="12" cy="8" r="4" />
+              <path d="M12 14c-5 0-8 2.5-8 5v1h16v-1c0-2.5-3-5-8-5z" />
+            </svg>
+            <div class="name-imail">
+              Віталій В. <br />
+              exemple@mail.com
+            </div>
+          </div>
+          <span>Бонуси: <b>100</b></span>
         </div>
+        <hr class="separator-full" />
 
         <div class="personal-data-container">
           <div class="personal-data">
@@ -252,6 +267,26 @@
               <p>Тут буде інформація про вашу адресу.</p>
             </div>
           </div>
+          <div class="personal-data">
+            <div class="personal-data-header">
+              <h3>Мої відгуки</h3>
+              <span class="arrow">&#8250;</span>
+              <!-- Иконка стрелки -->
+            </div>
+            <div class="personal-data-content">
+              <p>Тут будуть ваші персональні данні.</p>
+            </div>
+          </div>
+          <div class="personal-data">
+            <div class="personal-data-header">
+              <h3>Моя бонусна система</h3>
+              <span class="arrow">&#8250;</span>
+              <!-- Иконка стрелки -->
+            </div>
+            <div class="personal-data-content">
+              <p>Тут будуть ваші персональні данні.</p>
+            </div>
+          </div>
         </div>
 
         <a href="../index.html">
@@ -264,26 +299,50 @@
         </a>
       </div>
       <div class="secondary-section">
+        <div class="header-basket">
+          <span>Останні покупки</span>
+        </div>
         <div class="cart-panel" id="cartPanel">
-          <div class="header-basket">
-            <span>Останні покупки</span>
-          </div>
-          <div class="cart-product">
-            <div class="img-cart-product">
-              <img
-                src="https://thegadget.ua/images/products/90827e0735decbb88439c4ebb28ecc0a34026d160acccad4a5c4019a5f1d7ff8.webp"
-                alt="Photo product"
-              />
+          <div class="cart-product-container">
+            <div class="id-product">
+              Замовлення: 000222 <span>Обробляється</span>
             </div>
-            <div class="info-cart-product">
-              <p class="product-cart-name">
-                Чохол Benks Lucent Pro Case for iPhone 16 Pro Max with MagSafe
-                Transparent
-              </p>
-              <p class="quantity-cart-product">
-                1x
-                <b> 999грн</b>
-              </p>
+            <div class="cart-container">
+              <div class="cart-product">
+                <div class="img-cart-product">
+                  <img
+                    src="https://thegadget.ua/images/products/90827e0735decbb88439c4ebb28ecc0a34026d160acccad4a5c4019a5f1d7ff8.webp"
+                    alt="Photo product"
+                  />
+                </div>
+                <div class="info-cart-product">
+                  <p class="product-cart-name">
+                    Чохол Benks Lucent Pro Case for iPhone 16 Pro Max with
+                    MagSafe Transparent
+                  </p>
+                  <p class="quantity-cart-product">
+                    1x
+                    <b> 999грн</b>
+                  </p>
+                  <div class="btn-print-check">
+                    <button type="button" class="check-button">Чек</button>
+                  </div>
+                </div>
+              </div>
+              <div class="cart-features">
+                <div class="characteristic-item">
+                  <span class="label">Знижка:</span> -
+                </div>
+                <div class="characteristic-item">
+                  <span class="label">Гарантія:</span> 14 д.
+                </div>
+                <div class="characteristic-item">
+                  <span class="label">Кешбек:</span> 10 грн
+                </div>
+                <div class="characteristic-item">
+                  <span class="label">Доставка:</span> Безкоштовно
+                </div>
+              </div>
             </div>
           </div>
 

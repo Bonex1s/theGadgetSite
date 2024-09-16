@@ -449,9 +449,10 @@ body.cart-open {
   display: flex;
   justify-content: space-between;
   border-bottom: solid rgb(181, 181, 181);
-  padding-top: 2em;
+  padding-top: 2.3em;
   padding-bottom: 1em;
   font-weight: bold;
+  font-size: 15px;
 }
 .info-container {
   max-height: 0;
