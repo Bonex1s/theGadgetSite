@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+    <product>
+        <image>https://thegadget.ua/images/products/60d65f4affb3b8291ab13ae769a0951d707acb96c26db96ecabb0ff86409b03c.webp</image>
+        <name>Чохол MaiKai Titan Art Series для iPhone 15 Pro Max (Princess)</name>
+        <price>799</price>
+    </product>
+    <product>
+        <image>./assets/maikaicase.webp</image>
+        <name> Чохол MaiKai Strong Art Series with Magnetic для iPhone 15 Pro
+                Max (Oh Yeaaah)</name>
+        <price>799</price>
+    </product>
+    <product>
+        <image>./assets/maikaibear.webp</image>
+        <name>Чохол MaiKai Strong Art Series with Magnetic для iPhone 15 Pro Max
+              (Pink Style Bear)</name>
+        <price>799</price>
+    </product>
+    <product>
+        <image>./assets/spigenthinfit1.webp</image>
+        <name>Чохол Spigen для iPhone 15 Pro Max, Thin Fit (FKL-0320022-BG)</name>
+        <price>949</price>
+    </product>
+</products>

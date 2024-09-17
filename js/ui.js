@@ -250,3 +250,53 @@ document.querySelector("#login-form").addEventListener("submit", (event) => {
     alert("Неверный логин или пароль");
   }
 });
+
+// XML PARSER ====================================================================
+
+document.addEventListener("DOMContentLoaded", function () {
+  fetch("data/products.xml")
+    .then((response) => {
+      if (!response.ok) {
+        console.error("Ошибка сети:", response.statusText);
+        throw new Error("Network response was not ok");
+      }
+      return response.text();
+    })
+    .then((data) => {
+      const parser = new DOMParser();
+      const xmlDoc = parser.parseFromString(data, "application/xml");
+      const products = xmlDoc.getElementsByTagName("product");
+
+      const productElements = document.querySelectorAll(".card");
+
+      productElements.forEach((productElement, index) => {
+        if (index < products.length) {
+          const product = products[index];
+          const image = product.getElementsByTagName("image")[0].textContent;
+          const name = product.getElementsByTagName("name")[0].textContent;
+          const price = product.getElementsByTagName("price")[0].textContent;
+
+          const imgElement = productElement.querySelector(".main-img");
+          const nameElement = productElement.querySelector(".text-card");
+          const priceElement = productElement.querySelector(".price");
+          if (!imgElement || !nameElement || !priceElement) {
+            console.error("Элементы не найдены", {
+              imgElement,
+              nameElement,
+              priceElement,
+            });
+          }
+
+          imgElement.src = image;
+          nameElement.textContent = name;
+          priceElement.textContent = `${price} грн.`;
+        }
+      });
+    })
+    .catch((error) => console.error("Ошибка при загрузке XML:", error));
+});
+
+// const nameElement = document.querySelectorAll(".text-card");
+// nameElement.forEach((b) => {
+//   b.textContent = "hdjdshfj";
+// });

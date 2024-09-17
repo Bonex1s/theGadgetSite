@@ -206,7 +206,7 @@ a {
 /* MAIN ZONE ============================= */
 .account-page-container {
   display: flex;
-  height: 100vh;
+  height: auto;
 }
 .primary-section {
   flex: 0 0 67%; /* Левая часть займет 70% */
@@ -252,6 +252,11 @@ a {
   border-top: 1px solid #ccc;
   margin: 1em 0em 1em 0;
   width: 100%;
+}
+.separator-small {
+  border: none;
+  border-top: 1px solid var(--separator-color);
+  margin: 1em 7em 1em 7em;
 }
 .personal-data {
   padding: 10px;
@@ -360,7 +365,4 @@ a {
   justify-content: space-between;
   padding: 0.3em 3.5em;
   font-size: 15px;
-}
-.label {
-  font-weight: 600;
 }
