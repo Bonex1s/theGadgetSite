@@ -1,5 +1,6 @@
 import cartTemplate from "./cart-template.js";
 import footerTemplate from "./footer-template.js";
+import { renderTemplate } from "./utils.js";
 
 const minRange = document.getElementById("minRange");
 const maxRange = document.getElementById("maxRange");
@@ -100,14 +101,8 @@ function closeCart() {
 window.openCart = openCart;
 window.closeCart = closeCart;
 
-function renderContainer() {
-  const cartContainer = document.getElementById("cart-container");
-  const footerContainer = document.getElementById("footer");
-  cartContainer.innerHTML = cartTemplate;
-  footerContainer.innerHTML = footerTemplate;
-}
-document.addEventListener("DOMContentLoaded", renderContainer);
-document.addEventListener("DOMContentLoaded", renderContainer);
+renderTemplate("footer", footerTemplate);
+renderTemplate("cart-container", cartTemplate);
 
 // CART ADD -------------------------------------------------------
 

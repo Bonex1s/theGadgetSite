@@ -1,4 +1,5 @@
-import { activeButton } from "./utils.js";
+import { activeButton, renderTemplate } from "./utils.js";
+import footerTemplate from "./footer-template.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   //  PROMOTION-BLOCK
@@ -184,7 +185,7 @@ document.getElementById("description-button").addEventListener("click", () => {
   feedbackCol.style.display = "flex";
 });
 
-activeButton(".stoke-white-btn");
+activeButton(".buy-main-btn");
 console.log("Script loaded");
 
 // CART ADD -------------------------------------------------------
@@ -308,3 +309,5 @@ toggleBtn.addEventListener("click", function () {
     toggleBtn.textContent = "Ще характеристики";
   }
 });
+
+renderTemplate("footer", footerTemplate);

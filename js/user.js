@@ -1,3 +1,6 @@
+import { renderTemplate } from "./utils.js";
+import footerTemplate from "./footer-template.js";
+
 const headers = document.querySelectorAll(".personal-data-header");
 
 headers.forEach((header) => {
@@ -9,3 +12,5 @@ headers.forEach((header) => {
     arrow.classList.toggle("rotate");
   });
 });
+
+renderTemplate("footer", footerTemplate);

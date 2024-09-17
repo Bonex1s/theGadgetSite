@@ -233,10 +233,6 @@ a {
   width: 550px;
   text-align: left;
 }
-.stoke-white-btn.active {
-  background-color: black;
-  color: white;
-}
 
 .buy-button-block {
   display: flex;
@@ -323,6 +319,24 @@ a {
 }
 .colored-circles svg {
   padding-left: 0.1em;
+}
+.buy-main-btn {
+  border: solid;
+  border-radius: 0.3em;
+  padding: 0.6em;
+  font-size: 15px;
+  margin-right: 0.3em;
+}
+.buy-main-btn:hover {
+  background-color: black;
+  border-radius: 0.3em;
+  color: white;
+  padding: 0.6em;
+  border: solid;
+}
+.buy-main-btn.active {
+  background-color: black;
+  color: white;
 }
 .svg-info {
   padding: 2em 0 0;
@@ -576,20 +590,26 @@ body.cart-open {
 /* FOOOOTER */
 
 .footer {
+  position: relative;
   background-color: #000000;
   color: white;
   height: 450px;
-  margin-top: 7em;
+  margin-top: 4em;
 }
-.footer-container {
+.footer-main {
   display: flex;
   justify-content: space-between;
-  padding: 35px 100px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 2em 0em 1em 4em;
+  gap: 9em;
 }
 
 .footer-column {
-  flex: 1;
-  margin: 0 10px;
+  padding: 0 10px;
 }
 
 .footer-column h3 {
@@ -617,5 +637,22 @@ body.cart-open {
   color: var(--primary-color);
 }
 .footer p {
+  margin: 1.2em 4em;
   font-weight: 100;
+}
+.footer-info {
+  padding: 2em;
+  text-align: center;
+}
+.svg-footer-list {
+  display: flex;
+}
+.svg-footer-list li a svg {
+  width: 40px;
+  padding: 0.2em;
+}
+.img-logo-footer {
+  position: absolute;
+  top: 50%;
+  right: 6%;
 }

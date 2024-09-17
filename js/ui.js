@@ -9,25 +9,34 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.getElementById("search-icon").addEventListener("click", function () {
     const searchContainer = document.querySelector(".search-container");
-    if (
-      searchContainer.style.display === "none" ||
-      searchContainer.style.display === ""
-    ) {
+    if (searchContainer.style.display === "none") {
       searchContainer.style.display = "block";
     } else {
       searchContainer.style.display = "none";
     }
   });
 
-  document.getElementById("login").addEventListener("click", function () {
-    const formSection = document.querySelector(".login-container");
-    if (
-      formSection.style.display === "none" ||
-      formSection.style.display === ""
-    ) {
+  const formSection = document.querySelector(".login-container");
+  const formOpenBtn = document.querySelector("#login");
+
+  formOpenBtn.addEventListener("click", function (event) {
+    event.stopPropagation();
+
+    if (formSection.style.display === "none" || !formSection.style.display) {
       formSection.style.display = "flex";
     } else {
       formSection.style.display = "none";
+    }
+  });
+
+  // Закрытие формы при клике вне её
+  document.addEventListener("click", function (event) {
+    // Проверяем, был ли клик вне формы и кнопки
+    if (
+      !formSection.contains(event.target) &&
+      !formOpenBtn.contains(event.target)
+    ) {
+      formSection.style.display = "none"; // Скрываем форму
     }
   });
 

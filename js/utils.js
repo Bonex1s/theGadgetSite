@@ -8,3 +8,10 @@ export function activeButton(classBtn) {
     });
   });
 }
+
+// HADNLEBARS RENDER ===========================================
+export function renderTemplate(id, template) {
+  const elementContainer = document.getElementById(id);
+
+  elementContainer.innerHTML = template;
+}
