@@ -1,5 +1,7 @@
+import cartTemplate from "./cart-template.js";
 import { activeButton, renderTemplate } from "./utils.js";
 import footerTemplate from "./footer-template.js";
+import headerTemplate from "./header-template.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   //  PROMOTION-BLOCK
@@ -10,27 +12,36 @@ document.addEventListener("DOMContentLoaded", function () {
     promotionContainer.style.display = "none";
   });
 
-  document.getElementById("search-icon").addEventListener("click", () => {
+  document.getElementById("search-icon").addEventListener("click", function () {
     const searchContainer = document.querySelector(".search-container");
-    if (
-      searchContainer.style.display === "none" ||
-      searchContainer.style.display === ""
-    ) {
+    if (searchContainer.style.display === "none") {
       searchContainer.style.display = "block";
     } else {
       searchContainer.style.display = "none";
     }
   });
 
-  document.getElementById("login").addEventListener("click", function () {
-    const formSection = document.querySelector(".login-container");
-    if (
-      formSection.style.display === "none" ||
-      formSection.style.display === ""
-    ) {
+  const formSection = document.querySelector(".login-container");
+  const formOpenBtn = document.querySelector("#login");
+
+  formOpenBtn.addEventListener("click", function (event) {
+    event.stopPropagation();
+
+    if (formSection.style.display === "none" || !formSection.style.display) {
       formSection.style.display = "flex";
     } else {
       formSection.style.display = "none";
+    }
+  });
+
+  // Закрытие формы при клике вне её
+  document.addEventListener("click", function (event) {
+    // Проверяем, был ли клик вне формы и кнопки
+    if (
+      !formSection.contains(event.target) &&
+      !formOpenBtn.contains(event.target)
+    ) {
+      formSection.style.display = "none"; // Скрываем форму
     }
   });
 
@@ -44,6 +55,42 @@ document.addEventListener("DOMContentLoaded", function () {
       header.classList.remove("scrolled");
     }
   });
+
+  const menuCase = document.getElementById("item-preview-menu");
+  const buttonMenuCase = document.getElementById("menu-text-case");
+  const menuGlass = document.getElementById("item-preview-menu-2");
+  const buttonMenuGlass = document.getElementById("menu-text-glass");
+  const buttonMenuPhone = document.getElementById("menu-text-phone");
+  const menuPhone = document.getElementById("item-preview-menu-3");
+  const menuСharger = document.getElementById("item-preview-menu-4");
+  const buttonСharger = document.getElementById("menu-text-charger");
+  const buttonOther = document.getElementById("menu-text-other");
+  const buttonGadget = document.getElementById("menu-text-gadget");
+  const menuGadget = document.getElementById("item-preview-menu-5");
+  const menuOther = document.getElementById("item-preview-menu-6");
+
+  function previewMenu(menu, button) {
+    button.addEventListener("mouseover", () => {
+      menu.style.display = "flex";
+    });
+    button.addEventListener("mouseout", () => {
+      menu.style.display = "none";
+    });
+
+    menu.addEventListener("mouseover", () => {
+      menu.style.display = "flex";
+    });
+
+    menu.addEventListener("mouseout", () => {
+      menu.style.display = "none";
+    });
+  }
+  previewMenu(menuCase, buttonMenuCase);
+  previewMenu(menuGlass, buttonMenuGlass);
+  previewMenu(menuPhone, buttonMenuPhone);
+  previewMenu(menuСharger, buttonСharger);
+  previewMenu(menuOther, buttonOther);
+  previewMenu(menuGadget, buttonGadget);
 });
 
 // IMG
@@ -189,6 +236,9 @@ activeButton(".buy-main-btn");
 console.log("Script loaded");
 
 // CART ADD -------------------------------------------------------
+renderTemplate("footer", footerTemplate);
+renderTemplate("header", headerTemplate);
+renderTemplate("cart-container", cartTemplate);
 
 function getCart() {
   return JSON.parse(localStorage.getItem("cart")) || [];
@@ -246,6 +296,7 @@ function renderCart() {
         <span class="cancel-product js-cancel-cart-product" data-index="${index}">Відмінити</span>
       </div>
     `;
+    console.log(cart);
     cartItemsContainer.appendChild(cartItem);
     totalPrice += item.price * item.quantity;
   });
@@ -309,5 +360,3 @@ toggleBtn.addEventListener("click", function () {
     toggleBtn.textContent = "Ще характеристики";
   }
 });
-
-renderTemplate("footer", footerTemplate);

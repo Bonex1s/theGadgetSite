@@ -19,19 +19,13 @@
     <title>Product page</title>
   </head>
   <body>
-    <header class="header">
-      <div class="promotions">
-        <div class="prom-block">
-          Знижка 100 грн на перше замовлення! Гарячі новинки та акції.
-        </div>
-        <button id="close-promotion">&times;</button>
-      </div>
-      <nav class="header-panel">
+    <header class="header" id="header">
+      <div class="header-panel">
         <a href="../index.html">
           <img class="logo" src="../assets/Logo 5.png" alt="LOGO" />
         </a>
-        <ul class="menu_list">
-          <li class="menu-text">
+        <nav class="menu_list">
+          <a class="menu-text" id="menu-text-case">
             Чохли
             <svg
               width="21"
@@ -46,8 +40,8 @@
                 fill="black"
               />
             </svg>
-          </li>
-          <li class="menu-text">
+          </a>
+          <a class="menu-text" id="menu-text-glass">
             Скло
             <svg
               width="21"
@@ -62,8 +56,8 @@
                 fill="black"
               />
             </svg>
-          </li>
-          <li class="menu-text">
+          </a>
+          <a class="menu-text">
             Телефони
             <svg
               width="21"
@@ -78,8 +72,8 @@
                 fill="black"
               />
             </svg>
-          </li>
-          <li class="menu-text">
+          </a>
+          <a class="menu-text">
             Зарядний пристрій
             <svg
               width="21"
@@ -94,8 +88,8 @@
                 fill="black"
               />
             </svg>
-          </li>
-          <li class="menu-text">
+          </a>
+          <a class="menu-text">
             Гаджети
             <svg
               width="21"
@@ -110,8 +104,8 @@
                 fill="black"
               />
             </svg>
-          </li>
-          <li class="menu-text">
+          </a>
+          <a class="menu-text">
             Ще
             <svg
               width="21"
@@ -126,8 +120,9 @@
                 fill="black"
               />
             </svg>
-          </li>
-        </ul>
+          </a>
+        </nav>
+
         <div class="search-container">
           <input type="text" class="search-input" placeholder="Пошук..." />
         </div>
@@ -136,7 +131,7 @@
             <div class="image-overlay">
               <img src="../assets/loginpict.png" alt="" />
               <div class="text-front">
-                <h1>Привіт!</h1>
+                <h1>Привіт красавец!</h1>
                 <p>увійти в систему для продовження</p>
               </div>
             </div>
@@ -222,8 +217,112 @@
               />
             </svg>
           </li>
+          <li class="svg-icon">
+            <div class="menu-toggle" id="menu-toggle" onclick="openCart()">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4 6h16M4 12h16M4 18h16"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </li>
         </ul>
-      </nav>
+      </div>
+      <div class="toggle-section" id="toggle-section">
+        <div class="toggle-container">
+          <div>Чохли</div>
+          <div>Скло</div>
+          <div>Телефон</div>
+          <div>Зарядний пристрій</div>
+          <div>Гаджети</div>
+          <div>Ще</div>
+        </div>
+      </div>
+      <div class="item-preview-menu" id="item-preview-menu">
+        <div class="preview-list one" id="preview-list">
+          <div>iPhone</div>
+          <a href="../pages/productList.html"> iPhone 15 Pro max</a>
+          <a href="">iPhone 15 Pro</a>
+          <a href="">iPhone 15 Plus</a>
+          <a href="">iPhone 15</a>
+          <a href="">iPhone 14 Pro Max</a>
+          <a href="">iPhone 14 Pro</a>
+          <a href="">iPhone 14</a>
+          <a href="">iPhone 14 Plus</a>
+          <a href="">iPhone 14/13</a>
+          <a href="">iPhone 14/13</a>
+          <a href="">iPhone 13 Pro Max</a>
+          <a href="">iPhone 13 Pro</a>
+        </div>
+        <div class="preview-list two">
+          <a>iPad</a>
+          <a>iPad Pro 12.9 2022</a>
+          <a>iPad Pro 11 2022</a>
+          <a>iPad Air 2022</a>
+          <a>iPad 2022</a>
+        </div>
+        <div class="preview-list three">
+          <a>iPad</a>
+          <a>iPad Pro 12.9 2022</a>
+          <a>iPad Pro 11 2022</a>
+          <a>iPad Air 2022</a>
+          <a>iPad 2022</a>
+        </div>
+        <div class="preview-list four">
+          <a>Xiaomi</a>
+          <a>iPad Pro 12.9 2022</a>
+          <a>iPad Pro 11 2022</a>
+          <a>iPad Air 2022</a>
+          <a>iPad 2022</a>
+        </div>
+      </div>
+      <div class="item-preview-menu" id="item-preview-menu-2">
+        <div class="preview-list one" id="preview-list-2">
+          <div>Скло для iPhone</div>
+          <div>Скло для iPhone 15 Pro max</div>
+          <div>Скло для iPhone 15 Pro</div>
+          <div>Скло для iPhone 15 Plus</div>
+          <div>Скло для iPhone 15</div>
+          <div>Скло для iPhone 14 Pro Max</div>
+          <div>Скло для iPhone 14 Pro</div>
+          <div>Скло для iPhone 14</div>
+          <div>Скло для iPhone 14 Plus</div>
+          <div>Скло для iPhone 14/13</div>
+          <div>Скло для iPhone 13 Pro Max</div>
+          <div>Скло для iPhone 13 Pro</div>
+        </div>
+        <div class="preview-list two">
+          <div>iPad</div>
+          <div>iPad Pro 12.9 2022</div>
+          <div>iPad Pro 11 2022</div>
+          <div>iPad Air 2022</div>
+          <div>iPad 2022</div>
+        </div>
+        <div class="preview-list three">
+          <div>iPad</div>
+          <div>iPad Pro 12.9 2022</div>
+          <div>iPad Pro 11 2022</div>
+          <div>iPad Air 2022</div>
+          <div>iPad 2022</div>
+        </div>
+        <div class="preview-list four">
+          <div>Xiaomi</div>
+          <div>iPad Pro 12.9 2022</div>
+          <div>iPad Pro 11 2022</div>
+          <div>iPad Air 2022</div>
+          <div>iPad 2022</div>
+        </div>
+      </div>
     </header>
     <div class="navigation">
       <a href="../index.html">Головна</a> /
@@ -784,6 +883,7 @@
             <button class="buy-main-btn">iPhone 15 Pro</button>
             <button class="buy-main-btn">iPhone 15 Pro Max</button>
           </div>
+
           <div class="price-block">
             <div class="price" id="price">999грн</div>
             <div class="cashback">
@@ -870,40 +970,7 @@
               <p>20грн</p>
             </div>
           </div>
-          <div class="cart-panel" id="cartPanel">
-            <div class="header-basket">
-              <span>Мій кошик</span>
-              <button
-                type="button"
-                onclick="closeCart()"
-                style="font-size: 30px"
-              >
-                ×
-              </button>
-            </div>
-            <div class="cart-product-main" id="cart-product">
-              <div class="img-cart-product">
-                <img src="../assets/spigencase1.webp" alt="Photo product" />
-              </div>
-              <div class="info-cart-product">
-                <p class="product-cart-name" id="product-cart-name">
-                  Захисне Скло MaiKai 3D Amazing Full Glass для iPhone X/XS/11
-                  Pro
-                </p>
-                <p class="quantity-cart-product">
-                  1x
-                  <b> 399грн</b>
-                </p>
-                <span class="cancel-product js-cancel-cart-product"
-                  >Відмінити</span
-                >
-              </div>
-            </div>
-            <p class="price-cart-product" id="price-cart-product">
-              Усього: <strong>300грн</strong>
-            </p>
-            <hr class="separator" />
-          </div>
+          <div class="cart-container" id="cart-container"></div>
           <div class="buy-button-block">
             <button
               class="button-57 js-add-to-cart"

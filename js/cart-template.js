@@ -16,7 +16,7 @@ const cartTemplate = `
               Усього: <strong>300грн</strong>
             </p>
             <hr class="separator" />
-            <div class="extra-header">
+        <div class="header-basket">
           <span>Разом дешевше</span>
         </div>
         <div class="extra-container">
@@ -27,7 +27,7 @@ const cartTemplate = `
             />
           </div>
           <div class="extra-product-info">
-            <p class="exta-header-text">
+            <p class="extra-header-text">
               Захисне Скло MaiKai 3D Amazing Full Glass для iPhone X/XS/11 Pro
             </p>
             <div class="main-extra-section">
@@ -228,7 +228,7 @@ const cartTemplate = `
             />
           </div>
           <div class="extra-product-info">
-            <p class="exta-header-text">
+            <p class="extra-header-text">
               МЗП Baseus GaN5S Fast Charger 20W (1 Type-C) (чорний)
             </p>
             <div class="main-extra-section">
@@ -422,6 +422,7 @@ const cartTemplate = `
           </div>
         </div>
         <button type="button" class="formalize">Оформити замовлення</button>
+      </div>
           </div>
  
 

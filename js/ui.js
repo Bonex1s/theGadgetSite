@@ -7,11 +7,27 @@ document.addEventListener("DOMContentLoaded", function () {
     promotionContainer.style.display = "none";
   });
 
-  document.getElementById("search-icon").addEventListener("click", function () {
-    const searchContainer = document.querySelector(".search-container");
-    if (searchContainer.style.display === "none") {
-      searchContainer.style.display = "block";
+  const searchBtn = document.getElementById("search-icon");
+  const searchContainer = document.querySelector(".search-container");
+
+  searchBtn.addEventListener("click", function (event) {
+    event.stopPropagation();
+
+    if (
+      searchContainer.style.display === "none" ||
+      !searchContainer.style.display
+    ) {
+      searchContainer.style.display = "flex";
     } else {
+      searchContainer.style.display = "none";
+    }
+  });
+  // ВІДКЛЮЧИТИ DISPLAY КЛІКОМ
+  document.addEventListener("click", function (event) {
+    if (
+      !searchContainer.contains(event.target) &&
+      !searchBtn.contains(event.target)
+    ) {
       searchContainer.style.display = "none";
     }
   });
@@ -86,19 +102,6 @@ document.addEventListener("DOMContentLoaded", function () {
   previewMenu(menuСharger, buttonСharger);
   previewMenu(menuOther, buttonOther);
   previewMenu(menuGadget, buttonGadget);
-
-  // const productElement = document.getElementById("menu-text-case");
-
-  // function handleMouseEnter() {
-  //   const menu = document.getElementById("item-preview-menu");
-  //   menu.style.display = "flex";
-  // }
-  // function handleMouseLeave() {
-  //   const menu = document.getElementById("item-preview-menu");
-  //   menu.style.display = "none"; // Скрываем меню
-  // }
-  // productElement.addEventListener("mouseenter", handleMouseEnter);
-  // productElement.addEventListener("mouseleave", handleMouseLeave);
 
   document
     .querySelector(".carousel-container")
@@ -207,9 +210,12 @@ document.getElementById("loadMoreBtn").addEventListener("click", function () {
   }
 });
 const images = [
-  { desktop: "./assets/hero-img.webp", mobile: "./assets/hero-img-M.webp" },
-  { desktop: "./assets/hero-img-3.webp", mobile: "./assets/hero-img-3M.webp" },
-  { desktop: "./assets/hero-img-4.png", mobile: "./assets/hero-img-4M.webp" },
+  { desktop: "../assets/hero-img.webp", mobile: "../assets/hero-img-M.webp" },
+  {
+    desktop: "../assets/hero-img-3.webp",
+    mobile: "../assets/hero-img-3M.webp",
+  },
+  { desktop: "../assets/hero-img-4.png", mobile: "../assets/hero-img-4M.webp" },
 ];
 
 let currentIndex = 0;
@@ -240,7 +246,7 @@ buttonSelectZone.forEach((button) => {
 });
 
 console.log("Script loaded");
-// LOGIN ------------------------------------------------------------------------
+// LOGIN ACCOUNT ------------------------------------------------------------------------
 
 document.querySelector("#login-form").addEventListener("submit", (event) => {
   event.preventDefault();
@@ -254,7 +260,7 @@ document.querySelector("#login-form").addEventListener("submit", (event) => {
       JSON.stringify({ name: "Test User", email: "test@example.com" })
     );
 
-    window.location.href = "./pages/user.html";
+    window.location.href = "../pages/user.html";
   } else {
     alert("Неверный логин или пароль");
   }
@@ -304,8 +310,3 @@ document.addEventListener("DOMContentLoaded", function () {
     })
     .catch((error) => console.error("Ошибка при загрузке XML:", error));
 });
-
-// const nameElement = document.querySelectorAll(".text-card");
-// nameElement.forEach((b) => {
-//   b.textContent = "hdjdshfj";
-// });

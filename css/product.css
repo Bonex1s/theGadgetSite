@@ -27,7 +27,6 @@ a {
   stroke: black;
 }
 /* HEADER */
-
 .header {
   position: fixed;
   top: 0;
@@ -50,13 +49,16 @@ a {
 
 .header-panel {
   position: fixed;
-  color: black;
+  color: var(--base-text-color);
   width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: white;
+  background-color: transparent;
+  transition: background-color 0.5s ease;
 }
-
+.header-panel.scrolled {
+  background-color: rgba(255, 255, 255, 1); /* Полностью непрозрачный фон */
+}
 .logo {
   width: 4em;
   margin-top: 0.3em;
@@ -67,10 +69,11 @@ a {
   display: flex;
   align-items: center;
   padding-right: 10em;
+  gap: 2em;
 }
 .menu-text {
-  padding: 1em;
   transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
+  padding: 1.5em 0 2em;
 }
 .menu-text:hover {
   cursor: pointer;
@@ -81,7 +84,6 @@ a {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin: 1em;
 }
 .svg-icon {
   margin: 0.5em;
@@ -101,7 +103,7 @@ a {
   background: transparent;
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
   padding: 0.5em;
-  border-radius: 4px;
+  border-radius: var(--border-radius);
 }
 .search-input {
   border: none;
@@ -111,89 +113,126 @@ a {
   box-sizing: border-box;
 }
 .search-input::placeholder {
-  color: black;
+  color: var(--base-text-color);
 }
-
-/* REGISTRATION-LOGIN */
-
-.login-container {
-  display: none; /* Скрываем окно по умолчанию */
-  position: absolute;
-  height: 36em;
-  width: 50em;
-  background-color: #ffffff;
-  left: 23%;
-  top: 120px;
-  border: solid rgb(180, 180, 180);
-}
-
-.login-container.visible {
-  display: flex; /* Показать окно с flex-раскладкой, когда класс "visible" добавлен */
-}
-
-.image-section {
-  flex: 1;
-  position: relative;
+/* CART PANEL (BASKET) */
+.cart-panel {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 32%;
   height: 100%;
+  background-color: white;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  transition: right 0.9s cubic-bezier(0.25, 1, 0.5, 1); /* Плавная анимация */
+  overflow-y: auto; /* Скролл внутри корзины, если контент длинный */
 }
 
-.image-section img {
-  width: 100%;
-  height: 100%; /* Заставляем изображение занимать всю высоту контейнера */
-  object-fit: cover; /* Обеспечиваем правильное масштабирование изображения без искажений */
+.cart-panel.active {
+  right: 0; /* Панель выезжает на экран */
 }
 
-.text-front {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  text-align: center;
+body.cart-open {
+  overflow: hidden; /* Отключение скролла страницы */
 }
-
-.text-front h1 {
-  font-size: 2em;
-  margin: 0;
-}
-
-.text-front p {
-  font-size: 1.2em;
-}
-
-.form-section {
-  flex: 1;
+.header-basket {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 2em;
+  justify-content: space-between;
+  padding: 0.5em 1.5em;
 }
-
-.login-form {
+.header-basket span {
+  font-weight: 600;
+}
+.cart-product {
   display: flex;
-  flex-direction: column;
-}
-
-.login-form label {
-  margin-bottom: 0.5em;
-}
-
-.login-form input {
+  padding: 1em 1em 0;
   margin-bottom: 1em;
-  padding: 0.5em;
-  border: solid rgb(188, 188, 188);
+}
+.cart-product img {
+  width: 250px;
+}
+.product-cart-name {
+  font-size: 13px;
+  font-weight: 500;
+}
+.cancel-cart-product {
+  border-bottom: solid #757575;
+  border-width: 1px;
+  color: var(--secondary-color);
+  font-size: 12px;
+}
+.quantity-cart-product {
+  font-size: 12px;
+  padding-top: 0.5em;
+}
+.price-cart-product {
+  padding: 1em 2em;
+}
+.separator {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 1em 0em 0 2em;
+  width: 25em;
 }
 
-.login-form button {
-  padding: 0.4em;
-  background-color: #ffffff;
-  color: rgb(0, 0, 0);
-  border: none;
-  cursor: pointer;
-  border: solid;
-  width: 10em;
-  margin: auto;
+.main-extra-section {
+  display: flex;
+  justify-content: space-between;
 }
+.extra-container {
+  display: flex;
+  margin: 1em 2em 0;
+  border: solid grey;
+  border-radius: var(--border-radius);
+  border-width: 0.1px;
+}
+.extra-img {
+  width: 200px;
+  padding: 0.5em;
+}
+
+.extra-header-text {
+  font-size: 10px;
+  font-weight: 600;
+}
+.extra-product-info {
+  padding: 1em;
+}
+.add-button {
+  background-color: black;
+  border-radius: var(--border-radius);
+  color: white;
+  padding: 1em;
+  margin: 0.5em;
+  font-size: 13px;
+}
+.extra-colors-svg svg {
+  width: 22px;
+}
+.extra-colors-svg {
+  padding-top: 0.5em;
+}
+.red-price {
+  font-size: 13px;
+  color: red;
+  font-weight: 600;
+}
+.old-price {
+  font-size: 13px;
+  text-decoration: line-through;
+}
+.formalize {
+  width: 25.5em;
+  background-color: black;
+  color: white;
+  padding: 1em 1em;
+  margin: 1.5em 0em 0 2em;
+}
+.formalize:hover {
+  background-color: var(--secondary-color);
+}
+
 /* NAVIGATION */
 
 .navigation {
@@ -412,6 +451,161 @@ body.cart-open {
   border: none;
   border-top: 1px solid #ccc;
   margin: 10px 0;
+}
+/* PREVIEW-BLOCK */
+.item-preview-menu {
+  width: 100%;
+  background-color: white;
+  padding-top: 5.5em;
+  justify-content: space-evenly;
+  display: none;
+}
+.preview-list {
+  padding-bottom: 2em;
+}
+.preview-list a {
+  padding: 0.2em;
+  display: block;
+}
+.preview-list a:hover {
+  color: var(--primary-color);
+}
+
+/* REGISTRATION-LOGIN */
+.menu-toggle {
+  display: none;
+}
+.login-container {
+  display: none; /* Скрываем окно по умолчанию */
+  position: fixed;
+  height: 620px;
+  width: 855px;
+  background-color: #ffffff;
+  border: solid rgb(180, 180, 180);
+
+  /* Центрирование */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.login-container.visible {
+  display: flex; /* Показать окно с flex-раскладкой, когда класс "visible" добавлен */
+}
+
+.image-section {
+  flex: 1;
+  position: relative;
+  height: 100%;
+}
+
+.image-section img {
+  width: 100%;
+  height: 100%; /* Заставляем изображение занимать всю высоту контейнера */
+  object-fit: cover; /* Обеспечиваем правильное масштабирование изображения без искажений */
+}
+
+.text-front {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+.text-front h1 {
+  font-size: 2em;
+  margin: 0;
+}
+
+.text-front p {
+  font-size: 1.2em;
+}
+
+.form-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2em;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form label {
+  margin-bottom: 0.5em;
+}
+
+.login-form input {
+  margin-bottom: 1em;
+  padding: 0.5em;
+  border: solid rgb(188, 188, 188);
+}
+
+.login-form button {
+  padding: 0.4em;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: none;
+  cursor: pointer;
+  border: solid;
+  width: 10em;
+  margin: auto;
+}
+/* TOGGLE MENU -------------*/
+.toggle-section {
+  display: none;
+}
+
+/* HERO */
+
+.hero {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 45em;
+  overflow: hidden;
+  text-align: center;
+}
+
+.hero img {
+  width: 100%; /* Изображение занимает 100% ширины родителя */
+  height: auto; /* Высота зависит от пропорций */
+  object-fit: cover; /* Обрезает изображение для заполнения контейнера */
+  display: block; /* Убирает отступы вокруг изображения */
+}
+
+.centered-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Центрирует блок */
+  background-color: rgba(255, 255, 255, 0.6); /* Полупрозрачный белый фон */
+  padding: 20px 40px;
+  text-align: center;
+  border-radius: 10px; /* Закругленные углы */
+}
+
+.centered-text h1 {
+  font-size: 3.5rem; /* Размер заголовка */
+  color: #000; /* Цвет текста */
+  margin: 0;
+  font-weight: 500;
+}
+
+.centered-text p {
+  font-size: 3.5rem;
+  color: #000;
+  margin: 0;
+  font-weight: 500;
+}
+.centered-text p span {
+  color: #ffffff;
 }
 
 /* RAITNG STARS PRODUCT */
