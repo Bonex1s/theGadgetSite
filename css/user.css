@@ -37,7 +37,7 @@ a {
   transition: background-color 0.5s ease;
 }
 .header-panel.scrolled {
-  background-color: rgb(6, 6, 6); /* Полностью непрозрачный фон */
+  background-color: rgb(255, 255, 255); /* Полностью непрозрачный фон */
 }
 .logo {
   width: 4em;

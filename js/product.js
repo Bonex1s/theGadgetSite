@@ -104,7 +104,7 @@ smallImages.forEach((img) => {
   });
 });
 
-// RAITING
+// RAITING ==================================================================
 
 document.querySelectorAll(".rating").forEach((rating) => {
   const ratingValue = parseFloat(rating.getAttribute("data-rating"));
@@ -235,11 +235,11 @@ document.getElementById("description-button").addEventListener("click", () => {
 activeButton(".buy-main-btn");
 console.log("Script loaded");
 
-// CART ADD -------------------------------------------------------
+// RENDER ==========================================================================
 renderTemplate("footer", footerTemplate);
 renderTemplate("header", headerTemplate);
 renderTemplate("cart-container", cartTemplate);
-
+// ADD LOCAL CART ==========================================================================
 function getCart() {
   return JSON.parse(localStorage.getItem("cart")) || [];
 }
@@ -358,5 +358,25 @@ toggleBtn.addEventListener("click", function () {
     toggleBtn.textContent = "Скрити характеристики";
   } else {
     toggleBtn.textContent = "Ще характеристики";
+  }
+});
+
+// LOGIN ACCOUNT ======================================================================
+
+document.querySelector("#login-form").addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const username = document.querySelector("#username").value;
+  const password = document.querySelector("#password").value;
+
+  if (username === "admin" && password === "admin") {
+    localStorage.setItem(
+      "user",
+      JSON.stringify({ name: "Test User", email: "test@example.com" })
+    );
+
+    window.location.href = "../pages/user.html";
+  } else {
+    alert("Неверный логин или пароль");
   }
 });

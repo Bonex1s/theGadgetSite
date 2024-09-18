@@ -212,3 +212,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   renderCart();
 });
+// LOGIN ACCOUNT ======================================================================
+
+// FILTER OPEN CONTENT ===============================================================
+const headers = document.querySelectorAll(".filter-header");
+
+headers.forEach((header) => {
+  header.addEventListener("click", function () {
+    const content = this.nextElementSibling;
+    const arrow = this.querySelector(".filter-arrow");
+
+    content.classList.toggle("open");
+    arrow.classList.toggle("rotate");
+  });
+});

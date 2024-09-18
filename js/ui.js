@@ -1,3 +1,4 @@
+// HEADER ========================================================================
 document.addEventListener("DOMContentLoaded", function () {
   //  PROMOTION-BLOCK
 
@@ -246,7 +247,7 @@ buttonSelectZone.forEach((button) => {
 });
 
 console.log("Script loaded");
-// LOGIN ACCOUNT ------------------------------------------------------------------------
+// LOGIN ACCOUNT ======================================================================
 
 document.querySelector("#login-form").addEventListener("submit", (event) => {
   event.preventDefault();
