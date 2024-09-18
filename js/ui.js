@@ -211,12 +211,12 @@ document.getElementById("loadMoreBtn").addEventListener("click", function () {
   }
 });
 const images = [
-  { desktop: "./assets/hero-img.webp", mobile: "../assets/hero-img-M.webp" },
+  { desktop: "./assets/hero-img.webp", mobile: "./assets/hero-img-M.webp" },
   {
     desktop: "./assets/hero-img-3.webp",
     mobile: "./assets/hero-img-3M.webp",
   },
-  { desktop: "../assets/hero-img-4.png", mobile: "../assets/hero-img-4M.webp" },
+  { desktop: "./assets/hero-img-4.png", mobile: "./assets/hero-img-4M.webp" },
 ];
 
 let currentIndex = 0;
@@ -261,7 +261,7 @@ document.querySelector("#login-form").addEventListener("submit", (event) => {
       JSON.stringify({ name: "Test User", email: "test@example.com" })
     );
 
-    window.location.href = "../pages/user.html";
+    window.location.href = "./pages/user.html";
   } else {
     alert("Неверный логин или пароль");
   }
