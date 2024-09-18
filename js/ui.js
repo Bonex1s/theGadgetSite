@@ -211,10 +211,10 @@ document.getElementById("loadMoreBtn").addEventListener("click", function () {
   }
 });
 const images = [
-  { desktop: "../assets/hero-img.webp", mobile: "../assets/hero-img-M.webp" },
+  { desktop: "./assets/hero-img.webp", mobile: "../assets/hero-img-M.webp" },
   {
-    desktop: "../assets/hero-img-3.webp",
-    mobile: "../assets/hero-img-3M.webp",
+    desktop: "./assets/hero-img-3.webp",
+    mobile: "./assets/hero-img-3M.webp",
   },
   { desktop: "../assets/hero-img-4.png", mobile: "../assets/hero-img-4M.webp" },
 ];
