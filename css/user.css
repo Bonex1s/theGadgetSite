@@ -227,9 +227,9 @@ a {
   font-size: 16px;
 }
 .back-button {
-  position: absolute; /* Абсолютное позиционирование кнопки */
-  bottom: 10px; /* Отступ от нижней границы контейнера */
-  left: 10px; /* Отступ от левой границы контейнера */
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;

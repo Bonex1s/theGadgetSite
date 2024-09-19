@@ -1,10 +1,4 @@
 /* TEXT STYLE */
-.header-text-strong {
-  font-size: 1.3em;
-  font-weight: 600;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
 
 .grey-txt {
   color: grey;
@@ -29,12 +23,12 @@
 .button-57 {
   position: relative;
   overflow: hidden;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   color: white;
   display: inline-block;
   font-size: 15px;
   line-height: 15px;
-  padding: 15px 100px 17px;
+  padding: 15px 140px 17px;
   text-decoration: none;
   cursor: pointer;
   background: black;

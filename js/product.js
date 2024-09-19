@@ -45,17 +45,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  window.addEventListener("scroll", function () {
-    const header = document.querySelector(".header-panel");
-    const scrollPosition = window.scrollY;
-
-    if (scrollPosition > 100) {
-      header.classList.add("scrolled");
-    } else {
-      header.classList.remove("scrolled");
-    }
-  });
-
   const menuCase = document.getElementById("item-preview-menu");
   const buttonMenuCase = document.getElementById("menu-text-case");
   const menuGlass = document.getElementById("item-preview-menu-2");

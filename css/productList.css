@@ -236,8 +236,10 @@ a {
   overflow: hidden;
   transition: max-height 0.3s ease;
 }
+
 .filter-content.open {
   max-height: 20em;
+  padding-top: 1em;
 }
 .filter-arrow {
   font-size: 24px;

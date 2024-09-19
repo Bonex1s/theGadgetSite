@@ -53,12 +53,9 @@ a {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: transparent;
-  transition: background-color 0.5s ease;
+  background-color: white;
 }
-.header-panel.scrolled {
-  background-color: rgba(255, 255, 255, 1); /* Полностью непрозрачный фон */
-}
+
 .logo {
   width: 4em;
   margin-top: 0.3em;
@@ -282,14 +279,18 @@ body.cart-open {
 }
 .quick-buy {
   border: solid #5c5c5c;
-  border-radius: 0.3em;
+  border-radius: var(--border-radius);
   background-color: black;
-  width: 100px;
+  width: 200px;
   padding: 10px;
 }
 .quick-buy:hover {
   background-color: #5c5c5c;
 }
+.quick-buy img {
+  width: 100px;
+}
+
 /* img */
 
 .product-img {
@@ -312,6 +313,12 @@ body.cart-open {
 /* --------------  */
 .header-text {
   height: 5.5em;
+}
+.header-text-strong {
+  font-size: 1.2em;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .id-product {
@@ -360,17 +367,17 @@ body.cart-open {
   padding-left: 0.1em;
 }
 .buy-main-btn {
-  border: solid;
-  border-radius: 0.3em;
+  border: solid var(--secondary-color);
+  border-width: 0.5px;
+  border-radius: var(--border-radius);
   padding: 0.6em;
   font-size: 15px;
   margin-right: 0.3em;
 }
 .buy-main-btn:hover {
   background-color: black;
-  border-radius: 0.3em;
   color: white;
-  padding: 0.6em;
+  padding: 0.5em;
   border: solid;
 }
 .buy-main-btn.active {
@@ -380,9 +387,8 @@ body.cart-open {
 .svg-info {
   padding: 2em 0 0;
   display: flex;
-  justify-content: space-between;
-  max-width: fit-content;
-  gap: 5em;
+  justify-content: center;
+  gap: 7em;
 }
 .svg-info div {
   text-align: center;
@@ -725,6 +731,13 @@ body.cart-open {
 
 .label {
   font-weight: bold;
+}
+.characteristic-toggle-btn {
+  border-top: solid var(--secondary-color);
+  border-width: 0.5px;
+  font-size: 12px;
+  margin-top: 1em;
+  padding: 7px;
 }
 /* DESCRIPTION */
 .description {

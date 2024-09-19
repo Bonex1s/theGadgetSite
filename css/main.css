@@ -408,6 +408,7 @@ body.cart-open {
   padding: 5px 10px;
   font-size: 12px;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Тень для лучшего выделения */
+  border-radius: var(--border-radius);
 }
 .picture {
   cursor: pointer;

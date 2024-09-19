@@ -263,7 +263,7 @@ document.querySelector("#login-form").addEventListener("submit", (event) => {
 
     window.location.href = "./pages/user.html";
   } else {
-    alert("Неверный логин или пароль");
+    alert("Невірний логін чи пароль");
   }
 });
 
@@ -273,7 +273,7 @@ document.addEventListener("DOMContentLoaded", function () {
   fetch("data/products.xml")
     .then((response) => {
       if (!response.ok) {
-        console.error("Ошибка сети:", response.statusText);
+        console.error("Network error:", response.statusText);
         throw new Error("Network response was not ok");
       }
       return response.text();
