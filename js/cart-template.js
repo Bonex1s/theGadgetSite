@@ -421,7 +421,9 @@ const cartTemplate = `
             </div>
           </div>
         </div>
+        <a href="../pages/order.html">
         <button type="button" class="formalize">Оформити замовлення</button>
+        </a>
       </div>
           </div>
  
