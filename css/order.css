@@ -287,6 +287,7 @@ body.cart-open {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 2em;
 }
 
 .login-form {
@@ -367,9 +368,12 @@ body.cart-open {
 }
 
 .separator {
-  border: none;
-  border-top: 1px solid #ccc;
-  margin: 1em 0em 0 2em;
+  border-right: none;
+  border-bottom: none;
+  border-left: none;
+  border-image: initial;
+  border-top: 1px solid rgb(204, 204, 204);
+  margin: 1em 0em 3em 2em;
   width: 50em;
 }
 .left-section p span {
@@ -402,16 +406,19 @@ body.cart-open {
   align-items: center;
 }
 /* FORM SECTION ========================== */
+
 .checkout-form {
   max-width: 100%;
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 10px;
+  margin-top: 2em;
 }
 
 .checkout-form h2 {
-  font-size: 1.5em;
+  font-size: 1em;
   margin-bottom: 10px;
+  grid-column: span 2;
 }
 
 .form-group {
@@ -456,6 +463,7 @@ textarea {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+    row-gap: 0.4em;
   }
 
   .form-group {
@@ -470,8 +478,12 @@ textarea {
   }
 
   .form-group:nth-child(1),
-  .form-group:nth-child(2),
-  .form-group:nth-child(3) {
+  .form-group:nth-child(7),
+  .form-group:nth-child(8),
+  .form-group:nth-child(9),
+  .form-group:nth-child(10),
+  .form-group:nth-child(11),
+  .form-group:nth-child(12) {
     grid-column: span 2;
   }
 }
