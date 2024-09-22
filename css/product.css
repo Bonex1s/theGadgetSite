@@ -477,7 +477,8 @@ body.cart-open {
   color: var(--primary-color);
 }
 
-/* REGISTRATION-LOGIN */
+/* REGISTRATION-LOGIN =====================*/
+
 .menu-toggle {
   display: none;
 }
@@ -510,6 +511,9 @@ body.cart-open {
   height: 100%; /* Заставляем изображение занимать всю высоту контейнера */
   object-fit: cover; /* Обеспечиваем правильное масштабирование изображения без искажений */
 }
+.image-overlay {
+  height: 100%;
+}
 
 .text-front {
   position: absolute;
@@ -535,6 +539,24 @@ body.cart-open {
   flex-direction: column;
   justify-content: center;
   padding: 2em;
+  align-items: center;
+}
+
+.form-section h3 {
+  font-weight: 600;
+  padding: 0.5em;
+}
+
+.recovery {
+  font-size: small;
+  text-align: center;
+  padding: 0em 0 3em 0;
+}
+.recovery:hover {
+  color: var(--primary-color);
+}
+.form-section p {
+  font-size: small;
 }
 
 .login-form {
@@ -542,25 +564,29 @@ body.cart-open {
   flex-direction: column;
 }
 
-.login-form label {
-  margin-bottom: 0.5em;
-}
-
 .login-form input {
   margin-bottom: 1em;
   padding: 0.5em;
   border: solid rgb(188, 188, 188);
+  width: 17em;
+  border-radius: var(--border-radius);
 }
 
-.login-form button {
+.main-button {
   padding: 0.4em;
-  background-color: #ffffff;
-  color: rgb(0, 0, 0);
-  border: none;
+  background-color: black;
+  color: white;
   cursor: pointer;
   border: solid;
-  width: 10em;
-  margin: auto;
+  width: 17em;
+  border-radius: var(--border-radius);
+}
+.registration {
+  font-size: small;
+  padding: 0.5em;
+}
+.registration span:hover {
+  color: var(--primary-color);
 }
 /* TOGGLE MENU -------------*/
 .toggle-section {

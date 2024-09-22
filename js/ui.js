@@ -33,30 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  const formSection = document.querySelector(".login-container");
-  const formOpenBtn = document.querySelector("#login");
-
-  formOpenBtn.addEventListener("click", function (event) {
-    event.stopPropagation();
-
-    if (formSection.style.display === "none" || !formSection.style.display) {
-      formSection.style.display = "flex";
-    } else {
-      formSection.style.display = "none";
-    }
-  });
-
-  // Закрытие формы при клике вне её
-  document.addEventListener("click", function (event) {
-    // Проверяем, был ли клик вне формы и кнопки
-    if (
-      !formSection.contains(event.target) &&
-      !formOpenBtn.contains(event.target)
-    ) {
-      formSection.style.display = "none"; // Скрываем форму
-    }
-  });
-
   window.addEventListener("scroll", function () {
     const header = document.querySelector(".header-panel");
     const scrollPosition = window.scrollY;
@@ -248,23 +224,56 @@ buttonSelectZone.forEach((button) => {
 
 console.log("Script loaded");
 // LOGIN ACCOUNT ======================================================================
+const formSection = document.querySelector(".login-container");
+const formOpenBtn = document.querySelector("#login");
 
-document.querySelector("#login-form").addEventListener("submit", (event) => {
-  event.preventDefault();
+formOpenBtn.addEventListener("click", function (event) {
+  event.stopPropagation();
 
-  const username = document.querySelector("#username").value;
-  const password = document.querySelector("#password").value;
-
-  if (username === "admin" && password === "admin") {
-    localStorage.setItem(
-      "user",
-      JSON.stringify({ name: "Test User", email: "test@example.com" })
-    );
-
-    window.location.href = "./pages/user.html";
+  if (formSection.style.display === "none" || !formSection.style.display) {
+    formSection.style.display = "flex";
   } else {
-    alert("Невірний логін чи пароль");
+    formSection.style.display = "none";
   }
+});
+
+// Закрытие формы при клике вне её
+document.addEventListener("click", function (event) {
+  // Проверяем, был ли клик вне формы и кнопки
+  if (
+    !formSection.contains(event.target) &&
+    !formOpenBtn.contains(event.target)
+  ) {
+    formSection.style.display = "none"; // Скрываем форму
+  }
+});
+
+document
+  .querySelector("#login-form-login")
+  .addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const username = document.querySelector("#username").value;
+    const password = document.querySelector("#password").value;
+
+    if (username === "admin" && password === "admin") {
+      localStorage.setItem(
+        "user",
+        JSON.stringify({ name: "Test User", email: "test@example.com" })
+      );
+
+      window.location.href = "./pages/user.html";
+    } else {
+      alert("Невірний логін чи пароль");
+    }
+  });
+const formRegistration = document.querySelector("#login-form-registration");
+const formLogin = document.querySelector("#login-form-login");
+const registrationBtn = document.querySelector("#registration-btn");
+
+registrationBtn.addEventListener("click", () => {
+  formLogin.style.display = "none";
+  formRegistration.style.display = "flex";
 });
 
 // XML PARSER ====================================================================

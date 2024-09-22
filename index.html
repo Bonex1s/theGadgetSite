@@ -135,7 +135,7 @@
         <div class="login-container">
           <div class="image-section">
             <div class="image-overlay">
-              <img src="assets/loginpict.png" alt="" />
+              <img src="assets/registrationimg.jpeg" alt="" />
               <div class="text-front">
                 <h1>Привіт красавец!</h1>
                 <p>увійти в систему для продовження</p>
@@ -143,14 +143,76 @@
             </div>
           </div>
           <div class="form-section">
-            <form class="login-form" id="login-form">
-              <label for="username">Логин:</label>
-              <input type="text" id="username" name="username" required />
+            <form class="login-form login" id="login-form-login">
+              <h3>Вхід</h3>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Email"
+                required
+                autocomplete="email"
+              />
 
-              <label for="password">Пароль:</label>
-              <input type="password" id="password" name="password" required />
-
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Пароль"
+                required
+                autocomplete="current-password"
+              />
+              <button type="button" class="recovery">Забули пароль?</button>
               <button class="main-button" type="submit">Увійти</button>
+              <button type="button" class="registration" id="registration-btn">
+                Не має аккаунту? <br />
+                <span>Зареєструватися</span>
+              </button>
+            </form>
+            <form class="login-form registration" id="login-form-registration">
+              <h3>Реєстрація</h3>
+              <input
+                type="text"
+                id="first-name"
+                name="first-name"
+                placeholder="Ім'я"
+                required
+              />
+              <input
+                type="text"
+                id="second-name"
+                name="second-name"
+                placeholder="Прізвище"
+                required
+              />
+              <input
+                type="email"
+                id="email-registration"
+                name="email"
+                placeholder="Email"
+                required
+                autocomplete="email"
+              />
+              <input
+                type="tel"
+                id="tel"
+                name="tel"
+                placeholder="Номер телефону"
+                required
+                autocomplete="tel"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+              />
+
+              <input
+                type="password"
+                id="password-registration"
+                name="password"
+                placeholder="Пароль"
+                required
+                autocomplete="current-password"
+              />
+
+              <button class="main-button" type="submit">Зареєструватися</button>
             </form>
           </div>
         </div>
@@ -931,7 +993,9 @@
             </div>
           </div>
         </div>
-        <button type="button" class="formalize">Оформити замовлення</button>
+        <a href="./pages/order.html">
+          <button type="button" class="formalize">Оформити замовлення</button>
+        </a>
       </div>
     </header>
 

@@ -111,10 +111,10 @@ const headerTemplate = `
         <div class="search-container">
           <input type="text" class="search-input" placeholder="Пошук..." />
         </div>
-        <div class="login-container">
+              <div class="login-container">
           <div class="image-section">
             <div class="image-overlay">
-              <img src="../assets/loginpict.png" alt="" />
+              <img src="../assets/registrationimg.jpeg" alt="" />
               <div class="text-front">
                 <h1>Привіт красавец!</h1>
                 <p>увійти в систему для продовження</p>
@@ -122,17 +122,33 @@ const headerTemplate = `
             </div>
           </div>
           <div class="form-section">
+            <h3>Вхід</h3>
             <form class="login-form" id="login-form">
-              <label for="username">Логин:</label>
-              <input type="text" id="username" name="username" required />
+              <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Email"
+                required
+              />
 
-              <label for="password">Пароль:</label>
-              <input type="password" id="password" name="password" required />
-
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Пароль"
+                required
+              />
+              <button type="button" class="recovery">Забули пароль?</button>
               <button class="main-button" type="submit">Увійти</button>
             </form>
+            <button type="button" class="registration">
+              Не має аккаунту? <br />
+              <span>Зареєструватися</span>
+            </button>
           </div>
         </div>
+
         <ul class="svg-list">
           <li class="svg-icon" id="search-icon">
             <svg
