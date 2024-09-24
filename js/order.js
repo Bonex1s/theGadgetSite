@@ -103,3 +103,16 @@ document.querySelector("#login-form").addEventListener("submit", (event) => {
     alert("Неверный логин или пароль");
   }
 });
+
+// PROMOCODE ============================================================================
+
+const openPromo = document.getElementById("toggleButton");
+const promoCode = document.getElementById("promo-code");
+
+openPromo.addEventListener("click", () => {
+  if (promoCode.style.display === "none") {
+    promoCode.style.display = "block";
+  } else {
+    promoCode.style.display = "none";
+  }
+});

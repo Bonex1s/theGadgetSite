@@ -19,8 +19,7 @@
     <header class="header" id="header"></header>
     <section class="main-section-container">
       <div class="left-section">
-        <p>Реєстрація, або увійдіть в <span> аккаунт</span></p>
-        <div class="social-panel">
+        <!-- <div class="social-panel">
           <button type="button" class="social-button">
             <div class="svg-logo-button">
               <svg
@@ -102,8 +101,68 @@
             </div>
             Продовжити з Facebook
           </button>
+        </div> -->
+        <div class="product-select">
+          <div class="header-text">
+            <h3>Ваше замовлення</h3>
+          </div>
+          <div class="main-info-product">
+            <div class="main-picture">
+              <img src="../assets/KajsaGlamorus.webp" alt="photo" />
+            </div>
+            <div class="main-info-container">
+              <h3>
+                Чохол Kajsa Glamorus Collection Snake iPhone 15 Pro Max (синій)
+              </h3>
+              <p>2000000128740</p>
+            </div>
+            <div class="count">
+              <p>Кількість</p>
+              <h3>1</h3>
+            </div>
+            <div class="price-product">
+              <span>999грн</span>
+            </div>
+          </div>
+          <div class="main-info-product">
+            <div class="main-picture">
+              <img src="../assets/KajsaGlamorus.webp" alt="photo" />
+            </div>
+            <div class="main-info-container">
+              <h3>
+                Чохол Kajsa Glamorus Collection Snake iPhone 15 Pro Max (синій)
+              </h3>
+              <p>2000000128740</p>
+            </div>
+            <div class="count">
+              <p>Кількість</p>
+              <h3>1</h3>
+            </div>
+            <div class="price-product">
+              <span>999грн</span>
+            </div>
+          </div>
+          <div class="main-info-product">
+            <div class="main-picture">
+              <img src="../assets/siliconeyellowcase.webp" alt="photo" />
+            </div>
+            <div class="main-info-container">
+              <h3>
+                Чохол Silicone Case with MagSafe for iPhone 15 Pro, Sunshine
+                (OEM)
+              </h3>
+              <p>2000000128235</p>
+            </div>
+            <div class="count">
+              <p>Кількість</p>
+              <h3>1</h3>
+            </div>
+            <div class="price-product">
+              <span>999грн</span>
+            </div>
+          </div>
         </div>
-
+        <p>Реєстрація, або увійдіть в <span> аккаунт</span></p>
         <div class="form-main-section">
           <form class="checkout-form">
             <div class="form-group">
@@ -179,29 +238,43 @@
         </div>
       </div>
       <div class="right-section">
-        <div class="cart-product">
-          <div class="img-cart-product">
-            <img src="../assets/spigencase1.webp" alt="Photo product" />
-          </div>
-          <div class="info-cart-product">
-            <p class="product-cart-name">
-              Захисне Скло MaiKai 3D Amazing Full Glass для iPhone X/XS/11 Pro
-            </p>
-            <p class="quantity-cart-product">
-              1x
-              <b> 399грн</b>
-            </p>
-            <span class="cancel-cart-product">Відмінити</span>
+        <div class="promo-code-container">
+          <div class="input-container">
+            <div class="open-input">
+              <h3>Промокод</h3>
+              <button class="toggle-button" id="toggleButton">+</button>
+            </div>
+            <input
+              type="text"
+              id="promo-code"
+              class="promo-code-input"
+              placeholder="промокод"
+            />
           </div>
         </div>
-        <hr class="separator-right" />
-        <div class="promo-code-container">
-          <input
-            type="text"
-            id="promo-code"
-            class="promo-code-input"
-            placeholder="промокод"
-          />
+
+        <div class="amount-ordered">
+          <div class="order-header">Сума замовлення</div>
+          <div class="amount">
+            <div class="amount-container">
+              <div class="order-info">
+                <span class="label">Сума:</span> 999грн
+              </div>
+              <div class="order-info">
+                <span class="label">Знижка:</span> 50грн
+              </div>
+
+              <div class="order-info">
+                <span class="label">Доставка:</span> 70грн
+              </div>
+              <div class="order-info sum">
+                <span class="label">Разом:</span> 1999грн
+              </div>
+              <button class="amount-order-button">
+                Підтвердити замовлення
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -116,8 +116,8 @@ const headerTemplate = `
             <div class="image-overlay">
               <img src="../assets/registrationimg.jpeg" alt="" />
               <div class="text-front">
-                <h1>Привіт красавец!</h1>
-                <p>увійти в систему для продовження</p>
+                <h1>Увійти в систему для продовження</h1>
+                
               </div>
             </div>
           </div>

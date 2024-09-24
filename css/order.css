@@ -347,14 +347,18 @@ body.cart-open {
 /* MAIN CONTENT ============================ */
 .main-section-container {
   display: flex;
-  justify-content: space-between;
   margin-top: 12em;
+  max-width: none;
+  width: 100%;
 }
 /* RIGHT SECTION ========================= */
 
 .right-section {
+  position: sticky;
+  padding-right: 2em;
   width: 35%;
-  padding: 1em;
+  top: 120px;
+  height: 100%;
 }
 .cart-product {
   display: flex;
@@ -387,30 +391,113 @@ body.cart-open {
   border-left: none;
   border-image: initial;
   border-top: 0.5px solid var(--secondary-color);
-  width: 28em;
+  width: 100%;
   margin: 2em 0 2em 0;
 }
+.open-input {
+  background-color: var(--background-color);
+  padding: 1em;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
 .promo-code-input {
-  width: 28em;
+  display: none;
+  width: 100%;
   padding: 10px;
   font-size: 16px;
   color: #333;
   background-color: #f4f3f3;
   border-radius: var(--border-radius);
   box-sizing: border-box;
+  margin-top: 1em;
 }
 
 .promo-code-input::placeholder {
   color: #888;
 }
+.order-header {
+  padding: 1em;
+}
+.order-button {
+  width: 100%;
+  font-size: 16px;
+  padding: 10px;
+  margin-top: 1em;
+  background-color: black;
+  color: white;
+  border-radius: var(--border-radius);
+}
+.amount-container {
+  padding: 2em;
+  background-color: var(--background-color);
+  width: 100%;
+  text-align: center;
+}
+.order-info {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1em;
+}
+.order-info.sum {
+  font-size: 20px;
+  font-weight: 600;
+}
+.amount-order-button {
+  background-color: black;
+  color: white;
+  padding: 0.8em;
+  border-radius: var(--border-radius);
+  font-size: medium;
+  width: 100%;
+}
 
 /* LEFT SECTION =========================== */
 
 .left-section {
-  width: 65%;
+  flex: 1;
   padding: 0 2em;
+  width: 65%;
 }
+.product-select {
+  border: solid var(--secondary-color);
+  border-width: 0.5px;
+  border-radius: var(--border-radius);
+  padding: 1em;
+}
+.header-text {
+  font-weight: 600;
+  padding: 1em;
+}
+.main-info-product {
+  display: flex;
+  margin-bottom: 2em;
+}
+.main-picture {
+  width: 150px;
+}
+.main-info-container h3 {
+  width: 20em;
+  padding: 1em 0 1em 0;
+}
+.main-info-container p {
+  color: #888;
+  font-size: small;
+}
+.count {
+  width: 20em;
+  padding: 1em 0 1em 5em;
+}
+.price-product {
+  width: 10em;
+  padding: 1em 0 1em 0em;
 
+  text-align: center;
+  align-items: center;
+}
+.price-product span {
+  font-weight: 600;
+}
 .separator {
   border-right: none;
   border-bottom: none;
