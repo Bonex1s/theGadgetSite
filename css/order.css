@@ -539,20 +539,51 @@ body.cart-open {
 }
 /* FORM SECTION ========================== */
 
-.checkout-form {
-  max-width: 100%;
+/* Общие стили для формы */
+.form-section-info {
+  border: 1px solid #ccc;
   padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  margin-top: 2em;
+  margin: 20px 0;
+  position: relative;
+  border-radius: var(--border-radius);
+}
+.form-container {
+  padding: 1em;
 }
 
-.checkout-form h2 {
-  font-size: 1em;
-  margin-bottom: 10px;
-  grid-column: span 2;
+/* Стили для заголовка секции */
+.section-header {
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+  transform: translate(-13px, -88%);
+  display: inline-flex;
+  background-color: white;
 }
 
+/* Стили для номера в кружке */
+.section-number {
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.section-header h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Стили для групп элементов формы */
 .form-group {
   margin-bottom: 20px;
 }
@@ -563,61 +594,19 @@ body.cart-open {
   margin-bottom: 5px;
 }
 
-.form-group input,
-.form-group select,
-.form-group textarea {
+.form-group input {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: none;
+  border-bottom: 1px solid #000;
   font-size: 16px;
-}
-
-.form-group select {
-  appearance: none;
-  cursor: pointer;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-  border-color: #007bff;
   outline: none;
 }
 
-textarea {
-  height: 100px;
-  resize: vertical;
-}
-
-@media (min-width: 768px) {
-  .checkout-form {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    row-gap: 0.4em;
-  }
-
-  .form-group {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .form-group input,
-  .form-group select,
-  .form-group textarea {
-    width: 100%;
-  }
-
-  .form-group:nth-child(1),
-  .form-group:nth-child(7),
-  .form-group:nth-child(8),
-  .form-group:nth-child(9),
-  .form-group:nth-child(10),
-  .form-group:nth-child(11),
-  .form-group:nth-child(12) {
-    grid-column: span 2;
-  }
+.form-group input:disabled {
+  color: green;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid green;
 }
 
 /* FOOOOTER */
