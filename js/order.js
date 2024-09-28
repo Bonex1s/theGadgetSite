@@ -116,3 +116,34 @@ openPromo.addEventListener("click", () => {
     promoCode.style.display = "none";
   }
 });
+// DROPDOWN ========================================================================
+const dropdownHeader = document.querySelector(".dropdown-header");
+const dropdown = document.querySelector(".dropdown");
+
+dropdownHeader.addEventListener("click", function () {
+  dropdown.classList.toggle("open");
+});
+
+document.addEventListener("click", function (e) {
+  if (!dropdown.contains(e.target)) {
+    dropdown.classList.remove("open");
+  }
+});
+
+const deliveryRadios = document.querySelectorAll(".delivery-radio");
+
+deliveryRadios.forEach((radio) => {
+  radio.addEventListener("change", function () {
+    const allContents = document.querySelectorAll(".delivery-info");
+    allContents.forEach((content) => content.classList.remove("open"));
+
+    const targetId = radio.getAttribute("data-target");
+    const content = document.getElementById(targetId);
+
+    if (content) {
+      content.classList.add("open"); // Добавляем класс "open" для показа
+    } else {
+      console.error(`Element with ID ${targetId} not found.`);
+    }
+  });
+});

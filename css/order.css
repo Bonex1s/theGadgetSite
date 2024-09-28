@@ -548,13 +548,12 @@ body.cart-open {
   border-radius: var(--border-radius);
 }
 .form-container {
-  padding: 1em;
+  padding: 0 1em 2em 1em;
 }
 
 /* Стили для заголовка секции */
 .section-header {
   align-items: center;
-  margin-bottom: 20px;
   position: relative;
   padding-bottom: 10px;
   transform: translate(-13px, -88%);
@@ -607,6 +606,99 @@ body.cart-open {
   color: green;
   background-color: #f0f0f0;
   border-bottom: 1px solid green;
+}
+/* FORM 2 ============================= */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  width: 300px;
+  margin: 0 1em 1em 0;
+}
+
+.dropdown-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 100%;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.dropdown.open .dropdown-content {
+  display: block;
+}
+
+.search-city {
+  width: 80%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  margin-right: 5px;
+}
+
+.search-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.search-button img {
+  width: 20px;
+  height: 20px;
+}
+
+.dropdown-icon {
+  font-size: 12px;
+  transform: rotate(180deg);
+}
+
+.dropdown.open .dropdown-icon {
+  transform: rotate(0deg);
+}
+
+.delivery-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.delivery-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.delivery-option input[type="radio"] {
+  margin-right: 10px;
+}
+
+.delivery-cost {
+  color: green;
+}
+
+.delivery-info {
+  display: none;
+}
+.delivery-info.open {
+  display: block;
+  color: gray;
+  font-size: 12px;
+}
+
+input[type="radio"]:checked + span + span + .delivery-info {
+  display: block;
 }
 
 /* FOOOOTER */

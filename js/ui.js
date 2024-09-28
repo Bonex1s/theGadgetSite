@@ -149,7 +149,6 @@ const productLinks = document.querySelectorAll("a[data-product]");
 // Добавляем обработчик событий на клик для каждой ссылки
 productLinks.forEach((link) => {
   link.addEventListener("click", (event) => {
-    // Получаем значение атрибута data-product (название товара)
     const productName = event.target.getAttribute("data-product");
 
     // Сохраняем текст в localStorage

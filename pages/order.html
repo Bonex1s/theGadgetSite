@@ -270,6 +270,142 @@
             </form>
           </div>
         </div>
+        <div class="form-section-info">
+          <div class="section-header">
+            <div class="section-number">2</div>
+            <h2>СПОСІБ ДОСТАВКИ</h2>
+          </div>
+          <div class="form-container">
+            <form>
+              <div class="dropdown">
+                <label for="city-select">Місто</label>
+                <div class="dropdown-header" id="city-select">
+                  <span class="selected-city">Київ</span>
+                  <span class="dropdown-icon">&#9650;</span>
+                </div>
+                <div class="dropdown-content">
+                  <input
+                    type="text"
+                    placeholder="Введіть ваше місто"
+                    class="search-city"
+                  />
+                  <button class="search-button">
+                    <?xml version="1.0" encoding="UTF-8"?>
+
+                    <svg
+                      fill="#000000"
+                      height="35px"
+                      width="35px"
+                      version="1.1"
+                      id="Capa_1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      viewBox="-19.29 -19.29 231.49 231.49"
+                      xml:space="preserve"
+                      transform="matrix(1, 0, 0, 1, 0, 0)rotate(0)"
+                    >
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g
+                        id="SVGRepo_tracerCarrier"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke="#CCCCCC"
+                        stroke-width="0.771624"
+                      ></g>
+                      <g id="SVGRepo_iconCarrier">
+                        <g>
+                          <path
+                            d="M190.709,180.102l-47.08-47.076c11.702-14.072,18.752-32.142,18.752-51.831c0-44.77-36.421-81.193-81.188-81.193 C36.423,0.001,0,36.424,0,81.194c0,44.767,36.423,81.188,81.193,81.188c19.688,0,37.758-7.049,51.829-18.75l47.081,47.077 c1.464,1.464,3.384,2.196,5.303,2.196c1.919,0,3.839-0.732,5.304-2.197C193.639,187.779,193.639,183.031,190.709,180.102z M15,81.194c0-36.499,29.694-66.193,66.193-66.193c36.496,0,66.188,29.694,66.188,66.193c0,36.496-29.691,66.188-66.188,66.188 C44.694,147.382,15,117.69,15,81.194z"
+                          ></path>
+                          <path
+                            d="M81.186,41.989c-15.79,0-28.637,12.845-28.637,28.634c0,23.968,22.381,46.622,23.334,47.575 c1.464,1.464,3.383,2.196,5.303,2.196c1.919,0,3.838-0.732,5.302-2.195c0.953-0.953,23.345-23.607,23.345-47.576 C109.832,54.835,96.981,41.989,81.186,41.989z M81.168,101.497c-6.045-7.682-13.619-19.864-13.619-30.873 c0-7.518,6.117-13.634,13.637-13.634c7.524,0,13.646,6.116,13.646,13.634C94.832,82.233,86.776,94.419,81.168,101.497z"
+                          ></path>
+                        </g>
+                      </g>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="delivery-options">
+                <div class="delivery-container">
+                  <label class="delivery-option">
+                    <div class="input-container">
+                      <input
+                        type="radio"
+                        name="delivery"
+                        value="store"
+                        class="delivery-radio"
+                        data-target="content1"
+                      />
+                      <span>Забрати із магазину</span>
+                    </div>
+
+                    <span class="delivery-cost">безкоштовно</span>
+                  </label>
+                  <div class="delivery-info" id="content1">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Totam fugit animi sed quia ipsa blanditiis non dolores quo
+                    deleniti iste et, fuga, quaerat quibusdam saepe rerum,
+                    aperiam asperiores delectus ducimus?
+                  </div>
+                </div>
+                <div class="delivery-container">
+                  <label class="delivery-option">
+                    <div class="input-container">
+                      <input
+                        type="radio"
+                        name="delivery"
+                        value="address"
+                        class="delivery-radio"
+                        id="delivery"
+                        data-target="content2"
+                      />
+
+                      <span>Адресна доставка (Нова Пошта)</span>
+                    </div>
+                    <span class="delivery-cost">безкоштовно</span>
+                  </label>
+                  <div class="delivery-info" id="content2">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Totam fugit animi sed quia ipsa blanditiis non dolores quo
+                    deleniti iste et, fuga, quaerat quibusdam saepe rerum,
+                    aperiam asperiores delectus ducimus?
+                  </div>
+                </div>
+
+                <label class="delivery-option">
+                  <div class="input-container">
+                    <input
+                      type="radio"
+                      name="delivery"
+                      value="branch"
+                      class="delivery-radio"
+                    />
+                    <span>У відділення (Нова Пошта)</span>
+                  </div>
+                  <span class="delivery-info"
+                    >Відправимо через: 2 дні<br />Доставимо: 1 Жовтня - 2
+                    Жовтня</span
+                  >
+                  <span class="delivery-cost">безкоштовно</span>
+                </label>
+                <label class="delivery-option">
+                  <div class="input-container">
+                    <input
+                      type="radio"
+                      name="delivery"
+                      value="address"
+                      class="delivery-radio"
+                    />
+                    <span>Поштомат (Нова Пошта)</span>
+                  </div>
+                  <span class="delivery-cost">безкоштовно</span>
+                </label>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
       <div class="right-section">
         <div class="promo-code-container">
