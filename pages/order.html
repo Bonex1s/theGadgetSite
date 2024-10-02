@@ -238,7 +238,6 @@
         </div> -->
         <div class="form-section-info">
           <div class="section-header">
-            <div class="section-number">1</div>
             <h2>ОСОБИСТІ ДАНІ</h2>
           </div>
           <div class="form-container">
@@ -255,6 +254,7 @@
 
               <div class="form-group">
                 <label for="phone">Телефон</label>
+
                 <input type="tel" id="phone" placeholder="+38 XXX XXX XX XX" />
               </div>
 
@@ -272,7 +272,6 @@
         </div>
         <div class="form-section-info">
           <div class="section-header">
-            <div class="section-number">2</div>
             <h2>СПОСІБ ДОСТАВКИ</h2>
           </div>
           <div class="form-container">
@@ -281,7 +280,21 @@
                 <label for="city-select">Місто</label>
                 <div class="dropdown-header" id="city-select">
                   <span class="selected-city">Київ</span>
-                  <span class="dropdown-icon">&#9650;</span>
+                  <div class="dropdown-icon">
+                    <svg
+                      width="15"
+                      height="15"
+                      viewBox="0 0 21 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        opacity="0.2"
+                        d="M18.5355 0.168281L20.294 1.94967L10.2297 11.8849L0.294466 1.82056L2.07586 0.0620206L10.2526 8.34498L18.5355 0.168281Z"
+                        fill="black"
+                      ></path>
+                    </svg>
+                  </div>
                 </div>
                 <div class="dropdown-content">
                   <input
@@ -344,10 +357,45 @@
                     <span class="delivery-cost">безкоштовно</span>
                   </label>
                   <div class="delivery-info" id="content1">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Totam fugit animi sed quia ipsa blanditiis non dolores quo
-                    deleniti iste et, fuga, quaerat quibusdam saepe rerum,
-                    aperiam asperiores delectus ducimus?
+                    <div class="city-select">
+                      <button class="city-select-button" type="button">
+                        Магазин
+                      </button>
+                      <div class="city-select-content">
+                        <p data-city="Київ, ТРЦ Respublika Park">
+                          Київ, ТРЦ Respublika Park
+                        </p>
+                        <p data-city="Київ, вул.Хрещатик 38, 'ЦУМ'">
+                          Київ, вул.Хрещатик 38, "ЦУМ"
+                        </p>
+                        <p data-city="Київ, ТЦ Blockbuster mall">
+                          Київ, ТЦ Blockbuster mall
+                        </p>
+                        <p
+                          data-city="Київ, вул.Дніпровська набережна, 12, ТРЦ River Mall"
+                        >
+                          Київ, вул.Дніпровська набережна, 12, ТРЦ River Mall
+                        </p>
+                        <p data-city="Київ, пл. Галицька, 3 ТЦ «Україна»">
+                          Київ, пл. Галицька, 3 ТЦ «Україна»
+                        </p>
+                        <p
+                          data-city="Київ, пр-т Європейського Союзу 47, ТРЦ Retroville"
+                        >
+                          Київ, пр-т Європейського Союзу 47, ТРЦ Retroville
+                        </p>
+                        <p data-city="Київ, ТЦ «Океан Плаза»">
+                          Київ, ТЦ «Океан Плаза»
+                        </p>
+                        <p
+                          data-city="Київ, Проспект Генерала Ватутіна, 2, ТЦ «Skymall»"
+                        >
+                          Київ, Проспект Генерала Ватутіна, 2, ТЦ «Skymall»
+                        </p>
+                      </div>
+                    </div>
+
+                    <p id="selected-city">Ваш город: <span>не выбран</span></p>
                   </div>
                 </div>
                 <div class="delivery-container">
@@ -373,35 +421,145 @@
                     aperiam asperiores delectus ducimus?
                   </div>
                 </div>
+                <div class="delivery-container">
+                  <label class="delivery-option">
+                    <div class="input-container">
+                      <input
+                        type="radio"
+                        name="delivery"
+                        value="branch"
+                        class="delivery-radio"
+                        data-target="content3"
+                      />
+                      <span>У відділення (Нова Пошта)</span>
+                    </div>
 
-                <label class="delivery-option">
-                  <div class="input-container">
-                    <input
-                      type="radio"
-                      name="delivery"
-                      value="branch"
-                      class="delivery-radio"
-                    />
-                    <span>У відділення (Нова Пошта)</span>
+                    <span class="delivery-cost">безкоштовно</span>
+                  </label>
+                  <div class="delivery-info" id="content3">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Totam fugit animi sed quia ipsa blanditiis non dolores quo
+                    deleniti iste et, fuga, quaerat quibusdam saepe rerum,
+                    aperiam asperiores delectus ducimus?
                   </div>
-                  <span class="delivery-info"
-                    >Відправимо через: 2 дні<br />Доставимо: 1 Жовтня - 2
-                    Жовтня</span
-                  >
-                  <span class="delivery-cost">безкоштовно</span>
-                </label>
-                <label class="delivery-option">
-                  <div class="input-container">
-                    <input
-                      type="radio"
-                      name="delivery"
-                      value="address"
-                      class="delivery-radio"
-                    />
-                    <span>Поштомат (Нова Пошта)</span>
+                </div>
+                <div class="delivery-container">
+                  <label class="delivery-option">
+                    <div class="input-container">
+                      <input
+                        type="radio"
+                        name="delivery"
+                        value="address"
+                        class="delivery-radio"
+                        data-target="content4"
+                      />
+                      <span>Поштомат (Нова Пошта)</span>
+                    </div>
+                    <span class="delivery-cost">безкоштовно</span>
+                  </label>
+                  <div class="delivery-info" id="content4">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Totam fugit animi sed quia ipsa blanditiis non dolores quo
+                    deleniti iste et, fuga, quaerat quibusdam saepe rerum,
+                    aperiam asperiores delectus ducimus?
                   </div>
-                  <span class="delivery-cost">безкоштовно</span>
-                </label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="form-section-info">
+          <div class="section-header">
+            <h2>ПЛАТІЖНА СИСТЕМА</h2>
+          </div>
+          <div class="form-container">
+            <form>
+              <div class="delivery-options">
+                <div class="delivery-container">
+                  <label class="delivery-option">
+                    <div class="input-container">
+                      <input
+                        type="radio"
+                        name="delivery"
+                        value="store"
+                        class="delivery-radio"
+                        data-target="content5"
+                      />
+                      <span>Готівкою при отриманні</span>
+                    </div>
+                  </label>
+                  <div class="delivery-info" id="content5">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Totam fugit animi sed quia ipsa blanditiis non dolores quo
+                    deleniti iste et, fuga, quaerat quibusdam saepe rerum,
+                    aperiam asperiores delectus ducimus?
+                  </div>
+                </div>
+                <div class="delivery-container">
+                  <label class="delivery-option">
+                    <div class="input-container">
+                      <input
+                        type="radio"
+                        name="delivery"
+                        value="address"
+                        class="delivery-radio"
+                        id="delivery"
+                        data-target="content6"
+                      />
+
+                      <span
+                        >Plata by mono (оплата карткою, ApplePay,
+                        GooglePay)</span
+                      >
+                    </div>
+                  </label>
+                  <div class="delivery-info" id="content6">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Totam fugit animi sed quia ipsa blanditiis non dolores quo
+                    deleniti iste et, fuga, quaerat quibusdam saepe rerum,
+                    aperiam asperiores delectus ducimus?
+                  </div>
+                </div>
+                <div class="delivery-container">
+                  <label class="delivery-option">
+                    <div class="input-container">
+                      <input
+                        type="radio"
+                        name="delivery"
+                        value="branch"
+                        class="delivery-radio"
+                        data-target="content7"
+                      />
+                      <span>ПриватБанк (Миттєва розстрочка)</span>
+                    </div>
+                  </label>
+                  <div class="delivery-info" id="content7">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Totam fugit animi sed quia ipsa blanditiis non dolores quo
+                    deleniti iste et, fuga, quaerat quibusdam saepe rerum,
+                    aperiam asperiores delectus ducimus?
+                  </div>
+                </div>
+                <div class="delivery-container">
+                  <label class="delivery-option">
+                    <div class="input-container">
+                      <input
+                        type="radio"
+                        name="delivery"
+                        value="address"
+                        class="delivery-radio"
+                        data-target="content8"
+                      />
+                      <span>ПриватБанк (Оплата частинами)</span>
+                    </div>
+                  </label>
+                  <div class="delivery-info" id="content8">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Totam fugit animi sed quia ipsa blanditiis non dolores quo
+                    deleniti iste et, fuga, quaerat quibusdam saepe rerum,
+                    aperiam asperiores delectus ducimus?
+                  </div>
+                </div>
               </div>
             </form>
           </div>

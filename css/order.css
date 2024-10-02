@@ -543,7 +543,7 @@ body.cart-open {
 .form-section-info {
   border: 1px solid #ccc;
   padding: 20px;
-  margin: 20px 0;
+  margin: 3em 0;
   position: relative;
   border-radius: var(--border-radius);
 }
@@ -556,25 +556,12 @@ body.cart-open {
   align-items: center;
   position: relative;
   padding-bottom: 10px;
-  transform: translate(-13px, -88%);
+  transform: translate(9px, -95%);
   display: inline-flex;
   background-color: white;
 }
 
 /* Стили для номера в кружке */
-.section-number {
-  width: 30px;
-  height: 30px;
-  background-color: black;
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  margin-right: 10px;
-  font-size: 16px;
-}
 
 .section-header h2 {
   font-size: 16px;
@@ -639,7 +626,13 @@ body.cart-open {
 .dropdown.open .dropdown-content {
   display: block;
 }
+.dropdown-icon {
+  transition: transform 0.3s ease;
+}
 
+.dropdown-icon.rotated {
+  transform: rotate(180deg);
+}
 .search-city {
   width: 80%;
   padding: 5px;
@@ -699,6 +692,54 @@ body.cart-open {
 
 input[type="radio"]:checked + span + span + .delivery-info {
   display: block;
+}
+.city-select {
+  position: relative;
+  display: inline-block;
+  width: 300px;
+  font-family: Arial, sans-serif;
+}
+
+.city-select-button {
+  background-color: #f8f8f8;
+  color: #333;
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  text-align: left;
+  border-radius: 5px;
+}
+
+.city-select-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+}
+
+.city-select-content p {
+  padding: 12px;
+  margin: 0;
+  border-bottom: 1px solid #f1f1f1;
+  cursor: pointer;
+}
+
+.city-select-content p:hover {
+  background-color: #f1f1f1;
+}
+
+.show {
+  display: block;
+}
+
+#selected-city {
+  margin-top: 20px;
 }
 
 /* FOOOOTER */

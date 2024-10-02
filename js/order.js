@@ -119,14 +119,17 @@ openPromo.addEventListener("click", () => {
 // DROPDOWN ========================================================================
 const dropdownHeader = document.querySelector(".dropdown-header");
 const dropdown = document.querySelector(".dropdown");
+const dropdownIcon = document.querySelector(".dropdown-icon");
 
 dropdownHeader.addEventListener("click", function () {
   dropdown.classList.toggle("open");
+  dropdownIcon.classList.toggle("rotated");
 });
 
 document.addEventListener("click", function (e) {
   if (!dropdown.contains(e.target)) {
     dropdown.classList.remove("open");
+    dropdownIcon.classList.remove("rotated");
   }
 });
 
@@ -141,9 +144,41 @@ deliveryRadios.forEach((radio) => {
     const content = document.getElementById(targetId);
 
     if (content) {
-      content.classList.add("open"); // Добавляем класс "open" для показа
+      content.classList.add("open");
     } else {
       console.error(`Element with ID ${targetId} not found.`);
     }
   });
+});
+
+// CITY DROPPDOWN =====================================================
+
+const cityButton = document.querySelector(".city-select-button");
+const cityContent = document.querySelector(".city-select-content");
+const selectedCitySpan = document
+  .getElementById("selected-city")
+  .querySelector("span");
+
+// Открытие/закрытие выпадающего списка
+cityButton.addEventListener("click", (event) => {
+  event.preventDefault();
+  cityContent.classList.toggle("show");
+});
+
+// Выбор города из списка
+cityContent.addEventListener("click", (event) => {
+  if (event.target.tagName === "P") {
+    const selectedCity = event.target.getAttribute("data-city");
+    selectedCitySpan.textContent = selectedCity;
+    localStorage.setItem("selectedCity", selectedCity);
+    cityContent.classList.remove("show"); // Закрываем список после выбора
+  }
+});
+
+// Проверка сохраненного города при загрузке страницы
+document.addEventListener("DOMContentLoaded", () => {
+  const savedCity = localStorage.getItem("selectedCity");
+  if (savedCity) {
+    selectedCitySpan.textContent = savedCity;
+  }
 });
