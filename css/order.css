@@ -60,6 +60,9 @@ a {
   color: var(--primary-color);
   transform: scale(1.05); /* Увеличение текста при наведении */
 }
+.menu-text svg {
+  width: 15px;
+}
 .svg-list {
   display: flex;
   justify-content: flex-end;
@@ -241,8 +244,7 @@ body.cart-open {
   width: 855px;
   background-color: #ffffff;
   border: solid rgb(180, 180, 180);
-
-  /* Центрирование */
+  box-shadow: 10px 10px 200px 1000px rgba(0, 0, 0, 0.5);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -400,6 +402,7 @@ body.cart-open {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  cursor: pointer;
 }
 .promo-code-input {
   display: none;
@@ -408,7 +411,8 @@ body.cart-open {
   font-size: 16px;
   color: #333;
   background-color: #f4f3f3;
-  border-radius: var(--border-radius);
+  user-select: none;
+
   box-sizing: border-box;
   margin-top: 1em;
 }
@@ -472,13 +476,18 @@ body.cart-open {
 .main-info-product {
   display: flex;
   margin-bottom: 2em;
+  padding-right: 1em;
+}
+.info-text {
+  padding: 1em 0 0 1em;
 }
 .main-picture {
   width: 150px;
 }
+
 .main-info-container h3 {
-  width: 20em;
-  padding: 1em 0 1em 0;
+  width: 18em;
+  padding: 1em 0 0.5em 0;
 }
 .main-info-container p {
   color: #888;
@@ -486,18 +495,20 @@ body.cart-open {
 }
 .count {
   width: 20em;
-  padding: 1em 0 1em 5em;
+  padding: 1em 0 1em 1em;
+  align-content: center;
+  text-align: center;
 }
 .price-product {
   width: 10em;
   padding: 1em 0 1em 0em;
-
   text-align: center;
-  align-items: center;
+  align-content: center;
 }
 .price-product span {
   font-weight: 600;
 }
+
 .separator {
   border-right: none;
   border-bottom: none;
@@ -593,6 +604,28 @@ body.cart-open {
   color: green;
   background-color: #f0f0f0;
   border-bottom: 1px solid green;
+}
+
+.form-group__mail {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.form-group__mail input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #000;
+  font-size: 16px;
+  outline: none;
+}
+.label-address {
+  padding: 2em;
+}
+.comment {
+  grid-column: span 2;
+}
+.street {
+  grid-column: span 2;
 }
 /* FORM 2 ============================= */
 .dropdown {
@@ -701,14 +734,20 @@ input[type="radio"]:checked + span + span + .delivery-info {
 }
 
 .city-select-button {
-  background-color: #f8f8f8;
   color: #333;
   padding: 10px;
   width: 100%;
   border: 1px solid #ccc;
   cursor: pointer;
   text-align: left;
-  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+.city-select-icon {
+  transition: transform 0.3s ease;
+}
+.city-select-icon.rotate {
+  transform: rotate(180deg);
 }
 
 .city-select-content {

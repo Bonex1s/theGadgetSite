@@ -2,6 +2,9 @@ body {
   font-family: "Montserrat", sans-serif;
   line-height: 1.5;
 }
+.no-scroll {
+  overflow: hidden;
+}
 a {
   color: #000000;
 }
@@ -76,6 +79,9 @@ a {
   cursor: pointer;
   color: var(--primary-color);
   transform: scale(1.05); /* Увеличение текста при наведении */
+}
+.menu-text svg {
+  width: 15px;
 }
 .svg-list {
   display: flex;
@@ -377,8 +383,9 @@ body.cart-open {
 .buy-main-btn:hover {
   background-color: black;
   color: white;
-  padding: 0.5em;
-  border: solid;
+  padding: 0.6em;
+  border: solid black;
+  border-width: 0.5px;
 }
 .buy-main-btn.active {
   background-color: black;
@@ -489,8 +496,7 @@ body.cart-open {
   width: 855px;
   background-color: #ffffff;
   border: solid rgb(180, 180, 180);
-
-  /* Центрирование */
+  box-shadow: 10px 10px 200px 1000px rgba(0, 0, 0, 0.5);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -716,6 +722,7 @@ body.cart-open {
 
 .user-tip svg {
   transition: transform 0.3s ease;
+  width: 15px;
 }
 
 .user-tip svg.rotated {

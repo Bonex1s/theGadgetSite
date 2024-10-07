@@ -106,7 +106,7 @@ document.querySelector("#login-form").addEventListener("submit", (event) => {
 
 // PROMOCODE ============================================================================
 
-const openPromo = document.getElementById("toggleButton");
+const openPromo = document.getElementById("open-input");
 const promoCode = document.getElementById("promo-code");
 
 openPromo.addEventListener("click", () => {
@@ -155,30 +155,33 @@ deliveryRadios.forEach((radio) => {
 
 const cityButton = document.querySelector(".city-select-button");
 const cityContent = document.querySelector(".city-select-content");
-const selectedCitySpan = document
-  .getElementById("selected-city")
-  .querySelector("span");
+const selectedCitySpan = document.getElementById("city-select-button");
+const selectedCityIcon = document.getElementById("city-select-icon");
 
-// Открытие/закрытие выпадающего списка
 cityButton.addEventListener("click", (event) => {
   event.preventDefault();
   cityContent.classList.toggle("show");
+  selectedCityIcon.classList.toggle("rotate");
 });
 
-// Выбор города из списка
 cityContent.addEventListener("click", (event) => {
   if (event.target.tagName === "P") {
     const selectedCity = event.target.getAttribute("data-city");
     selectedCitySpan.textContent = selectedCity;
     localStorage.setItem("selectedCity", selectedCity);
-    cityContent.classList.remove("show"); // Закрываем список после выбора
+    cityContent.classList.remove("show");
   }
 });
 
-// Проверка сохраненного города при загрузке страницы
 document.addEventListener("DOMContentLoaded", () => {
-  const savedCity = localStorage.getItem("selectedCity");
-  if (savedCity) {
-    selectedCitySpan.textContent = savedCity;
-  }
+  const deleteItem = document.querySelectorAll(".delete-item");
+  const mainInfoProduct = document.querySelectorAll(".main-info-product");
+  deleteItem.forEach((element) => {
+    element.addEventListener("click", (event) => {
+      const mainInfoProduct = event.target.closest(".main-info-product");
+      if (mainInfoProduct) {
+        mainInfoProduct.style.display = "none";
+      }
+    });
+  });
 });

@@ -225,14 +225,17 @@ console.log("Script loaded");
 // LOGIN ACCOUNT ======================================================================
 const formSection = document.querySelector(".login-container");
 const formOpenBtn = document.querySelector("#login");
+const body = document.body;
 
 formOpenBtn.addEventListener("click", function (event) {
   event.stopPropagation();
 
   if (formSection.style.display === "none" || !formSection.style.display) {
     formSection.style.display = "flex";
+    body.classList.add("no-scroll");
   } else {
     formSection.style.display = "none";
+    body.classList.remove("no-scroll");
   }
 });
 
@@ -243,7 +246,8 @@ document.addEventListener("click", function (event) {
     !formSection.contains(event.target) &&
     !formOpenBtn.contains(event.target)
   ) {
-    formSection.style.display = "none"; // Скрываем форму
+    formSection.style.display = "none";
+    body.classList.remove("no-scroll");
   }
 });
 

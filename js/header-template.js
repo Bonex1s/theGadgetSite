@@ -45,7 +45,7 @@ const headerTemplate = `
           <a class="menu-text" id="menu-text-phone">
             Телефони
             <svg
-              width="21"
+              width="21";
               height="12"
               viewBox="0 0 21 12"
               fill="none"

@@ -106,7 +106,7 @@
           <div class="header-text">
             <h3>Ваше замовлення</h3>
           </div>
-          <div class="main-info-product">
+          <div class="main-info-product" id="main-info-product">
             <div class="main-picture">
               <img src="../assets/KajsaGlamorus.webp" alt="photo" />
             </div>
@@ -117,14 +117,28 @@
               <p>2000000128740</p>
             </div>
             <div class="count">
-              <p>Кількість</p>
-              <h3>1</h3>
+              <p>Кількість:</p>
+              <b>1</b>
             </div>
             <div class="price-product">
               <span>999грн</span>
             </div>
+            <button class="delete-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="red"
+                width="24px"
+                height="24px"
+              >
+                <path d="M0 0h24v24H0V0z" fill="none" />
+                <path
+                  d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"
+                />
+              </svg>
+            </button>
           </div>
-          <div class="main-info-product">
+          <div class="main-info-product" id="main-info-product">
             <div class="main-picture">
               <img src="../assets/KajsaGlamorus.webp" alt="photo" />
             </div>
@@ -135,14 +149,28 @@
               <p>2000000128740</p>
             </div>
             <div class="count">
-              <p>Кількість</p>
-              <h3>1</h3>
+              <p>Кількість:</p>
+              <b>1</b>
             </div>
             <div class="price-product">
               <span>999грн</span>
             </div>
+            <button class="delete-item" id="delete-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="red"
+                width="24px"
+                height="24px"
+              >
+                <path d="M0 0h24v24H0V0z" fill="none" />
+                <path
+                  d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"
+                />
+              </svg>
+            </button>
           </div>
-          <div class="main-info-product">
+          <div class="main-info-product" id="main-info-product">
             <div class="main-picture">
               <img src="../assets/siliconeyellowcase.webp" alt="photo" />
             </div>
@@ -154,15 +182,34 @@
               <p>2000000128235</p>
             </div>
             <div class="count">
-              <p>Кількість</p>
-              <h3>1</h3>
+              <p>Кількість:</p>
+              <b>1</b>
             </div>
             <div class="price-product">
               <span>999грн</span>
             </div>
+            <button class="delete-item" id="delete-item" type="button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="red"
+                width="24px"
+                height="24px"
+              >
+                <path d="M0 0h24v24H0V0z" fill="none" />
+                <path
+                  d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"
+                />
+              </svg>
+            </button>
           </div>
         </div>
-        <p>Реєстрація, або увійдіть в <span> аккаунт</span></p>
+        <div class="info-text">
+          <p>
+            Реєстрація, або увійдіть в <a href="#"><span> аккаунт</span></a>
+          </p>
+        </div>
+
         <!-- <div class="form-main-section">
           <form class="checkout-form">
             <div class="form-group">
@@ -343,7 +390,7 @@
               <div class="delivery-options">
                 <div class="delivery-container">
                   <label class="delivery-option">
-                    <div class="input-container">
+                    <div class="input-container" id="input-container">
                       <input
                         type="radio"
                         name="delivery"
@@ -358,8 +405,27 @@
                   </label>
                   <div class="delivery-info" id="content1">
                     <div class="city-select">
-                      <button class="city-select-button" type="button">
+                      <button
+                        class="city-select-button"
+                        type="button"
+                        id="city-select-button"
+                      >
                         Магазин
+                        <div class="city-select-icon" id="city-select-icon">
+                          <svg
+                            width="15"
+                            height="15"
+                            viewBox="0 0 21 12"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              opacity="0.2"
+                              d="M18.5355 0.168281L20.294 1.94967L10.2297 11.8849L0.294466 1.82056L2.07586 0.0620206L10.2526 8.34498L18.5355 0.168281Z"
+                              fill="black"
+                            ></path>
+                          </svg>
+                        </div>
                       </button>
                       <div class="city-select-content">
                         <p data-city="Київ, ТРЦ Respublika Park">
@@ -394,8 +460,6 @@
                         </p>
                       </div>
                     </div>
-
-                    <p id="selected-city">Ваш город: <span>не выбран</span></p>
                   </div>
                 </div>
                 <div class="delivery-container">
@@ -415,10 +479,41 @@
                     <span class="delivery-cost">безкоштовно</span>
                   </label>
                   <div class="delivery-info" id="content2">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Totam fugit animi sed quia ipsa blanditiis non dolores quo
-                    deleniti iste et, fuga, quaerat quibusdam saepe rerum,
-                    aperiam asperiores delectus ducimus?
+                    Відправимо: сьогодні <br />Доставимо: 8 Жовтня - 9 Жовтня
+                    <div class="form-group__mail">
+                      <label class="label-address street"
+                        ><span>Вулиця</span
+                        ><input
+                          type="text"
+                          required=""
+                          autocomplete="false"
+                          class=""
+                      /></label>
+                      <label class="label-address house"
+                        ><span>Дім</span
+                        ><input
+                          type="text"
+                          required=""
+                          autocomplete="false"
+                          class=""
+                      /></label>
+                      <label class="label-address room"
+                        ><span>Квартира</span
+                        ><input
+                          type="text"
+                          required=""
+                          autocomplete="false"
+                          class=""
+                      /></label>
+                      <label class="label-address comment"
+                        ><span>Ваш коментар</span
+                        ><input
+                          type="text"
+                          required=""
+                          autocomplete="false"
+                          class=""
+                      /></label>
+                    </div>
                   </div>
                 </div>
                 <div class="delivery-container">
@@ -437,10 +532,17 @@
                     <span class="delivery-cost">безкоштовно</span>
                   </label>
                   <div class="delivery-info" id="content3">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Totam fugit animi sed quia ipsa blanditiis non dolores quo
-                    deleniti iste et, fuga, quaerat quibusdam saepe rerum,
-                    aperiam asperiores delectus ducimus?
+                    Відправимо: сьогодні <br />Доставимо: 8 Жовтня - 9 Жовтня
+                    <div class="form-group__mail">
+                      <label class="label-address office"
+                        ><span>Відділення</span
+                        ><input
+                          type="text"
+                          required=""
+                          autocomplete="false"
+                          class=""
+                      /></label>
+                    </div>
                   </div>
                 </div>
                 <div class="delivery-container">
@@ -568,7 +670,7 @@
       <div class="right-section">
         <div class="promo-code-container">
           <div class="input-container">
-            <div class="open-input">
+            <div class="open-input" id="open-input">
               <h3>Промокод</h3>
               <button class="toggle-button" id="toggleButton">+</button>
             </div>

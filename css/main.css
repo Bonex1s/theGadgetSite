@@ -6,7 +6,9 @@ body {
 a {
   color: #000000;
 }
-
+.no-scroll {
+  overflow: hidden;
+}
 /* HEADER */
 
 .header {
@@ -56,6 +58,9 @@ a {
 .menu-text {
   transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
   padding: 1.5em 0 2em;
+}
+.menu-text svg {
+  width: 15px;
 }
 .menu-text:hover {
   cursor: pointer;
@@ -248,9 +253,7 @@ body.cart-open {
   height: 620px;
   width: 855px;
   background-color: #ffffff;
-  border: solid rgb(180, 180, 180);
-
-  /* Центрирование */
+  box-shadow: 10px 10px 200px 1000px rgba(0, 0, 0, 0.5);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
