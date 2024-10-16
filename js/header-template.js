@@ -201,6 +201,7 @@ const headerTemplate = `
               />
             </svg>
           </li>
+          
 
           <li class="svg-icon" onclick="openCart()">
             <svg
@@ -240,6 +241,7 @@ const headerTemplate = `
           </li>
         </ul>
       </div>
+      <div class="logiout">Вийти з аккаунту?</div>
       <div class="toggle-section" id="toggle-section">
         <div class="toggle-container">
           <a href="../pages/productList.html" data-product="Чохли"> Чохли</a>

@@ -301,11 +301,11 @@ body.cart-open {
 
 .product-img {
   width: 35em;
+  padding: 1em;
 }
 
 .small-img-list {
   display: flex;
-  padding-left: 2em;
 }
 
 .small-img {
@@ -678,7 +678,7 @@ body.cart-open {
   padding-left: 2em;
 }
 .features {
-  width: 500px;
+  width: 550px;
 }
 .features-main-text {
   border-bottom: solid rgb(181, 181, 181);
@@ -814,6 +814,9 @@ body.cart-open {
   width: 400px;
   box-shadow: 0 13px 20px rgba(0, 0, 0, 0.2);
   border-radius: 35px;
+}
+.description-button {
+  font-weight: 600;
 }
 /* FEEDBACK PRODUCT */
 .feedback-data div {

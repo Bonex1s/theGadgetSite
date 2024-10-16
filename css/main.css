@@ -451,7 +451,7 @@ body.cart-open {
   filter: brightness(1.1);
 }
 .text-card {
-  font-weight: 670;
+  font-weight: 700;
   font-size: small;
   text-align: left;
   padding: 1em 0 1em;
@@ -503,7 +503,8 @@ body.cart-open {
 .select-zone {
   color: #000000;
   padding: 10px 20px;
-  font-size: 1em;
+  font-size: 22px;
+  font-weight: 500;
   cursor: pointer;
   position: relative; /* Для позиционирования псевдоэлемента */
   overflow: hidden;
@@ -572,13 +573,24 @@ body.cart-open {
 }
 
 .picture1 {
-  grid-column: span 1;
-  grid-row: span 2;
+  grid-column: span 2;
+  width: 820px;
+}
+.picture2 {
+  width: 400px;
+}
+.picture3 {
+  width: 400px;
+}
+.picture4 {
+  width: 400px;
 }
 
 .picture img {
   width: 100%;
-  height: auto;
+  height: 400px;
+  border-radius: 2em;
+  background-color: rgba(225, 206, 140, 0.5);
 }
 
 .main-text {
