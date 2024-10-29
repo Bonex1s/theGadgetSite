@@ -110,11 +110,8 @@ const openPromo = document.getElementById("open-input");
 const promoCode = document.getElementById("promo-code");
 
 openPromo.addEventListener("click", () => {
-  if (promoCode.style.display === "none") {
-    promoCode.style.display = "block";
-  } else {
-    promoCode.style.display = "none";
-  }
+  promoCode.style.display =
+    promoCode.style.display === "block" ? "none" : "block";
 });
 // DROPDOWN ========================================================================
 const dropdownHeader = document.querySelector(".dropdown-header");

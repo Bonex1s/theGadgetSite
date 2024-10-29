@@ -334,3 +334,12 @@ headers.forEach((header) => {
     arrow.classList.toggle("rotate");
   });
 });
+
+// find filter
+
+const sortHeader = document.getElementById("sort-title-name");
+const sortContent = document.getElementById("toggle-filter-menu");
+
+sortHeader.addEventListener("click", () => {
+  sortContent.classList.toggle("open");
+});
